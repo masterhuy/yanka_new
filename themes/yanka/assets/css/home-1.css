@@ -1,0 +1,100 @@
+.jms-banner .banner-content p {
+  margin-bottom: 0; }
+
+.h1-banner-type-1 .container-fluid {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.h1-banner-type-1 .owl-dots {
+  margin-top: 18px; }
+
+.h1-banner-type-1 .owl-theme .owl-controls div {
+  background: #fff;
+  opacity: 1;
+  visibility: visible; }
+  .h1-banner-type-1 .owl-theme .owl-controls div:hover {
+    background: #333;
+    color: #fff; }
+  .h1-banner-type-1 .owl-theme .owl-controls div.owl-prev {
+    left: 23px !important; }
+  .h1-banner-type-1 .owl-theme .owl-controls div.owl-next {
+    right: 23px !important; }
+
+.h1-banner-type-1 .jms-banner {
+  top: 0;
+  overflow: visible;
+  position: relative;
+  -webkit-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top; }
+  .h1-banner-type-1 .jms-banner img {
+    width: 100%; }
+  .h1-banner-type-1 .jms-banner:hover {
+    top: -70px; }
+    .h1-banner-type-1 .jms-banner:hover .text-2::before {
+      width: 100%; }
+    .h1-banner-type-1 .jms-banner:hover img {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
+    .h1-banner-type-1 .jms-banner:hover .banner-content .button {
+      opacity: 1;
+      visibility: visible; }
+
+.h1-banner-type-1 .banner-content {
+  position: relative;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin-top: 35px; }
+  .h1-banner-type-1 .banner-content .text-1 {
+    font-size: 18px;
+    line-height: 26px;
+    color: #333;
+    font-weight: 800;
+    display: block; }
+  .h1-banner-type-1 .banner-content .text-2 {
+    font-size: 48px;
+    line-height: 58px;
+    color: #333;
+    font-weight: 800;
+    display: inline-block;
+    position: relative; }
+    .h1-banner-type-1 .banner-content .text-2::before {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '';
+      color: transparent;
+      background-color: #333;
+      height: 3px;
+      -webkit-transition: width 0.25s linear;
+      -o-transition: width 0.25s linear;
+      transition: width 0.25s linear; }
+    .h1-banner-type-1 .banner-content .text-2::before {
+      -webkit-transition-delay: 0.25s;
+      -o-transition-delay: 0.25s;
+      transition-delay: 0.25s; }
+  .h1-banner-type-1 .banner-content .text-3 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 9px; }
+  .h1-banner-type-1 .banner-content .button {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden; }
+  .h1-banner-type-1 .banner-content .btn-default {
+    margin-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px; }
+
+/*# sourceMappingURL=home-1.css.map */

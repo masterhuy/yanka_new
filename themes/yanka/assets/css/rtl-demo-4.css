@@ -1,0 +1,45 @@
+.pb-service-box .pb-service-content{
+	text-align: right;
+}
+.pb-countdown-time .countdown-row .countdown-section {
+	float: right;
+}
+.pb-countdown-time .countdown-section:not(:last-child)::after {
+	left: 0;
+	right: 100%;
+	margin-right: 6px;
+	margin-left: 0;
+}
+#addon-a7aa081a7 .pb-heading {
+	text-align: right !important;
+}
+#addon-31dd4a893 .pb-text-content {
+	text-align: left !important;
+}
+#addon-d29b731eb .pb-text-content {
+	text-align: right !important;
+}
+#addon-7q7a91w10 .pb-heading {
+	text-align: right !important;
+}
+#addon-t3y7v735v .pb-text-content {
+	text-align: right !important;
+}
+#addon-fggsrh6x3 .pb-text-content {
+	text-align: right !important;
+}
+
+
+@media (min-width: 576px){
+	.h4-newsletter .email_subscription .form-control {
+		border-radius: 0 30px 30px 0 !important;
+	}
+	.h4-newsletter .email_subscription #newsletter-btn {
+		border-radius: 30px 0 0 30px;
+	}
+}
+@media (min-width: 992px){
+	.btn-lg-right .pb-button {
+		text-align: left;
+	}
+}

@@ -1,0 +1,267 @@
+<?php
+/**
+* 2007-2020 PrestaShop
+*
+Godzilla PageBuilder
+*
+*  @author    Godzilla <joommasters@gmail.com>
+*  @copyright 2007-2020 Godzilla
+*  @license   license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*  @Website: https://www.prestawork.com
+*/
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+use PrestaShop\PrestaShop\Adapter\Image\ImageRetriever;
+use PrestaShop\PrestaShop\Adapter\Product\PriceFormatter;
+use PrestaShop\PrestaShop\Core\Product\ProductListingPresenter;
+use PrestaShop\PrestaShop\Adapter\Product\ProductColorsRetriever;
+
+include_once(_PS_MODULE_DIR_._GDZ_PB_NAME_.'/addons/addonbase.php');
+if (Module::isInstalled('gdz_flashsale')) {
+    include_once(_PS_MODULE_DIR_.'gdz_flashsale/gdz_flashsale.php');
+}
+class gdzAddonFlashSale extends gdzAddonBase
+{
+    public function __construct()
+    {
+        $this->addonname = 'flashsale';
+        $this->modulename = 'gdz_flashsale';
+        $this->addontitle = 'Flash Sales';
+        $this->addondesc = 'Show Flash Sales';
+        $this->type = 'Shop Addons';
+        $this->ordering = 88;
+        $this->overwrite_tpl = '';
+        $this->context = Context::getContext();
+
+    }
+    public function getCategories() {
+  		$this->context = Context::getContext();
+  		$id_lang = $this->context->language->id;
+
+  		return Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
+  			SELECT hs.`category_id`, hss.`title`
+  			FROM `'._DB_PREFIX_.'gdz_flashsale_categories` hs
+  			LEFT JOIN '._DB_PREFIX_.'gdz_flashsale_categories_lang hss ON (hs.category_id = hss.category_id)
+  			WHERE id_lang = '.(int)$id_lang);
+  	}
+    public function getInputs()
+    {
+        if (!Module::isInstalled('gdz_flashsale')) return;
+        $categories = $this->getCategories();
+        $inputs = array(
+            array(
+                'type' => 'select2',
+                'name' => 'category',
+                'label' => $this->l('Category'),
+                'lang' => '0',
+                'desc' => 'Select Category to show.',
+                'options' => $categories,
+                'options_name' => array('category_id','title')
+            ),
+            array(
+                'type' => 'tab',
+                'name' => 'carousel_setting',
+                'label' => $this->l('Carousel Setting'),
+                'lang' => '0',
+                'open' => 0
+            ),
+            array(
+                'type' => 'range',
+                'name' => 'items_total',
+                'label' => $this->l('Total Items'),
+                'min'  => 1,
+                'max'  => 50,
+                'lang' => '0',
+                'desc' => 'Total Number Items',
+                'default' => 10
+            ),
+            array(
+                'type' => 'screen-range',
+                'name' => 'cols',
+                'label' => $this->l('Products per Line'),
+                'min'  => 1,
+                'max'  => 8,
+                'lang' => '0',
+                'desc' => 'Number of Products per Line',
+                'default' => '4-3-2'
+            ),
+            array(
+                'type' => 'checkbox2',
+                'name' => 'navigation',
+                'label' => $this->l('Show Navigation'),
+                'lang' => '0',
+                'desc' => 'Enable/Disable Navigation',
+                'default' => '1'
+            ),
+            array(
+                'type' => 'checkbox2',
+                'name' => 'pagination',
+                'label' => $this->l('Show Pagination'),
+                'lang' => '0',
+                'desc' => 'Enable/Disable Pagination',
+                'default' => '0'
+            ),
+            array(
+                'type' => 'checkbox2',
+                'name' => 'autoplay',
+                'label' => $this->l('Auto Play'),
+                'lang' => '0',
+                'desc' => 'Enable/Disable Auto Play',
+                'default' => '0'
+            ),
+            array(
+                'type' => 'checkbox2',
+                'name' => 'rewind',
+                'label' => $this->l('ReWind Navigation'),
+                'lang' => '0',
+                'desc' => 'Enable/Disable ReWind Navigation',
+                'default' => '1'
+            ),
+            array(
+                'type' => 'checkbox2',
+                'name' => 'slidebypage',
+                'label' => $this->l('Slide By Page'),
+                'lang' => '0',
+                'desc' => 'Enable/Disable Slide By Page',
+                'default' => '0'
+            ),
+            array(
+                'type' => 'text',
+                'name' => 'overwrite_tpl',
+                'label' => $this->l('Overwrite Tpl File'),
+                'lang' => '0',
+                'desc' => 'Use When you want overwrite template file'
+            )
+        );
+        return $inputs;
+    }
+    public function getFlashSales($fields) {
+        $this->context = Context::getContext();
+        $id_shop = $this->context->shop->id;
+        $id_lang = $this->context->language->id;
+        $category_id = $fields[0]->value;
+        if($category_id) {
+            $query = "SELECT fc.`category_id`, fcl.`title`
+      			FROM `"._DB_PREFIX_."gdz_flashsale_categories` fc
+      			LEFT JOIN "._DB_PREFIX_."gdz_flashsale_categories_lang fcl ON (fc.category_id = fcl.category_id)
+      			WHERE id_lang = ".(int)$id_lang." AND fc.category_id = ".$category_id;
+            $_category = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($query);
+            $query = "SELECT fi.`product_id`
+      			FROM `"._DB_PREFIX_."gdz_flashsale_items` fi
+      			LEFT JOIN "._DB_PREFIX_."gdz_flashsale f ON (fi.item_id = f.item_id)
+      			WHERE id_shop = ".(int)$id_shop." AND fi.category_id = ".$category_id;
+            $productids = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($query);
+            if(count($productids) == 0) return null;
+            $id_arr = array();
+            for($i = 0; $i < count($productids); $i++) {
+              $id_arr[$i] = $productids[$i]['product_id'];
+            }
+            $products = array();
+            $sql = 'SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity, MAX(product_attribute_shop.id_product_attribute) id_product_attribute, 	product_attribute_shop.minimal_quantity AS product_attribute_minimal_quantity, pl.`description`, pl.`description_short`, pl.`available_now`,
+      					pl.`available_later`, pl.`link_rewrite`, pl.`meta_description`, pl.`meta_keywords`, pl.`meta_title`, pl.`name`, MAX(image_shop.`id_image`) id_image,
+      					il.`legend`, m.`name` AS manufacturer_name,
+      					DATEDIFF(product_shop.`date_add`, DATE_SUB(NOW(),
+      					INTERVAL '.(Validate::isUnsignedInt(Configuration::get('PS_NB_DAYS_NEW_PRODUCT')) ? Configuration::get('PS_NB_DAYS_NEW_PRODUCT') : 20).'
+      						DAY)) > 0 AS new, product_shop.price AS orderprice
+      				FROM `'._DB_PREFIX_.'product` p
+      				'.Shop::addSqlAssociation('product', 'p').'
+      				LEFT JOIN `'._DB_PREFIX_.'product_attribute` pa
+      				ON (p.`id_product` = pa.`id_product`)
+      				'.Shop::addSqlAssociation('product_attribute', 'pa', false, 'product_attribute_shop.`default_on` = 1').'
+      				'.Product::sqlStock('p', 'product_attribute_shop', false, $this->context->shop).'
+      				LEFT JOIN `'._DB_PREFIX_.'product_lang` pl
+      					ON (p.`id_product` = pl.`id_product`
+      					AND pl.`id_lang` = '.(int)$id_lang.Shop::addSqlRestrictionOnLang('pl').')
+      				LEFT JOIN `'._DB_PREFIX_.'image` i
+      					ON (i.`id_product` = p.`id_product`)'.
+      								Shop::addSqlAssociation('image', 'i', false, 'image_shop.cover=1').'
+      				LEFT JOIN `'._DB_PREFIX_.'image_lang` il
+      					ON (image_shop.`id_image` = il.`id_image`
+      					AND il.`id_lang` = '.(int)$id_lang.')
+      				LEFT JOIN `'._DB_PREFIX_.'manufacturer` m
+      					ON m.`id_manufacturer` = p.`id_manufacturer`
+      				WHERE p.`id_product` IN ('.implode(",", $id_arr).') AND product_shop.`id_shop` = '.(int)$id_shop.'
+      					 AND product_shop.`active` = 1'
+      					.' GROUP BY product_shop.id_product';
+      			$row = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($sql);
+      			$products[] = Product::getProductProperties($id_lang, $row);
+            $product_img = array();
+            foreach ($products as $k => $product) {
+                $pr = new Product($product['id_product']);
+                $product_img = $pr->getImages($id_lang);
+                $products[$k]['images']=$product_img;
+                $products[$k]['sold'] = gdzPageBuilderHelper::getNbOfSales($product['id_product']);
+            }
+            $assembler = new ProductAssembler($this->context);
+            $presenterFactory = new ProductPresenterFactory($this->context);
+            $presentationSettings = $presenterFactory->getPresentationSettings();
+            $presenter = new ProductListingPresenter(
+                new ImageRetriever(
+                    $this->context->link
+                ),
+                $this->context->link,
+                new PriceFormatter(),
+                new ProductColorsRetriever(),
+                $this->context->getTranslator()
+            );
+
+            $products_for_template = [];
+            if(!isset($products) || count($products) == 0) return;
+            foreach ($products as $rawProduct) {
+                $products_for_template[] = $presenter->present(
+                    $presentationSettings,
+                    $assembler->assembleProduct($rawProduct),
+                    $this->context->language
+                );
+            }
+            return $products_for_template;
+        }
+        return null;
+    }
+    public function getFlashCategory($category_id) {
+        $this->context = Context::getContext();
+        $id_lang = $this->context->language->id;
+        if($category_id) {
+            $query = "SELECT fc.`category_id`, fcl.`title`
+            FROM `"._DB_PREFIX_."gdz_flashsale_categories` fc
+            LEFT JOIN "._DB_PREFIX_."gdz_flashsale_categories_lang fcl ON (fc.category_id = fcl.category_id)
+            WHERE id_lang = ".(int)$id_lang." AND fc.category_id = ".$category_id;
+            $_category = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($query);
+        }
+        return $_category;
+    }
+    public function returnValue($addon) {
+        $this->context = Context::getContext();
+        $id_lang = $this->context->language->id;
+        $_products = $this->getFlashSales($addon->fields);
+        if(!isset($_products) || count($_products) == 0) return;
+        $cols = $addon->fields[2]->value;
+        $cols_arr = array();
+        if($cols)
+            $cols_arr = explode("-", $cols);
+        $expire_time = Configuration::get('GDZ_FLASHSALE_EXPIRETIME');
+        $category_id = $addon->fields[0]->value;
+        $_category = $this->getFlashCategory($category_id);
+        $this->context->smarty->assign(
+            array(
+                'products' => $_products,
+                'expire_time' => $expire_time,
+                'flash_category' => $_category,
+                'cols'  => $cols,
+                'cols_md'   => $cols_arr[0],
+        				'cols_sm'   => $cols_arr[1],
+        				'cols_xs'   => $cols_arr[2],
+                'navigation' => $addon->fields[3]->value,
+                'pagination' => $addon->fields[4]->value,
+                'autoplay' => $addon->fields[5]->value,
+                'rewind' => $addon->fields[6]->value,
+                'slidebypage' => $addon->fields[7]->value
+            )
+        );
+        $this->overwrite_tpl = $addon->fields[count($addon->fields)-1]->value;
+        $template_path = $this->loadTplPath();
+        return $this->context->smarty->fetch($template_path);
+    }
+}

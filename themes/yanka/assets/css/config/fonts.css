@@ -1,0 +1,25 @@
+/*-------  Font Family  --------*/
+@font-face {
+  font-family: "Neue Einstellung";
+  font-display: swap;
+  src: local("Neue Einstellung Normal"), url("../../fonts/neue-einstellung-normal.eot");
+  src: local("Neue Einstellung Normal"), url("../../fonts/neue-einstellung-normal.woff2") format("woff2"), url("../../fonts/neue-einstellung-normal.woff") format("woff"), url("../../fonts/neue-einstellung-normal.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Neue Einstellung";
+  font-display: swap;
+  src: local("Neue Einstellung Bold"), url("../../fonts/neue-einstellung-extra-bold.eot");
+  src: local("Neue Einstellung Bold"), url("../../fonts/neue-einstellung-extra-bold.woff2") format("woff2"), url("../../fonts/neue-einstellung-extra-bold.woff") format("woff"), url("../../fonts/neue-einstellung-extra-bold.ttf") format("truetype");
+  font-weight: 800; }
+
+/*-------  Fonts Icons  --------*/
+@font-face {
+  font-family: 'yanka';
+  font-display: swap;
+  src: local("yanka"), url("../../font-icons/fonts/yanka.eot?gdhhmd");
+  src: local("yanka"), url("../../font-icons/fonts/yanka.eot?gdhhmd#iefix") format("embedded-opentype"), url("../../font-icons/fonts/yanka.ttf?gdhhmd") format("truetype"), url("../../font-icons/fonts/yanka.woff?gdhhmd") format("woff"), url("../../font-icons/fonts/yanka.svg?gdhhmd#yanka") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*# sourceMappingURL=font.css.map */

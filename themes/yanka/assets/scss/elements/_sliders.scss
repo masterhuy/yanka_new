@@ -1,0 +1,71 @@
+/* Sliders */
+.fraction-slider{
+	.prev{
+		background-color: #fff;
+		&:hover{
+			background-color: #333;
+		}
+		&::before{
+			content: "\e904";
+			font-family: 'yanka';
+			font-size: 23px;
+			line-height: 1;
+			z-index: 2;
+			top: 8px;
+			left: 8px;
+			color: #D0D0D0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.next{
+		background-color: #fff;
+		&:hover{
+			background-color: #333;
+		}
+		&::before{
+			content: "\e905";
+			font-family: 'yanka';
+			font-size: 23px;
+			line-height: 1;
+			z-index: 2;
+			top: 8px;
+			left: 8px;
+			color: #D0D0D0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.fs-pager-wrapper{
+		bottom: 32px;
+		a{
+			width: 10px;
+			height: 4px;
+			border: none;
+			margin: 0 8px;
+			background-color: #fff;
+			border-radius: 0;
+			transition: all .2s;
+			&:hover{
+				background-color: #333;
+			}
+			&.active{
+				width: 30px;
+				background-color: #333;
+			}
+		}
+	}
+}
+.slider-home-1{
+	.slide-2{
+		.gdz-slide-content{
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+.pb-service-content {
+	text-align: right;
+}
+.pb-categorytab .nav.nav-tabs .nav-item + .nav-item {
+	margin-right: 3.1rem;
+	margin-left: 0;
+}

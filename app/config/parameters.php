@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '',
+    'database_name' => 'yanka',
+    'database_user' => 'root',
+    'database_password' => '',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'Pw9HuuH7VHaH8zki8LH5u3ugRBymaPgKIdmhn0EA3yx6KXRV08FSqipE',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2020-06-09',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'nggXSdYmkUqzjvIJAucQtvYsorWmPqJEG4N782S1iiuFgnn5nhuZE8jf',
+    'cookie_iv' => 'DBbx2vpH',
+    'new_cookie_key' => 'def00000e7c01fc5f6f55822cacd88ef8b960cb8b4547b17d82e24f63483d584a26dccee7b5070f7890ec5a8fa89a3b93b18c3f39b0885be37d0c5a2ab6bd79689fe7f62',
+  ),
+);

@@ -1,0 +1,14 @@
+.pb-service-box .pb-service-content{
+	text-align: right;
+}
+.productbox-3 .wrapp-buttons {
+	left: 2rem;
+	right: auto;
+}
+.productbox-3 .product-action .product-btn span{
+	margin-right: 0;
+	margin-left: 0;
+}
+.pb-blog .entry-body {
+	text-align: right;
+}

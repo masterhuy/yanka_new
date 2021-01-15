@@ -1,0 +1,90 @@
+/**
+* 2007-2020 PrestaShop
+*
+* Godzilla Blog
+*
+*  @author    Prestawork <joommasters@gmail.com>
+*  @copyright 2007-2020 Prestawork
+*  @license   license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*  @Website: http://www.prestawork.com
+*/
+.widget-tabs .nav-tabs {
+    border-bottom: 0 none;
+    padding-bottom: 20px;
+}
+.widget-tabs .item-post img {
+	float: left;
+    width: 126px;
+    margin-right: 10px;
+}
+.widget-tabs .comment-item,
+.widget-tabs .item-post {
+   display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.blog-widget .widget-title {
+	color: #333;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    margin-bottom: 2rem;
+}
+.blog-widget ul li{
+    position: relative;
+}
+.blog-widget ul li a{
+    color: #333;
+    display: block;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+.blog-widget ul li:not(:last-child){
+    margin-bottom: 1rem;
+}
+.blog-widget ul li .navbar-toggler{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    top: 0;
+}
+.widget-tabs h6 {
+	font-size: 13px;
+    line-height: 20px;
+    max-height: 65px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.widget-tabs .post-view {
+	font-size:12px;
+	margin:0px;
+}
+.widget-tabs .comment-item img {
+    float: left;
+    margin-right: 10px;
+    width: 65px;
+}
+.widget-categories li a {
+	position:relative;
+}
+.widget-categories li a span {
+	display:block;
+	width:20px;
+	height:20px;
+	top:9px;
+	right:10px;
+	position:absolute;
+}
+.widget-categories li ul {
+    margin-left: 20px;
+    padding: 5px 0;
+}
+.post-view .fa-eye {
+    margin-right: 5px;
+}
+.blog-social-sharing {
+	margin-bottom:30px;
+}

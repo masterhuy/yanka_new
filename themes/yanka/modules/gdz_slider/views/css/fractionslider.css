@@ -1,0 +1,128 @@
+.fraction-slider{
+	position:relative;
+	width:100%; height:100%;
+	overflow:visible;
+}
+.slide, .intro-slide{
+	display: none;
+}
+.fraction-slider .slide{
+	display:none; 
+	width:100%; 
+	height:100%;
+	position:absolute;
+	overflow: hidden;
+	z-index:500;
+}
+
+.fraction-slider .active-slide {
+	z-index:999;
+}
+
+.fraction-slider .fs_obj{
+	display:block; 
+	display:none;
+	position:absolute;
+	top:0px; 
+	left:100%;
+	z-index:700;
+}
+
+.fraction-slider .fs_fixed_obj{
+	z-index:600;
+	left:0;
+}
+
+.fraction-slider .fs_obj *{
+	display:inline-flex;
+	position:relative;
+	top:0px; left:0px;
+}
+
+.fs_loader{
+	width:100%; 
+	height:400px;
+	/*background:url(../img/fraction/fs.spinner.gif) center center no-repeat transparent;*/
+}
+
+
+
+
+/** CONTROLS **/
+.fraction-slider .prev,
+.fraction-slider .next{
+	top: 50%;
+	transform: translateY(-50%);
+	position:absolute;
+	transition: all 300ms;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	z-index:999;
+}
+.fraction-slider .prev{
+	left:5.3vw; 
+}
+
+.fraction-slider .next{
+	right:5.3vw; 
+}
+
+
+/** PAGER **/
+.fs-pager-wrapper{
+	position:absolute;
+	left:10px; bottom:10px;
+	z-index:9999;	
+}
+.fraction-slider .prev,
+.fraction-slider .next {
+	width: 4rem;
+	height: 4rem;
+    color: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fs-pager-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 2.1rem;
+    z-index: 999;
+}
+.fs-pager-wrapper a,
+.fs-custom-pager-wrapper a {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+    background: transparent;
+    border: 1px solid #d7d7d7;
+    border-radius:30px;
+    margin: 0px 6px;
+    transition: all 400ms;
+	-webkit-transition: all 400ms;
+	-moz-transition: all 400ms;
+	-ms-transition: all 400ms;
+	-o-transition: all 400ms;
+}
+.fs-pager-wrapper a span {
+    display: none;
+}
+.fs-pager-wrapper a.active {
+    background-color: #f8f8f8;
+    border-color: #f8f8f8;
+    width: 18px;
+}
+
+@media (max-width:575px) {
+    .fraction-slider .prev:before,
+    .fraction-slider .next:before {
+        padding: 5px;
+        font-size:20px;
+    }
+}

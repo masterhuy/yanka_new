@@ -1,0 +1,12 @@
+#addon-ywrm8mprh .pb-heading {
+	text-align: right;
+}
+#addon-s4s0wtnzg .pb-text-content {
+	text-align: right;
+}
+
+@media (min-width: 768px){
+	.block-signup .pb-button-right {
+		text-align: left;
+	}
+}

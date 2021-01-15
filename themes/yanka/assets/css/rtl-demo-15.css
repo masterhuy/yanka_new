@@ -1,0 +1,11 @@
+.productbox-3 .wrapp-buttons {
+	left: 2rem;
+	right: auto;
+}
+.productbox-3 .product-action .product-btn span {
+	margin-right: 0;
+}
+.shop-social::before {
+	left: 0;
+	right: auto;
+}

@@ -1,0 +1,100 @@
+//tooltips
+.hover-tooltip{
+    position: relative;
+    &:hover{
+        .tooltip-wrap{
+            opacity: 1;
+            &.bottom{
+                top: calc(100% + 24px);
+            }
+        }
+    }
+}
+.tooltip-wrap {
+    background: #333;
+    color: #fff;
+    font-size: 13px;
+    padding: 0 6px;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    pointer-events: none;
+    letter-spacing: 0;
+    line-height: 21px;
+    z-index: 9999;
+}
+.tooltip-wrap.left{
+    margin-right: 25px;
+    right: 100%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.product-btn:hover .tooltip-wrap.left{
+    margin-right: 15px;
+}
+.tooltip-wrap::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    border-top: 0;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #333;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.tooltip-wrap.top{
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: auto;
+    bottom: calc(100% + 20px);
+}
+.tooltip-wrap.bottom {
+    right: auto;
+    left: 50%;
+    top: calc(100% + 30px);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.tooltip-wrap.top::after {
+    border-left: 5px solid #333;
+    border-top: 5px solid transparent;
+    border-right: 0;
+    border-bottom: 5px solid transparent;
+    right: auto;
+    left: 50%;
+    top: 16px;
+    bottom: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.tooltip-wrap.bottom::after {
+    border-left: 6px solid #333;
+    border-top: 6px solid transparent;
+    border-right: 0;
+    border-bottom: 6px solid transparent;
+    right: auto;
+    left: 50%;
+    bottom: 15px;
+    top: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

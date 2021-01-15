@@ -1,0 +1,19 @@
+#addon-mlmxscjj4 .pb-heading {
+	text-align: right !important;
+}
+#addon-k8q69nyw0 .pb-heading {
+	text-align: right !important;
+}
+.pb-service-box .pb-service-content{
+	text-align: right;
+}
+.gdz-row .email_subscription input.form-control{
+	border-right: 1px solid #dadada;
+	border-left: 0;
+}
+
+@media (min-width: 768px){
+	.producttab-banner .addon-tab .nav-tabs.tab-right {
+		text-align: left;
+	}
+}

@@ -1,0 +1,97 @@
+//popup adv
+@import '../config/variables.scss';
+
+.gdz-popup{
+	padding: 10px;
+	.content{
+		background: #ffffff url("../../images/modal-discount-bg-01.jpg") 0 0 no-repeat;
+		background-size: 49% auto;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.row{
+		margin: 0;
+	}
+	.popup-close{
+		&:hover svg{
+			color: #333;
+		}
+		svg {
+		    color: #d0d0d0;
+		    transition: color .2s;
+		}
+	}
+	.gdz-popup-content{
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 62px;
+	}
+	h3{
+		padding-bottom: 0 !important;
+	}
+	.newsletter-desc{
+		font-size: 18px;
+		display: block;
+		line-height: 28px;
+		margin-top: 10px;
+	}
+	.block-content{
+		margin-top: 32px;
+	}
+	.newsletter-input-group{
+		display: block;
+		input{
+			width: 100%;
+			margin-bottom: 78px;
+		}
+		button{
+			font-size: 14px;
+			text-transform: uppercase;
+			padding: 0px 28px;
+			letter-spacing: 0.5px;
+		}
+	}
+	.email_subscription{
+		button{
+			&.btn-default{
+				position: static;
+				display: block !important;
+				background: $active;
+				margin: auto;
+				font-size: 14px;
+				max-width: 100%;
+				&:hover{
+					background: #333;
+				}
+			}
+		}
+	}
+	.dontshow{
+		display: inline-flex;
+		position: relative;
+		padding-left: 8px;
+		transform: translateY(-99px);
+		input:hover{
+			cursor: pointer;
+			~ .checkmark{
+				border-color: #333;
+			}
+		}
+		label a{
+			position: relative;
+			letter-spacing: -0.1px;
+			@include underline(1, #333, 1);
+			&::before{
+				width: 100%;
+			}
+			&:hover{
+				color: #333;
+				&::before{
+					width: 0;
+				}
+			}
+		}
+	}
+}
+//

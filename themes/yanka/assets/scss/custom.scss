@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@import url(product.css);
+@import url(product-list.css);
+@import url(cart.css);
+@import url(checkout.css);
+
+/* Main CSS File */
+@import 'mixins/clearfix.scss';
+@import 'config/fonts.css';
+@import 'config/variables.scss';
+
+
+/*--------------------- 1.General Styles ---------- */
+@import 'base/base.css';
+@import 'base/layout.css';
+/*--------------------- 2.Headers -------------------- */
+@import 'base/headers/header.css';
+// @import 'base/headers/header-2.scss';
+// @import 'base/headers/header-3.scss';
+// @import 'base/headers/header-4.scss';
+// @import 'base/headers/header-5.scss';
+// @import 'base/headers/header-6.scss';
+// @import 'base/headers/header-7.scss';
+// @import 'base/headers/header-8.scss';
+// @import 'base/headers/header-9.scss';
+// @import 'base/headers/header-10.scss';
+// @import 'base/headers/header-11.scss';
+// @import 'base/headers/header-12.scss';
+// @import 'base/headers/header-13.scss';
+// @import 'base/headers/header-14.scss';
+// @import 'base/headers/header-15.scss';
+// @import 'base/headers/header-16.scss';
+// @import 'base/headers/header-17.scss';
+
+/*--------------------- 3.Footer -------------------- */
+@import 'base/footers/footer.css';
+
+
+/*--------------------- 4.Elements -------------------- */
+
+/*--------------------- BreadCrumbs -------------------- */
+@import 'elements/breadcrumb.css';
+
+
+/*--------------------- Products box -------------------- */
+@import 'elements/products-box.css';
+
+
+/*--------------------- Testimonials -------------------- */
+@import 'elements/testimonials.css';
+
+/*--------------------- Testimonials -------------------- */
+@import 'elements/popup-newsletter.css';
+
+
+/*--------------------- 5.Pages -------------------- */
+
+/*--------------------- Category -------------------- */
+@import 'pages/category.css';
+
+/*--------------------- Product Pages -------------------- */
+@import 'pages/product.css';
+
+/*--------------------- Typography -------------------- */
+@import 'pages/typography.css';
+
+
+/*--------------------- 6.Spacing + Helpers -------------------- */
+@import 'config/spacing.css';
+
+
+/*--------------------- 7.Sliders -------------------- */
+@import 'elements/sliders.css';
+
+/*--------------------- 8.Tooltips -------------------- */
+@import 'elements/tooltips.css';
+
+
+
+
+

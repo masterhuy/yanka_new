@@ -1,0 +1,20 @@
+.h5-box-bg .email_subscription input {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 30px !important;
+	border-bottom-right-radius: 30px !important;
+	border-right: 1px solid #dadada;
+	border-left: 0;
+}
+.h5-box-bg .email_subscription #newsletter-btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-right: 0;
+	border-left: 1px solid #dadada;
+}
+.h5-box-bg .socials::before {
+	right: auto;
+	left: 0;
+}

@@ -1,0 +1,16 @@
+.pb-banner.banner-product .pb-banner-text {
+	text-align: right;
+}
+.pb-banner.banner-main .pb-banner-text {
+	text-align: right;
+}
+.productbox-3 .wrapp-buttons {
+	left: 2rem;
+	right: auto;
+}
+.productbox-3 .product-action .product-btn span {
+	margin-right: 0;
+}
+.pb-blog .entry-body {
+	text-align: right;
+}

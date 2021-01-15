@@ -1,0 +1,29 @@
+*ERROR* 	v1.7.6.5	2020/06/10 - 08:22:16: Table &#039;godzilla_test.ps_gdz_blog_categories&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+            SELECT hss.`category_id` as category_id,hssl.`title`
+            FROM ps_gdz_blog_categories hss
+            LEFT JOIN ps_gdz_blog_categories_lang hssl ON (hss.`category_id` = hssl.`category_id`)
+            WHERE hssl.`id_lang` = 1 AND hss.`parent` = 0
+            ORDER BY hss.`category_id` ASC&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.6.5	2020/06/10 - 11:33:28: Table &#039;godzilla_test.ps_hotdeals_items&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+                SELECT hs.`id_deal` as id_deal,
+                hss.`active`,hss.`ordering`,hss.`id_product`,hss.`deal_time`
+
+                FROM ps_gdz_hotdeal hs
+                LEFT JOIN ps_hotdeals_items hss ON (hs.id_deal = hss.id_deal)
+
+                WHERE id_shop = 1
+                ORDER BY hss.ordering&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.6.5	2020/06/10 - 14:43:55: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#039;FROM `ps_gdz_flashsale_items SET category_id = 0`
+			WHERE `category_id` = 1&#039; at line 1&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+			UPDATE FROM `ps_gdz_flashsale_items SET category_id = 0`
+			WHERE `category_id` = 1&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.6.5	2020/06/10 - 14:45:37: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#039;FROM `ps_gdz_flashsale_items SET category_id = 0`
+			WHERE `category_id` = 1&#039; at line 1&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+			UPDATE FROM `ps_gdz_flashsale_items SET category_id = 0`
+			WHERE `category_id` = 1&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.6.5	2020/06/10 - 14:46:11: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#039;FROM `ps_gdz_flashsale_items` SET `category_id` = 0
+			WHERE `category_id` = 1&#039; at line 1&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+			UPDATE FROM `ps_gdz_flashsale_items` SET `category_id` = 0
+			WHERE `category_id` = 1&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.6.5	2020/06/10 - 11:58:29: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused at line 127 in file classes/db/DbPDO.php
+*ERROR* 	v1.7.6.5	2020/06/10 - 12:00:37: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused at line 127 in file classes/db/DbPDO.php

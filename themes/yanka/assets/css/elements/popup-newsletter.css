@@ -1,0 +1,91 @@
+.gdz-popup {
+  padding: 10px; }
+  .gdz-popup .content {
+    background: #ffffff url("../../images/modal-discount-bg-01.jpg") 0 0 no-repeat;
+    background-size: 49% auto;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .gdz-popup .row {
+    margin: 0; }
+  .gdz-popup .popup-close:hover svg {
+    color: #333; }
+  .gdz-popup .popup-close svg {
+    color: #d0d0d0;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s; }
+  .gdz-popup .gdz-popup-content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 62px; }
+  .gdz-popup h3 {
+    padding-bottom: 0 !important; }
+  .gdz-popup .newsletter-desc {
+    font-size: 18px;
+    display: block;
+    line-height: 28px;
+    margin-top: 10px; }
+  .gdz-popup .block-content {
+    margin-top: 32px; }
+  .gdz-popup .newsletter-input-group {
+    display: block; }
+    .gdz-popup .newsletter-input-group input {
+      width: 100%;
+      margin-bottom: 78px; }
+    .gdz-popup .newsletter-input-group button {
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 0px 28px;
+      letter-spacing: 0.5px; }
+  .gdz-popup .email_subscription button.btn-default {
+    position: static;
+    display: block !important;
+    background: #48CAB2;
+    margin: auto;
+    font-size: 14px;
+    max-width: 100%; }
+    .gdz-popup .email_subscription button.btn-default:hover {
+      background: #333; }
+  .gdz-popup .dontshow {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    padding-left: 8px;
+    -webkit-transform: translateY(-99px);
+    -ms-transform: translateY(-99px);
+    transform: translateY(-99px); }
+    .gdz-popup .dontshow input:hover {
+      cursor: pointer; }
+      .gdz-popup .dontshow input:hover ~ .checkmark {
+        border-color: #333; }
+    .gdz-popup .dontshow label a {
+      position: relative;
+      letter-spacing: -0.1px; }
+      .gdz-popup .dontshow label a::before {
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '';
+        color: transparent;
+        background-color: #333;
+        height: 1px;
+        -webkit-transition: width 0.25s linear;
+        -o-transition: width 0.25s linear;
+        transition: width 0.25s linear; }
+      .gdz-popup .dontshow label a::before {
+        width: 100%; }
+      .gdz-popup .dontshow label a:hover {
+        color: #333; }
+        .gdz-popup .dontshow label a:hover::before {
+          width: 0; }
+
+/*# sourceMappingURL=popup-newsletter.css.map */

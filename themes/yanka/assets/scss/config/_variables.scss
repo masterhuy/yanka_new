@@ -1,0 +1,20 @@
+// Variables
+$active: #48CAB2;
+
+
+@mixin underline($bottom, $bgcolor, $height){
+	&::before{
+		position: absolute;
+		bottom: #{$bottom}px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		content: '';
+		color: transparent;
+		background-color: #{$bgcolor};
+		height: #{$height}px;
+		transition: width 0.25s linear;
+		@content;
+	}
+}

@@ -1,0 +1,36 @@
+.h1-slider .gdz-slide-content .btn-primary i {
+	margin-right: .5rem;
+	margin-left: 0;
+}
+#addon-jvh7leiil .pb-heading{
+	text-align: right !important;
+}
+#addon-amiwmj0uo .pb-heading {
+	text-align: right !important;
+}
+#addon-jcyc9lasg .pb-text-content {
+	text-align: right !important;
+}
+#addon-xqi0hh8wg .countdown {
+	text-align: right !important;
+}
+.h1-countdown .pb-countdown .countdown-section:not(:last-child) {
+	margin-left: 2rem;
+	margin-right: 0;
+}
+.h1-countdown .pb-countdown .countdown-section:not(:last-child)::after {
+	right: 100%;
+	margin-right: .9rem;
+	left: auto;
+	margin-left: 0;
+}
+.pb-service-box .pb-service-content{
+	text-align: right;
+}
+
+@media (min-width: 1200px){
+	.h1-countdown .deal-image {
+		padding-left: 2rem;
+		padding-right: 0;
+	}
+}

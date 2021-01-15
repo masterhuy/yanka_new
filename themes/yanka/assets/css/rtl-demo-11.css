@@ -1,0 +1,4 @@
+.more-products::after {
+	margin-right: 1rem;
+	margin-left: 0;
+}

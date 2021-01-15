@@ -1,0 +1,131 @@
+/**
+* 2007-2017 PrestaShop
+*
+* Godzilla Recently Bought
+*
+*  @author    Prestawork <joommasters@gmail.com>
+*  @copyright 2007-2017 Prestawork
+*  @license   license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*  @Website: http://www.joommasters.com
+*/
+body.toplevel_page_woo-notification {
+    overflow-x: hidden;
+}
+
+#woorebought-popup {
+    border: 0 none;
+    border-radius: 0;
+    bottom: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    font-family: tahoma, sans-serif;
+    left: 10px;
+    padding: 0;
+    position: fixed;
+    right: auto !important;
+    text-align: left;
+    top: auto !important;
+    width: auto;
+    z-index: 9999;
+}
+
+#woorebought-popup.bottom_left {
+    right: auto !important;
+    left: 10px !important;
+}
+
+#woorebought-popup.bottom_right {
+    left: auto !important;
+    right: 10px !important;
+}
+
+#woorebought-popup.top_right {
+    left: auto !important;
+    right: 10px !important;
+    top: 10px !important;
+    bottom: auto !important;
+}
+
+#woorebought-popup.top_left {
+    left: auto !important;
+    top: 10px !important;
+    bottom: auto !important;
+}
+
+#woorebought-popup img {
+    cursor: pointer;
+    float: left;
+    max-height: 85px;
+    max-width: 85px;
+    width: auto;
+    align-self: center;
+}
+
+#woorebought-popup.img_right img {
+    cursor: pointer;
+    float: right;
+    max-height: 85px;
+    max-width: 120px;
+    width: auto;
+}
+
+#woorebought-popup p {
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 0 0 13px;
+    padding: 10px 5px 5px 0;
+    width: auto;
+}
+
+#woorebought-popup p a {
+    color: #000;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100%;
+    margin: 0;
+}
+
+#woorebought-popup p a:hover {
+    color: #000;
+}
+
+#woorebought-popup p small {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+#woorebought-popup {
+    padding-right: 25px;
+}
+
+#woorebought-popup #popup-close {
+    cursor: pointer;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 16px;
+}
+
+
+#woo-notification-audio {
+    display: none;
+}
+
+#woorebought-popup {
+    max-width: calc(100% - 20px);
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+#woorebought-popup a {
+    color: #0f0f0f;
+}
+/*Non ajax*/
+#woorebought-popup .woorebought-content {
+    display: flex;
+    align-items: center;
+}

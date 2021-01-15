@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@import url(product.css);
+@import url(product-list.css);
+@import url(contact.css);
+@import url(cart.css);
+@import url(checkout.css);
+.tab-panel .panel {
+    border-radius: 0px!important;
+    margin-bottom: 0px!important;
+    min-height: 527px;
+}
+.gdz-slide-content a {
+    color:#fff;
+    border-bottom: 2px solid #fff;
+    letter-spacing: 3px;
+    line-height: 1.1;
+}
+.fraction-slider .prev,
+.fraction-slider .next {
+    background-image: none!important;
+}
+.fraction-slider .prev:before {
+    font-family: 'icomoon' !important;
+    content: "\e92f";
+    font-size:30px;
+    color:#fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+.fraction-slider .next:before {
+    font-family: 'icomoon' !important;
+    content: "\e96e";
+    font-size:30px;
+    color:#fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+@media (max-width:575px) {
+    .fraction-slider .prev:before,
+    .fraction-slider .next:before {
+        padding: 5px;
+        font-size:20px;
+    }
+}
+.fs-pager-wrapper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    z-index: 9999;
+}
+.fs-pager-wrapper a,
+.fs-custom-pager-wrapper a {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0px 5px;
+}
+.fs-pager-wrapper a span {
+    display: none;
+}
+.fs-pager-wrapper a.active {
+    background: #fff;
+}
+footer .social-links i {
+    font-size: 30px;
+}

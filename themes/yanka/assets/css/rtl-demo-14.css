@@ -1,0 +1,39 @@
+.banner-list-content {
+	padding-right: 4rem;
+	padding-left: 0;
+	text-align: right;
+}
+.cat-banner-list ul li a::before {
+	margin-left: .8rem;
+	margin-right: 0;
+}
+.pb-blog .entry-body {
+	text-align: right;
+}
+.pb-service-box .pb-service-content{
+	text-align: right;
+}
+.h14-servicebox .pb-service-box .pb-service-icon {
+	margin-right: -2rem;
+	margin-left: 0;
+}
+.h14-newsletter .email_subscription #newsletter-btn {
+	margin-right: 1rem;
+	margin-left: 0;
+}
+
+@media (min-width: 768px){
+	.addon-tab .nav-tabs.tab-right {
+		text-align: left;
+	}
+}
+@media (min-width: 1200px){
+	.col-lg-2-custom .addon-box {
+		margin-right: auto;
+		margin-left: 0;
+	}
+	.col-lg-2-custom + .col-lg-2-custom .addon-box {
+		margin-left: auto;
+		margin-right: 0;
+	}
+}

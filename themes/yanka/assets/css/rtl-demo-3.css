@@ -1,0 +1,40 @@
+#addon-ceb3vcm4n .pb-heading,
+#addon-u47bmlayj .pb-text-content,
+#addon-el5d552y1 .pb-text-content{
+	margin-right: auto !important;
+}
+.h3-deals .deal .product-price{
+	justify-content: flex-end;
+}
+.h3-deals .pb-button-left {
+	text-align: left;
+}
+.icon-box-side .addon-box .pb-service-box{
+	text-align: right !important;
+}
+.h3-box-bg .email_subscription input{
+	border-radius: 0 3rem 3rem 0;
+	border-right: .1rem solid #dadada;
+	border-left: none;
+}
+.h3-box-bg .email_subscription #newsletter-btn{
+	border-radius: 3rem 0 0 3rem;
+}
+.h3-box-bg .socials::before {
+	left: 0;
+	right: auto;
+}
+.h3-box-bg .email_subscription #newsletter-btn i {
+	margin-right: 0;
+}
+
+@media (min-width: 992px){
+	.h3-deals .deal {
+		margin-left: auto;
+		margin-right: 0;
+	}
+	.h3-deals .h3-hotdeal {
+		margin-right: auto;
+		margin-left: 0;
+	}
+}

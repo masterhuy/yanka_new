@@ -1,0 +1,96 @@
+@import '../config/variables.scss';
+
+.jms-banner .banner-content p {
+	margin-bottom: 0;
+}
+.h1-banner-type-1{
+	.container-fluid{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.owl-dots{
+		margin-top: 18px;
+	}
+	.owl-theme .owl-controls div{
+		background: #fff;
+		opacity: 1;
+		visibility: visible;
+		&:hover{
+			background: #333;
+			color: #fff;
+		}
+		&.owl-prev{
+			left: 23px !important;
+		}
+		&.owl-next{
+			right: 23px !important;
+		}
+	}
+	.jms-banner{
+		top: 0;
+		overflow: visible;
+		position: relative;
+		transition: 0.25s top;
+		img{
+			width: 100%;
+		}
+		&:hover{
+			top: -70px;
+			.text-2::before{
+				width: 100%;
+			}
+			img{
+				transform: none;
+			}
+			.banner-content .button{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	.banner-content{
+		position: relative;
+		left: 0;
+		top: 0;
+		text-align: center;
+		margin-top: 35px;
+		.text-1{
+			font-size: 18px;
+			line-height: 26px;
+			color: #333;
+			font-weight: 800;
+			display: block;
+		}
+		.text-2{
+			font-size: 48px;
+			line-height: 58px;
+			color: #333;
+			font-weight: 800;
+			display: inline-block;
+			position: relative;
+			@include underline(4, #333, 3)
+			&::before{
+				transition-delay: 0.25s;
+			}
+		}
+		.text-3{
+			font-size: 18px;
+			line-height: 28px;
+			margin-top: 9px;
+		}
+		.button{
+			width: 100%;
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			transform: translateX(-50%);
+			opacity: 0;
+			visibility: hidden;
+		}
+		.btn-default{
+			margin-top: 24px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}

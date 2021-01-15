@@ -1,0 +1,27 @@
+/* Product box */
+.productbox-1 .category-name {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #777; }
+
+.productbox-1 .product-link {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 4px;
+  font-size: 16px; }
+
+.productbox-1 .variant-links .color {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-right: 12px;
+  border-radius: 50%;
+  position: relative; }
+  .productbox-1 .variant-links .color.texture {
+    width: 44px;
+    height: 44px;
+    background-size: cover; }
+
+/*# sourceMappingURL=products-box.css.map */

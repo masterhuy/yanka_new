@@ -1,0 +1,19 @@
+.pb-service-box .pb-service-content{
+	text-align: right;
+}
+.new-arrival .categorytab-products .owl-item:not(:first-child) .product-miniature {
+	border-right: .1rem solid #eeeeee;
+	border-left: none;
+}
+.top-selling .col-grid {
+	border-right: 0;
+	border-left: .1rem solid #eee;
+}
+.cta-horizontal .cta-desc,
+.cta-horizontal .cta-title{
+	text-align: right;
+}
+.service-box .row > .layout-column:not(:last-child)::before {
+	left: .7rem;
+	right: auto;
+}

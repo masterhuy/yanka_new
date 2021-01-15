@@ -1,0 +1,25 @@
+/* Layout */
+.no-gutters {
+  margin-left: 0;
+  margin-right: 0; }
+  .no-gutters > .col,
+  .no-gutters > [class*=col-] {
+    padding-left: 0;
+    padding-right: 0; }
+
+.container {
+  max-width: 100%;
+  position: relative; }
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px; } }
+
+/*# sourceMappingURL=layout.css.map */
