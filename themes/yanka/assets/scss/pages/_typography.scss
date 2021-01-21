@@ -20,40 +20,33 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: -7px;
 }
 
-h4:not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h4 {
 	font-size: 24px;
 	line-height: 35px;
-	padding-bottom: 20px;
 }
-h1:not(.pt-title-subpages):not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h1 {
 	font-size: 64px;
 	line-height: 77px;
-	padding-bottom: 17px;
 }
-h2:not(.small):not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h2 {
 	font-size: 48px;
 	line-height: 58px;
-	padding-bottom: 23px;
 }
-h3:not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h3 {
 	font-size: 36px;
 	line-height: 43px;
-	padding-bottom: 23px;
 }
-h4:not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h4 {
 	font-size: 24px;
 	line-height: 35px;
-	padding-bottom: 20px;
 }
-h5:not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h5 {
 	font-size: 18px;
 	line-height: 26px;
-	padding-bottom: 21px;
 }
-h6:not([class^="pt-title"]):not([class^="pt-footer-title"]):not([class^="pt-aside"]):not([class^="pt-collapse-title"]) {
+h6 {
 	font-size: 16px;
 	line-height: 23px;
-	padding-bottom: 15px;
 }
 
 .demo-typography {

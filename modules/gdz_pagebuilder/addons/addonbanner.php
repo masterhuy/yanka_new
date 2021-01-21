@@ -259,6 +259,7 @@ class gdzAddonBanner extends gdzAddonBase
         $button_text = empty($addon->fields[15]->value->$id_lang) ? '' : gdzPageBuilderHelper::decodeHTML($addon->fields[15]->value->$id_lang);
         $box_class = '';
         if(isset($addon->fields[22]->value) && $addon->fields[16]->value) $box_class = $addon->fields[22]->value;
+        $text_align = empty($addon->fields[21]->value) ? '' : $addon->fields[21]->value;
         $banner_link = empty($addon->fields[16]->value) ? '' : $addon->fields[16]->value;
         $target = empty($addon->fields[17]->value) ? '' : $addon->fields[17]->value;
         $position = empty($addon->fields[18]->value) ? '' : $addon->fields[18]->value;
@@ -276,6 +277,7 @@ class gdzAddonBanner extends gdzAddonBase
                 'banner_link' => $banner_link,
                 'target' => $target,
                 'position' => $position,
+                'text_align' => $text_align,
                 'box_class' => $box_class
             )
         );

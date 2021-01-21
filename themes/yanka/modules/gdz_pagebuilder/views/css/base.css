@@ -198,18 +198,19 @@
     max-width: 100%;
 }
 /***** Button *****/
-.btn-info {
+.btn.btn-info {
     background-color: #5bc0de;
 }
-.btn-success {
+.btn.btn-success {
     background-color: #5cb85c;
 }
-.btn-warning {
+.btn.btn-warning {
     background-color: #f0ad4e;
 }
-.btn-danger {
+.btn.btn-danger {
     background-color: #d9534f;
 }
+
 .btn-xs {
     font-size: 13px!important;
     padding: 10px 20px;
@@ -465,18 +466,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
 }
-/***** Hot Deal *****/
-.pb-hotdeal .countdown {
-    text-align: center;
-    padding: 10px;
-    font-size:16px;
-}
-.countdown .countdown-section {
-    padding:0px 5px;
-}
-.countdown .countdown-amount {
-    padding-right: 5px;
-}
+
 .pb-social-box {
     font-size: 20px;
     text-align: center;
@@ -503,7 +493,6 @@
 }
 .pb-heading {
     margin-bottom: 0px;
-    letter-spacing: -.03em;
 }
 /***** Flash Sale *****/
 .pb-flashsale .pb-flashsale-header {

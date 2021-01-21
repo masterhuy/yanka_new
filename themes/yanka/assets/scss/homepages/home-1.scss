@@ -11,19 +11,12 @@
 	.owl-dots{
 		margin-top: 18px;
 	}
-	.owl-theme .owl-controls div{
-		background: #fff;
-		opacity: 1;
-		visibility: visible;
-		&:hover{
-			background: #333;
-			color: #fff;
+	.owl_carousel .owl-nav button{
+		&.owl-next {
+			right: 18px;
 		}
-		&.owl-prev{
-			left: 23px !important;
-		}
-		&.owl-next{
-			right: 23px !important;
+		&.owl-prev {
+			left: 18px;
 		}
 	}
 	.jms-banner{
@@ -93,4 +86,37 @@
 			padding-right: 20px;
 		}
 	}
+}
+
+.h1-banner-type-2{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding: 0 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	
+	.layout-column, .grid_column{
+		padding: 0 5px;
+	}
+	.pb-banner-subtitle{
+		font-weight: 800;
+		margin-bottom: 10px;
+	}
+	.pb-banner-title{
+		padding-bottom: 1px;
+	}
+	.pb-banner-desc{
+		margin-bottom: 34px;
+	}
+	.btn{
+		letter-spacing: 0.5px;
+		padding: 0px 28px;
+	}
+}
+.page-index #footer{
+	margin-top: 10px;
 }

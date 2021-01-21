@@ -8,17 +8,11 @@
 .h1-banner-type-1 .owl-dots {
   margin-top: 18px; }
 
-.h1-banner-type-1 .owl-theme .owl-controls div {
-  background: #fff;
-  opacity: 1;
-  visibility: visible; }
-  .h1-banner-type-1 .owl-theme .owl-controls div:hover {
-    background: #333;
-    color: #fff; }
-  .h1-banner-type-1 .owl-theme .owl-controls div.owl-prev {
-    left: 23px !important; }
-  .h1-banner-type-1 .owl-theme .owl-controls div.owl-next {
-    right: 23px !important; }
+.h1-banner-type-1 .owl_carousel .owl-nav button.owl-next {
+  right: 18px; }
+
+.h1-banner-type-1 .owl_carousel .owl-nav button.owl-prev {
+  left: 18px; }
 
 .h1-banner-type-1 .jms-banner {
   top: 0;
@@ -96,5 +90,64 @@
     margin-top: 24px;
     padding-left: 20px;
     padding-right: 20px; }
+
+.h1-banner-type-2 .pb-banner .pb-banner-img img {
+  width: 100%;
+  transition: transform 1s, -webkit-transform 1s; }
+
+.h1-banner-type-2 .pb-banner:hover .pb-banner-img img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1); }
+
+.h1-banner-type-2 .pb-banner:hover .pb-banner-title::before {
+  width: 100%; }
+
+.h1-banner-type-2 .pb-banner.white .pb-banner-title::before {
+  background-color: #fff; }
+
+.h1-banner-type-2 .pb-banner .pb-banner-title {
+  margin-right: auto;
+  position: relative; }
+  .h1-banner-type-2 .pb-banner .pb-banner-title::before {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background-color: #333;
+    height: 2px;
+    -webkit-transition: width 0.25s linear;
+    -o-transition: width 0.25s linear;
+    transition: width 0.25s linear; }
+
+.h1-banner-type-2 .container-fluid {
+  padding: 0 10px; }
+
+.h1-banner-type-2 .row {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.h1-banner-type-2 .layout-column, .h1-banner-type-2 .grid_column {
+  padding: 0 5px; }
+
+.h1-banner-type-2 .pb-banner-subtitle {
+  font-weight: 800;
+  margin-bottom: 10px; }
+
+.h1-banner-type-2 .pb-banner-title {
+  padding-bottom: 1px; }
+
+.h1-banner-type-2 .pb-banner-desc {
+  margin-bottom: 34px; }
+
+.h1-banner-type-2 .btn {
+  letter-spacing: 0.5px;
+  padding: 0px 28px; }
+
+.page-index #footer {
+  margin-top: 10px; }
 
 /*# sourceMappingURL=home-1.css.map */

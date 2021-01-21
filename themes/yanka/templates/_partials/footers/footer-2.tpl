@@ -25,37 +25,35 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="layout-column block col-sm-6 col-lg-3">
-                <div class="logo-footer">
-                    {include file='_partials/footers/logo.tpl'}
-                </div>
-                {$gdzSetting.footer_html nofilter}
-                {include file='_partials/socials.tpl'}
-            </div>
             {block name='hook_footer'}
                 {hook h='displayFooter'}
             {/block}
-        </div>
-        <div class="row">
-            {block name='hook_footer_after'}
-                {hook h='displayFooterAfter'}
-            {/block}
+            <div class="col-xl-6 block block-newsletter">
+                <h3 class="h3 block-title">
+                   {l s='Subscribe to Our Newsletter!' d='Shop.jmstheme'}
+                </h3>
+                <div class="block-content">
+                    {block name='footer-newsletter'}
+                        <div class="block block-footer block-newsletter">
+                            {widget name="ps_emailsubscription" hook='displayFooter'}
+                        </div>
+                    {/block}
+                    <p>{l s='By entering your email, you agree to our Terms of Service and Privacy Policy.' d='Shop.jmstheme'}</p>
+                    <div class="block-socials">
+                        {include file='_partials/socials.tpl'}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 {block name='footer-copyright'}
     <div id="footer-copyright" class="footer-copyright{if $gdzSetting.footer_copyright_class} {$gdzSetting.footer_copyright_class}{/if}">
         <div class="container">
-            <div class="row align-items-center">
-                {if isset($gdzSetting.footer_copyright_content) && $gdzSetting.footer_copyright_content}
-                    <div class="col-12 col-lg-6 col-copyright">
-                        {$gdzSetting.footer_copyright_content nofilter}
-                    </div>
-                {/if}
-                <div class="col-12 col-lg-6 col-payments">
-                    <img src="{$gdzSetting.footer_payment_image}" class="img-fluid" alt="{l s='Payments' d='Shop.jmstheme'}"/>
-                </div>
-            </div>
+            {if isset($gdzSetting.footer_copyright_content) && $gdzSetting.footer_copyright_content}
+                {$gdzSetting.footer_copyright_content nofilter}
+                <img src="{$gdzSetting.footer_payment_image}" class="img-fluid" alt="{l s='Payments' d='Shop.jmstheme'}"/>
+            {/if}
         </div>
     </div>
 {/block}

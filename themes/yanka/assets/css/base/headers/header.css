@@ -1,5 +1,8 @@
 /* Header */
 /*# sourceMappingURL=_header.css.map */
+.header-2 #hor-menu .nav {
+  text-align: center; }
+
 .site-logo-text {
   font-size: 26px;
   font-weight: 800;
@@ -307,6 +310,24 @@
     position: absolute;
     top: -14px;
     right: -12px; }
+  #cart_block .cart-button {
+    margin-top: 20px;
+    text-align: center; }
+    #cart_block .cart-button a + a {
+      margin-top: 27px; }
+  #cart_block .cart_block_list {
+    margin-bottom: 22px;
+    max-height: 254px;
+    overflow: auto; }
+  #cart_block .billing-info {
+    padding-top: 22px;
+    border-top: 1px solid #ebebeb; }
+    #cart_block .billing-info .label, #cart_block .billing-info .value {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 33px;
+      padding: 0;
+      color: #333; }
 
 .shoppingcart-box.sidebar .shoppingcartbox {
   padding: 0; }
@@ -339,27 +360,6 @@
 .product-cart-details .price.new {
   font-weight: 800;
   color: #48CAB2; }
-
-.cart_block_list {
-  margin-bottom: 22px;
-  max-height: 254px;
-  overflow: auto; }
-
-.billing-info {
-  padding-top: 22px;
-  border-top: 1px solid #ebebeb; }
-  .billing-info .label, .billing-info .value {
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 33px;
-    padding: 0;
-    color: #333; }
-
-.cart-button {
-  margin-top: 20px;
-  text-align: center; }
-  .cart-button a + a {
-    margin-top: 27px; }
 
 .dropdown-menu.sidebar {
   position: fixed;

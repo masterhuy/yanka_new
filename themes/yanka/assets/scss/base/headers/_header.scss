@@ -2,6 +2,12 @@
 /*# sourceMappingURL=_header.css.map */
 @import '../../config/variables.scss';
 
+.header-2{
+	#hor-menu .nav{
+		text-align: center;
+	}
+}
+
 //logo
 .site-logo-text{
 	font-size: 26px;
@@ -82,6 +88,7 @@
 		}
 	}
 }
+
 
 // megamenu
 .sticky #hor-menu .gdz-megamenu .nav.level0 > li > a{
@@ -349,6 +356,29 @@
 		top: -14px;
 		right: -12px;
 	}
+	.cart-button{
+		margin-top: 20px;
+		text-align: center;
+		a + a{
+			margin-top: 27px;
+		}
+	}
+	.cart_block_list{
+		margin-bottom: 22px;
+		max-height: 254px;
+		overflow: auto;
+	}
+	.billing-info{
+		padding-top: 22px;
+		border-top: 1px solid #ebebeb;
+		.label, .value{
+			font-size: 18px;
+			font-weight: 800;
+			line-height: 33px;
+			padding: 0;
+			color: #333;
+		}
+	}
 }
 .shoppingcart-box{
 	&.sidebar .shoppingcartbox{
@@ -392,29 +422,8 @@
 		color: $active;
 	}
 }
-.cart_block_list{
-	margin-bottom: 22px;
-	max-height: 254px;
-	overflow: auto;
-}
-.billing-info{
-	padding-top: 22px;
-	border-top: 1px solid #ebebeb;
-	.label, .value{
-		font-size: 18px;
-		font-weight: 800;
-		line-height: 33px;
-		padding: 0;
-		color: #333;
-	}
-}
-.cart-button{
-	margin-top: 20px;
-	text-align: center;
-	a + a{
-		margin-top: 27px;
-	}
-}
+
+
 .dropdown-menu.sidebar{
 	position: fixed;
 	display: block;

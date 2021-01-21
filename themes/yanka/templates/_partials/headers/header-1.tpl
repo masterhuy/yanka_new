@@ -22,24 +22,24 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="alert-box">
-	<div class="container">
-		<div class="row">
-			<div class="layout-column col-12">
-                {$gdzSetting.topbar_content nofilter}
-			</div>
-	    </div>
-	</div>
-</div>
 {if ($gdzSetting.header_topbar == 1)}
-    <div id="header-top" class="{if $gdzSetting.topbar_class} {$gdzSetting.topbar_class}{/if} header-top top-panel">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                {$gdzSetting.header_html nofilter}
+    <div class="alert-box">
+        <div class="container">
+            <div class="row">
+                <div class="layout-column col-12">
+                    {$gdzSetting.topbar_content nofilter}
+                </div>
             </div>
         </div>
     </div>
 {/if}
+<div id="header-top" class="{if $gdzSetting.topbar_class} {$gdzSetting.topbar_class}{/if} header-top top-panel">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            {$gdzSetting.header_html nofilter}
+        </div>
+    </div>
+</div>
 <div class="sticky-wrapper {if $gdzSetting.header_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
     <div class="container-fluid">
         <div class="row align-items-center">

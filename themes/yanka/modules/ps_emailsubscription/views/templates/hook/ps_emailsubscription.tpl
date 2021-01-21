@@ -34,6 +34,11 @@
 	    		<button type="submit" class="btn btn-popup newsletter-button align-items-center" name="submitNewsletter">
 					{l s='Subscribe!' d='Modules.Emailsubscription.Shop'}
 				</button>
+				<button type="submit" class="btn btn-icon align-items-center" name="submitNewsletter">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
+						<path fill="currentColor" d="M0,4v16h24V4H0z M21,5.6L12,12L3,5.6H21z M1.6,18.4V6.6L12,14l10.4-7.4v11.8H1.6z"></path>
+					</svg>
+				</button>
 			</div>
 	    	{hook h='displayGDPRConsent' id_module=$id_module}
 	    	<input type="hidden" name="action" value="0" />

@@ -24,14 +24,14 @@
  *}
 
 {* Javascript is used to display each product grade, this allows every rating to be udpated as soon as they change *}
-<div id="review">
-    <div class="product-list-reviews no-review" data-id="{$product.id}" data-url="{$product_comment_grade_url nofilter}">
-        <div class="grade-stars small-stars"></div>
-        <div class="comments-nb ratings-text"></div>
-    </div>
-</div>
-
 {if $nb_comments != 0}
+    <div id="review">
+        <div class="product-list-reviews no-review" data-id="{$product.id}" data-url="{$product_comment_grade_url nofilter}">
+            <div class="grade-stars small-stars"></div>
+            <div class="comments-nb ratings-text"></div>
+        </div>
+    </div>
+
     {* Rich snippet rating is displayed via php/smarty meaning it will be cached (for example on homepage) *}
     <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
         <meta itemprop="reviewCount" content="{$nb_comments}" />

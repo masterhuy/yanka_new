@@ -1,52 +1,6 @@
 jQuery(function ($) {
     "use strict";
 
-    //add login bg img
-    if($('#login-wrapper').hasClass('bg-img')){
-        $('body').addClass('has-background-image');
-    }
-
-    // Scroll To button
-    var $scrollTo = $('.scroll-to');
-    // If button scroll elements exists
-    if ( $scrollTo.length ) {
-        // Scroll to - Animate scroll
-        $scrollTo.on('click', function(e) {
-            var target = $(this).attr('href'),
-                $target = $(target);
-            if ($target.length) {
-                // Add offset for sticky menu
-                var scrolloffset = ( $(window).width() >= 992 ) ? ($target.offset().top - 52) : $target.offset().top
-                $('html, body').animate({
-                    'scrollTop': scrolloffset
-                }, 600);
-                e.preventDefault();
-            }
-        });
-    }
-
-    // Count to
-    var $countItem = $('.count');
-	if ( $.fn.countTo ) {
-        if ($.fn.waypoint) {
-            $countItem.waypoint( function () {
-                $(this.element).countTo();
-            }, {
-                offset: '90%',
-                triggerOnce: true 
-            });
-        } else {
-            $countItem.countTo();
-        }    
-    } else { 
-        // fallback
-        // Get the data-to value and add it to element
-        $countItem.each(function () {
-            var $this = $(this),
-                countValue = $this.data('to');
-            $this.text(countValue);
-        });
-    }
 
     //collapse
     $('.card.card-box').on('show.bs.collapse', function (e) {
@@ -57,28 +11,6 @@ jQuery(function ($) {
         $('.panel-default .collapse').not(e.target).collapse('hide');
     });
 
-    //owl carousel testimonials photo
-    var lazyload_testi = false;
-    if(gdzSetting.carousel_lazyload)
-    var lazyload_testi = true;
-    var rtl = false;
-	if ($("body").hasClass("rtl")) rtl = true;
-    $.each( $(".owl-testimonials-photo"), function( key, value ) {
-        $(this).owlCarousel({
-            loop:false,
-            rtl:rtl,
-            margin:0,
-            nav:true,
-            dots:true,
-            autoplay:false,
-            lazyLoad:lazyload_testi,
-            responsive:{
-                0:{
-                    items: 1
-                }
-            }
-        });
-    });
 
     //owl carousel featured product
     var lazyload_fp = false;
@@ -202,35 +134,9 @@ jQuery(function ($) {
         });
     });
 
-    //thumbs gallery carousel
-    var lazyload_thub = false;
-    if(gdzSetting.carousel_lazyload)
-    var lazyload_thub = true;
-    var rtl = false;
-    if ($("body").hasClass("rtl")) rtl = true;
-    $(".product-layout-gallery .product-images").addClass('owl-carousel');
-    $.each( $(".product-layout-gallery .product-images"), function( key, value ) {
-        $(this).owlCarousel({
-            loop:false,
-            rtl:rtl,
-            margin:10,
-            nav:true,
-            dots:false,
-            autoplay:false,
-            lazyLoad:lazyload_thub,
-            responsive:{
-                0:{
-                    items: 2
-                },
-                768:{
-                    items: 3
-                },
-            }
-        });
-    });
 
     // Scroll Top Button - Show
-    var $scrollTop = $('#scroll-top');
+    var $scrollTop = $('#back-to-top');
 
     $(window).on('load scroll', function() {
         if ( $(window).scrollTop() >= 400 ) {
@@ -661,7 +567,23 @@ jQuery(document).ready(function(){
     }
 
     calcOwlnavButton();
+    calcOwnControlCarousel('producttab-products');
+    calcOwnControlCarousel('filter-products');
+    calcOwnControlCarousel('hotdeal-products');
+    calcOwnControlCarousel('catproduct-carousel');
+    calcOwnControlCarousel('categorytab-products');
 });
+
+function calcOwnControlCarousel(x){
+    var carouselType = x;
+    var imgHeight = $('.' + carouselType + '.owl-carousel .product-preview').outerHeight();
+    if(imgHeight > 0){
+        var btnControlHeight = $('.' + carouselType + '.owl-carousel .owl-nav button').outerHeight();
+	    var space = (imgHeight/2) - (btnControlHeight/2);
+	    $('.' + carouselType + '.owl-carousel .owl-nav button').css({top: space, transform: 'none'});
+    }	
+}
+
 
 function calcOwlnavButton(){
 	var imgHeightB = $('.h1-banner-type-1 .jms-banner > a > img').outerHeight();

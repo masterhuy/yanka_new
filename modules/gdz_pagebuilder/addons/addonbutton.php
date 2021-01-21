@@ -64,7 +64,14 @@ class gdzAddonButton extends gdzAddonBase
                 'lang' => '0',
                 'options_name' => array('value','title'),
                 'desc' => 'Open link in same or in new window',
-                'options' => array(0 => array('value'=> 'default', 'title' => 'Default'), 1 => array('value'=> 'success', 'title' => 'Success'), 2 => array('value'=> 'info', 'title' => 'Info'), 3 => array('value'=> 'warning', 'title' => 'Warning'), 4 => array('value'=> 'danger', 'title' => 'Danger') ),
+                'options' => array(
+                    0 => array('value'=> 'default', 'title' => 'Default'), 
+                    1 => array('value'=> 'success', 'title' => 'Success'), 
+                    2 => array('value'=> 'info', 'title' => 'Info'), 
+                    3 => array('value'=> 'warning', 'title' => 'Warning'), 
+                    4 => array('value'=> 'danger', 'title' => 'Danger'),
+                    5 => array('value'=> 'border', 'title' => 'Border')
+                ),
                 'default' => 'default'
             ),
             array(

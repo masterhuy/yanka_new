@@ -1,1 +1,46 @@
 /* Demo 2 Homepage 2 */
+@import '../config/variables.scss';
+
+.h2-banner{
+	@include hoverImageEffect();
+	.pb-heading{
+		margin-top: 12px;
+		margin-bottom: -1px;
+	}
+	.pb-text-content{
+		p{
+			margin-bottom: 13px;
+		}
+	}
+	.pb-button{
+		margin-top: 10px;
+	}
+}
+
+.h2-services-block{
+	.layout-column{
+		&:hover{
+			.pt-title p::before{
+				width: 100%;
+			}
+			color: #333;
+		}
+	}
+	.pt-title{
+		display: flex;
+		margin-bottom: 4px;
+		.image{
+			margin-right: 20px;
+		}
+		p{
+			color: #333;
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 800;
+			display: inline-block;
+			position: relative;
+			margin-bottom: 0;
+			@include underline(2, #333, 2)
+		}
+	}
+}

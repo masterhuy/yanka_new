@@ -118,12 +118,9 @@ var productListingComments = (function () {
                         if (productData.comments_nb > 0) {
                             $self.find(DOMStrings.productListReviewsStarsContainer).rating({ grade: productData.average_grade, starWidth: 16 });
                             
-                            if (productData.comments_nb > 1){
-                                $self.find(DOMStrings.productListReviewsNumberOfComments).text('(' + productData.comments_nb +  ' Reviews' + ')');
-                            }
-                            else{
-                                $self.find(DOMStrings.productListReviewsNumberOfComments).text('(' + productData.comments_nb +  ' Review' + ')');
-                            }
+                            
+                            $self.find(DOMStrings.productListReviewsNumberOfComments).text('('+ productData.comments_nb +')');
+
                             $self.closest(DOMStrings.productContainer).addClass(DOMClasses.hasReviews);
                             $self.css('visibility', 'visible');
                             $self.removeClass('no-review');

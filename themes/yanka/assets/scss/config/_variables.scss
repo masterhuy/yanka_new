@@ -18,3 +18,62 @@ $active: #48CAB2;
 		@content;
 	}
 }
+
+@mixin hoverBannerEffect(){
+	.pb-banner{
+		.pb-banner-img img{
+			width: 100%;
+			transition: transform 1s, -webkit-transform 1s;
+		}
+		&:hover{
+			.pb-banner-img img{
+				transform: scale3d(1.1, 1.1, 1);
+			}
+		}
+	}
+}
+
+@mixin hoverImageEffect(){
+	.pb-image{
+		overflow: hidden;
+		a img{
+			width: 100%;
+			transition: transform 1s, -webkit-transform 1s;
+		}
+		&:hover{
+			a img{
+				transform: scale3d(1.1, 1.1, 1);
+			}
+		}
+	}
+}
+
+@mixin hoverBannerTitleEffect(){
+	.pb-banner{
+		&:hover .pb-banner-title::before{
+			width: 100%;
+		}
+		&.white{
+			.pb-banner-title::before{
+				background-color: #fff;
+			}
+		}
+		.pb-banner-title{
+			margin-right: auto;
+			position: relative;
+			&::before{
+				position: absolute;
+				bottom: 5px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				width: 0%;
+				content: '';
+				color: transparent;
+				background-color: #333;
+				height: 2px;
+				transition: width 0.25s linear;
+			}
+		}
+	}
+}

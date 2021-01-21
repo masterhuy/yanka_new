@@ -99,9 +99,16 @@
             {block name="footer"}
                 {include file="_partials/footer.tpl"}
             {/block}
-            <button id="scroll-top" title="{l s='Back to top' d='Shop.Theme.Actions'}" class="show">
-                <i class="icon-arrow-up"></i>
-            </button>
+            <div class="back-to-top show" id="back-to-top">
+                <span class="h-100">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
+                        <g>
+                            <polygon fill="currentColor" points="20.9,17.1 12.5,8.6 4.1,17.1 2.9,15.9 12.5,6.4 22.1,15.9"></polygon>
+                        </g>
+                    </svg>
+                    <span class="text d-block d-md-none">{l s='Back to top' d='Shop.Theme.Actions'}</span>
+                </span>
+            </div>
         </div>
 
         {block name='javascript_bottom'}
