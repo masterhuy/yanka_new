@@ -7,6 +7,11 @@
 		text-align: center;
 	}
 }
+.header-3{
+	#hor-menu .nav{
+		text-align: right;
+	}
+}
 
 //logo
 .site-logo-text{
@@ -93,20 +98,19 @@
 // megamenu
 .sticky #hor-menu .gdz-megamenu .nav.level0 > li > a{
 	line-height: 53px;
-	&::before{
+	span::before{
 		bottom: 15px;
 	}
 }
 .gdz-megamenu{
-	.nav .mega-nav li.group > a {
-	    color: #333;
+	.nav > .menu-item .mega-nav li.group > a {
 	    font-size: 18px;
 	    display: block;
 	    padding-bottom: 11px;
 	    padding-top: 8px;
 	    font-weight: 800;
 	}
-	.nav > .menu-item .mega-nav li > a, 
+	.nav > .menu-item .mega-nav li > a,
 	.nav > .menu-item .mega-nav li .mod-content .title {
 		border-bottom: medium none;
 		line-height: 31px;
@@ -115,13 +119,18 @@
 		display: block;
 		position: relative;
 		font-size: 16px;
+		font-weight: 400;
+		color: #333;
+		&:hover{
+			color: $active;
+		}
 	}
 	.nav > li{
 		&.sub-home{
 			padding-left: 10px;
 			> a{
 				color: $active;
-				&::before{
+				span::before{
 					width: 100%;
 				}
 			}
@@ -149,15 +158,18 @@
 		}
 		&.open > a{
 			color: $active;
-			&::before{
+			span::before{
 				width: 100%;
 			}
 		}
 		> a{
-			&:hover::before{
+			&:hover span::before{
 				width: 100%;
 			}
-			&::before {
+			span{
+				position: relative;
+			}
+			span::before {
 				position: absolute;
 				bottom: 28px;
 				left: 0;

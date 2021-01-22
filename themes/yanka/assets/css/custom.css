@@ -12,6 +12,8 @@
 /*--------------------- 3.Footer -------------------- */
 @import url(base/footers/footer.css);
 /*--------------------- 4.Elements -------------------- */
+/*--------------------- Blogs -------------------- */
+@import url(elements/blogs.css);
 /*--------------------- BreadCrumbs -------------------- */
 @import url(elements/breadcrumb.css);
 /*--------------------- Products box -------------------- */

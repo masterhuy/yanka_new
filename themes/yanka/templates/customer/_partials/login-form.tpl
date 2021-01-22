@@ -20,6 +20,11 @@
             <i class="icon-long-arrow-right"></i>
         </button>
         {/block}
+
+        {if isset($fb_on) && $fb_on}
+		    <div class="fb-login-button" data-max-rows="1" data-size="{$JMSFB_BUTTON_SIZE}" data-button-type="{$JMSFB_BUTTON_TEXT}" data-show-faces="{if $JMSFB_SHOW_FRIENDS}true{else}false{/if}" data-auto-logout-link="{if $JMSFB_LOGOUT_BUTTON}true{else}false{/if}" data-use-continue-as="{if $JMSFB_PROFILE_INCLUDED}true{else}false{/if}"></div>
+	    {/if}
+        
         <div class="authentication-links">
             <div class="forgot-password">
                 <a href="{$urls.pages.password}" rel="nofollow">

@@ -1,1 +1,42 @@
 /* Demo 3 Homepage 3 */
+@import '../config/variables.scss';
+
+.h3-banner-category{
+	@include hoverBannerEffect();
+	.pb-banner{
+		&:hover .pb-banner-button{
+			color: #fff;
+			background-color: $active;
+		}
+	}
+	.pb-banner-button{
+		font-size: 18px;
+		color: #333;
+		background-color: #fff;
+		padding: 8px 33px;
+		letter-spacing: 0;
+	}
+}
+.pb-hotdeal{
+	.owl-dots{
+		margin-top: 19px;
+	}
+}
+.h3-banner{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column, .grid_column{
+		padding: 0 5px;
+	}
+	.pb-banner .pb-banner-title::before{
+		bottom: 0;
+	}
+}

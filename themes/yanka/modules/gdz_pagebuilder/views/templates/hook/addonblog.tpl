@@ -44,6 +44,7 @@
 								</div>
 							{/if}
 							<div class="entry-body">
+								<a class="post-title" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}">{$post.title nofilter}</a>
 								<ul class="post-meta">
 									{if $show_category == '1'}
 										<li class="post-category">
@@ -62,7 +63,6 @@
 										<li class="post-comments">{$post.comment_count nofilter} {l s='Comment' d='Modules.Gdzblog.Addonblog'}{if $post.comment_count > 1}s{/if}</li>
 									{/if}
 								</ul>
-								<a class="post-title" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}">{$post.title nofilter}</a>
 								{if $show_introtext == '1'}
 									<div class="post-intro">{$post.introtext nofilter}</div>
 								{/if}

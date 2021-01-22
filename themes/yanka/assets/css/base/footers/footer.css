@@ -1,6 +1,8 @@
 /* Footer */
 #footer {
   background-color: #f8f8f8; }
+  #footer.footer-3 .footer-main .row .layout-column:nth-child(3) {
+    display: none; }
   #footer .footer-main {
     padding: 97px 0 53px; }
   #footer #footer-main .layout-column {

@@ -1,0 +1,24 @@
+/* Blogs */
+.pb-blog .post-title {
+  display: block;
+  font-size: 24px;
+  font-weight: 800; }
+
+.pb-blog .post-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .pb-blog .post-meta li {
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative; }
+    .pb-blog .post-meta li + li {
+      padding-left: 20px; }
+      .pb-blog .post-meta li + li::before {
+        content: "-";
+        position: absolute;
+        left: 7px; }
+
+/*# sourceMappingURL=blogs.css.map */

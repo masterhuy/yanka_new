@@ -53,7 +53,7 @@
 		{if $producttabs.show_featured == '1'}
 			<div role="tabpanel" class="tab-pane active" id="featured-{$unique_id}">
 				{if $view_type == 'carousel'}
-					<div class="producttab-products owl-carousel customs" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
+					<div class="producttab-products owl-carousel" data-row="{$row}" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
 						{foreach from = $producttabs.featured_products item = products_slide}
 							<div class="item">
 								{foreach from = $products_slide item = product}
@@ -63,9 +63,9 @@
 						{/foreach}
 					</div>
 				{else}
-					<div class="producttab-products products row">
+					<div class="producttab-products grid products row">
 						{foreach from=$producttabs.featured_products item=product}
-							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs}">
+							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs} mb-4">
 								{include file="catalog/_partials/miniatures/product.tpl" product=$product}
 							</div>
 						{/foreach}
@@ -77,7 +77,7 @@
 		{if $producttabs.show_new == '1'}
 			<div role="tabpanel" class="tab-pane {if $cf eq 0}active{/if}" id="latest-{$unique_id}">
 				{if $view_type == 'carousel'}
-					<div class="producttab-products owl-carousel customs" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
+					<div class="producttab-products owl-carousel" data-row="{$row}" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
 						{foreach from = $producttabs.new_products item = products_slide}
 							<div class="item">
 								{foreach from = $products_slide item = product}
@@ -87,9 +87,9 @@
 						{/foreach}
 					</div>
 				{else}
-					<div class="producttab-products products row">
+					<div class="producttab-products grid products row">
 						{foreach from=$producttabs.new_products item=product}
-							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs}">
+							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs} mb-4">
 								{include file="catalog/_partials/miniatures/product.tpl" product=$product}
 							</div>
 						{/foreach}
@@ -101,7 +101,7 @@
 		{if $producttabs.show_topseller == '1'}
 			<div role="tabpanel" class="tab-pane {if $cf eq 0}active{/if}" id="topseller-{$unique_id}">
 				{if $view_type == 'carousel'}
-					<div class="producttab-products owl-carousel customs" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
+					<div class="producttab-products owl-carousel" data-row="{$row}" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
 						{foreach from = $producttabs.topseller_products item = products_slide}
 							<div class="item">
 								{foreach from = $products_slide item = product}
@@ -111,9 +111,9 @@
 						{/foreach}
 					</div>
 				{else}
-					<div class="producttab-products products row">
+					<div class="producttab-products grid products row">
 						{foreach from=$producttabs.topseller_products item=product}
-							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs}">
+							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs} mb-4">
 								{include file="catalog/_partials/miniatures/product.tpl" product=$product}
 							</div>
 						{/foreach}
@@ -125,7 +125,7 @@
 		{if $producttabs.show_special == '1'}
 			<div role="tabpanel" class="tab-pane {if $cf eq 0}active{/if}" id="special-{$unique_id}">
 				{if $view_type == 'carousel'}
-					<div class="producttab-products owl-carousel customs" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
+					<div class="producttab-products owl-carousel" data-row="{$row}" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
 						{foreach from = $producttabs.special_products item = products_slide}
 							<div class="item">
 								{foreach from = $products_slide item = product}
@@ -135,9 +135,9 @@
 						{/foreach}
 					</div>
 				{else}
-					<div class="producttab-products products row">
+					<div class="producttab-products grid products row">
 						{foreach from=$producttabs.special_products item=product}
-							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs}">
+							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-{12/$cols_xs} mb-4">
 								{include file="catalog/_partials/miniatures/product.tpl" product=$product}
 							</div>
 						{/foreach}
@@ -149,7 +149,7 @@
 		{if $producttabs.show_onsale == '1'}
 			<div role="tabpanel" class="tab-pane {if $cf eq 0}active{/if}" id="onsale-{$unique_id}">
 				{if $view_type == 'carousel'}
-					<div class="producttab-products owl-carousel customs" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
+					<div class="producttab-products owl-carousel" data-row="{$row}" data-items="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-lg="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-md="{if $cols_md}{$cols_md|escape:'htmlall':'UTF-8'}{else}3{/if}" data-sm="{if $cols_sm}{$cols_sm|escape:'htmlall':'UTF-8'}{else}2{/if}" data-xs="{if $cols_xs}{$cols_xs|escape:'htmlall':'UTF-8'}{else}1{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
 						{foreach from = $producttabs.onsale_products item = products_slide}
 							<div class="item">
 								{foreach from = $products_slide item = product}
@@ -159,9 +159,9 @@
 						{/foreach}
 					</div>
 				{else}
-					<div class="producttab-products products row">
+					<div class="producttab-products grid products row">
 						{foreach from=$producttabs.onsale_products item=product}
-							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-xs-{12/$cols_xs}">
+							<div class="col-md-{12/$cols_md} col-sm-{12/$cols_sm} col-xs-{12/$cols_xs} mb-4">
 								{include file="catalog/_partials/miniatures/product.tpl" product=$product}
 							</div>
 						{/foreach}

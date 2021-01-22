@@ -291,6 +291,7 @@ class gdzAddonCategoryTab extends gdzAddonBase
                 'cols_md'   => $cols_arr[0],
                 'cols_sm'   => $cols_arr[1],
                 'cols_xs'   => $cols_arr[2],
+                'row' => $addon->fields[8]->value,
                 'navigation' => $addon->fields[10]->value,
                 'pagination' => $addon->fields[11]->value,
                 'autoplay' => $addon->fields[12]->value,

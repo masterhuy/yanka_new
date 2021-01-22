@@ -15,28 +15,16 @@
 @import 'base/layout.css';
 /*--------------------- 2.Headers -------------------- */
 @import 'base/headers/header.css';
-// @import 'base/headers/header-2.scss';
-// @import 'base/headers/header-3.scss';
-// @import 'base/headers/header-4.scss';
-// @import 'base/headers/header-5.scss';
-// @import 'base/headers/header-6.scss';
-// @import 'base/headers/header-7.scss';
-// @import 'base/headers/header-8.scss';
-// @import 'base/headers/header-9.scss';
-// @import 'base/headers/header-10.scss';
-// @import 'base/headers/header-11.scss';
-// @import 'base/headers/header-12.scss';
-// @import 'base/headers/header-13.scss';
-// @import 'base/headers/header-14.scss';
-// @import 'base/headers/header-15.scss';
-// @import 'base/headers/header-16.scss';
-// @import 'base/headers/header-17.scss';
+
 
 /*--------------------- 3.Footer -------------------- */
 @import 'base/footers/footer.css';
 
 
 /*--------------------- 4.Elements -------------------- */
+
+/*--------------------- Blogs -------------------- */
+@import 'elements/blogs.css';
 
 /*--------------------- BreadCrumbs -------------------- */
 @import 'elements/breadcrumb.css';

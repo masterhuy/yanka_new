@@ -374,6 +374,7 @@ class gdzAddonProductTab extends gdzAddonBase
                 'cols_md'   => $cols_arr[0],
                 'cols_sm'   => $cols_arr[1],
                 'cols_xs'   => $cols_arr[2],
+                'row' => $addon->fields[16]->value,
                 'navigation' => $addon->fields[18]->value,
                 'pagination' => $addon->fields[19]->value,
                 'autoplay' => $addon->fields[20]->value,

@@ -17,7 +17,7 @@
     float: inherit;
     vertical-align: top;
     position:relative;
-    padding: 0 12px;
+    padding: 0;
 }
 .gdz-megamenu .nav > li > a {
     padding: 0;
@@ -143,6 +143,7 @@
 }
 #hor-menu .gdz-megamenu .nav.level0 > li > a{
     line-height: 80px;
+    padding: 0 12px;
 }
 .vermenu .gdz-megamenu .nav > .menu-item .mega-nav li.mega > a::before {
     right: 2rem;

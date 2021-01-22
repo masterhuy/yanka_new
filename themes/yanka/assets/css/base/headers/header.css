@@ -3,6 +3,9 @@
 .header-2 #hor-menu .nav {
   text-align: center; }
 
+.header-3 #hor-menu .nav {
+  text-align: right; }
+
 .site-logo-text {
   font-size: 26px;
   font-weight: 800;
@@ -74,11 +77,10 @@
 
 .sticky #hor-menu .gdz-megamenu .nav.level0 > li > a {
   line-height: 53px; }
-  .sticky #hor-menu .gdz-megamenu .nav.level0 > li > a::before {
+  .sticky #hor-menu .gdz-megamenu .nav.level0 > li > a span::before {
     bottom: 15px; }
 
-.gdz-megamenu .nav .mega-nav li.group > a {
-  color: #333;
+.gdz-megamenu .nav > .menu-item .mega-nav li.group > a {
   font-size: 18px;
   display: block;
   padding-bottom: 11px;
@@ -93,13 +95,18 @@
   letter-spacing: 0;
   display: block;
   position: relative;
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 400;
+  color: #333; }
+  .gdz-megamenu .nav > .menu-item .mega-nav li > a:hover,
+  .gdz-megamenu .nav > .menu-item .mega-nav li .mod-content .title:hover {
+    color: #48CAB2; }
 
 .gdz-megamenu .nav > li.sub-home {
   padding-left: 10px; }
   .gdz-megamenu .nav > li.sub-home > a {
     color: #48CAB2; }
-    .gdz-megamenu .nav > li.sub-home > a::before {
+    .gdz-megamenu .nav > li.sub-home > a span::before {
       width: 100%; }
   .gdz-megamenu .nav > li.sub-home .mega-col-nav .mod-content .mod-content:hover .image {
     top: 0;
@@ -122,13 +129,16 @@
 
 .gdz-megamenu .nav > li.open > a {
   color: #48CAB2; }
-  .gdz-megamenu .nav > li.open > a::before {
+  .gdz-megamenu .nav > li.open > a span::before {
     width: 100%; }
 
-.gdz-megamenu .nav > li > a:hover::before {
+.gdz-megamenu .nav > li > a:hover span::before {
   width: 100%; }
 
-.gdz-megamenu .nav > li > a::before {
+.gdz-megamenu .nav > li > a span {
+  position: relative; }
+
+.gdz-megamenu .nav > li > a span::before {
   position: absolute;
   bottom: 28px;
   left: 0;

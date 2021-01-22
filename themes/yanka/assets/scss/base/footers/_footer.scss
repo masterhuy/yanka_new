@@ -4,6 +4,11 @@
 
 #footer{
 	background-color: #f8f8f8;
+	&.footer-3{
+		.footer-main .row .layout-column:nth-child(3){
+			display: none;
+		}
+	}
 	.footer-main{
 		padding: 97px 0 53px;
 	}

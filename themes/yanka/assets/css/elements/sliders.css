@@ -67,10 +67,7 @@
       width: 30px;
       background-color: #333; }
 
-.slider-home-1 .slide-2 .gdz-slide-content {
-  width: 100%; }
-
-.slider-home-2 .gdz-slide-content {
+.gdz-slide-content.text-center {
   width: 100%; }
 
 /*# sourceMappingURL=sliders.css.map */

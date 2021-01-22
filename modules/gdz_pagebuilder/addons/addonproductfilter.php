@@ -258,8 +258,9 @@ class gdzAddonProductFilter extends gdzAddonBase
       				'autoplay' => $fields[10]->value,
       				'rewind' => $fields[11]->value,
       				'slidebypage' => $fields[12]->value,
-              'gutter'   => $addon->fields[4]->value,
-              'view_type' => $view_type,
+                    'gutter'   => $addon->fields[4]->value,
+                    'row' => $fields[7]->value,
+                    'view_type' => $view_type,
       				'addon_tpl_dir' => $addon_tpl_dir
       			)
   		  );

@@ -1,1 +1,18 @@
 /* Demo 4 Homepage 4 */
+@import '../config/variables.scss';
+
+.h4-banner{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column, .grid_column{
+		padding: 0 5px;
+	}
+}

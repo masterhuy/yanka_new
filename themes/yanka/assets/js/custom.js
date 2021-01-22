@@ -393,7 +393,7 @@ function paginationToTop(){
 
 jQuery(document).ready(function(){
     $('#hor-menu .gdz-megamenu').jmsMegaMenu({
-        event: 'click',
+        event: 'hover',
         duration: 100
     });
     $('.vermenu .gdz-megamenu').jmsMegaMenu({
@@ -519,7 +519,7 @@ jQuery(document).ready(function(){
     $('.js-open-sidebar').click(function() {
         $('body').addClass('overflow-hidden');
         $('body').css('padding-right', '17px');
-        $(".overflow-hidden .main-site").click(function(){/* Product */
+        $(".overflow-hidden .main-site").click(function(){
             $('body').removeClass('overflow-hidden');
             $('body').css('padding-right', '0');
         });
@@ -577,7 +577,8 @@ jQuery(document).ready(function(){
 function calcOwnControlCarousel(x){
     var carouselType = x;
     var imgHeight = $('.' + carouselType + '.owl-carousel .product-preview').outerHeight();
-    if(imgHeight > 0){
+    var dataRow = $('.' + carouselType + '.owl-carousel').attr('data-row');
+    if(imgHeight > 0 && dataRow == 1){
         var btnControlHeight = $('.' + carouselType + '.owl-carousel .owl-nav button').outerHeight();
 	    var space = (imgHeight/2) - (btnControlHeight/2);
 	    $('.' + carouselType + '.owl-carousel .owl-nav button').css({top: space, transform: 'none'});
