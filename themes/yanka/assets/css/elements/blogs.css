@@ -1,8 +1,25 @@
 /* Blogs */
+.pb-blog .post-thumb {
+  overflow: hidden; }
+  .pb-blog .post-thumb img {
+    transition: transform 1s, -webkit-transform 1s; }
+  .pb-blog .post-thumb:hover img {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1); }
+
 .pb-blog .post-title {
   display: block;
   font-size: 24px;
-  font-weight: 800; }
+  font-weight: 800;
+  margin-top: 27px;
+  margin-bottom: 16px; }
+  .pb-blog .post-title:hover {
+    text-decoration: underline; }
+
+.pb-blog .post-intro {
+  margin-top: -3px; }
+  .pb-blog .post-intro p {
+    margin-bottom: 13px; }
 
 .pb-blog .post-meta {
   display: -webkit-box;

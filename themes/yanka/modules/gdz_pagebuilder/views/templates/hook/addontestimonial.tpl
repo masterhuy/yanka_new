@@ -27,24 +27,37 @@
         <div class="pb-testimonial-carousel owl-carousel carousel-tpl" data-items="{if $items_show_md}{$items_show_md|escape:'htmlall':'UTF-8'}{else}5{/if}" data-lg="{if $items_show_md}{$items_show_md|escape:'htmlall':'UTF-8'}{else}5{/if}" data-md="{if $items_show_md}{$items_show_md|escape:'htmlall':'UTF-8'}{else}4{/if}" data-sm="{if $items_show_sm}{$items_show_sm|escape:'htmlall':'UTF-8'}{else}3{/if}" data-xs="{if $items_show_xs}{$items_show_xs|escape:'htmlall':'UTF-8'}{else}2{/if}" data-nav="{if $navigation == '0'}false{else}true{/if}" data-dots="{if $pagination == '1'}true{else}false{/if}" data-auto="{if $autoplay == '1'}true{else}false{/if}" data-rewind="{if $rewind == '1'}true{else}false{/if}" data-slidebypage="{if $slidebypage == '1'}page{else}1{/if}" data-margin="{if isset($gutter)}{$gutter|escape:'htmlall':'UTF-8'}{else}30{/if}">
             {foreach from=$testimonials item=testimonial}
                 <div class="pb-testimonial-box">
-                    {if $show_image}
-                        <div class="pb-testimonial-img">
-                            <img class="img-responsive" src="{$testimonial->image|escape:'html':'UTF-8'}" />
-                        </div>
-                    {/if}
                     <div class="pb-testimonial-comment" >
+                        {if $show_rating}
+                            <div class="pb-rating" data-rating="{$testimonial->rating}">
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                            </div>
+                        {/if}
                         {$testimonial->comment|escape:'html':'UTF-8' nofilter}
                     </div>
-                    <h5 class="pb-testimonial-author">
-                        {$testimonial->author|escape:'html':'UTF-8'}
-                    </h5>
-                    {if $show_position}
-                        <div class="pb-testimonial-position">
-                            {$testimonial->position|escape:'html':'UTF-8'}
-                        </div>
-                    {/if}
+                    <div class="pb-reviewsbox-author">
+                        {if $show_image}
+                            <div class="pb-testimonial-img">
+                                <img class="img-responsive" src="{$testimonial->image|escape:'html':'UTF-8'}" />
+                            </div>
+                        {/if}
+                        <h5 class="pb-testimonial-author">
+                            {$testimonial->author|escape:'html':'UTF-8'}
+                        </h5>
+                        {if $show_position}
+                            <div class="pb-testimonial-position">
+                                {$testimonial->position|escape:'html':'UTF-8'}
+                            </div>
+                        {/if}
+                    </div>
                 </div>
             {/foreach}
         </div>
     </div>
 {/if}
+
+

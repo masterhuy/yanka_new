@@ -471,54 +471,7 @@ input:focus::placeholder {
     }
 }
 
-.pb-testimonial{
-    .pb-testimonial-box {
-        text-align: center;
-        width: 100%;
-        .pb-testimonial-img{
-            margin-bottom: 2.5rem;
-            img{
-                width: 7.2rem;
-                height: 7.2rem;
-                margin: auto;
-            }
-        }
-        .pb-testimonial-comment {
-            max-width: 840px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 2em;
-            margin-bottom: 3.5rem;
-            .lead{
-                color: #333;
-                margin: 0;
-                font-size: 1.6rem;
-                font-weight: 400;
-                text-transform: uppercase;
-                letter-spacing: .1em;
-                margin-bottom: 1rem;
-            }
-        }
-        .pb-testimonial-author{
-            font-weight: 500;
-            color: #333333;
-            letter-spacing: -.01em;
-            margin-bottom: -.1rem;
-            line-height: 1;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-        }
-        .pb-testimonial-position{
-            font-weight: 300;
-            font-size: 1.4rem;
-            color: #333;
-            letter-spacing: -.01em;
-        }
-    }
-    .owl-dots{
-        margin-top: 6.1rem;
-    }
-}
+
 .owl-dots.disabled,
 .owl-nav.disabled{
     display: none;

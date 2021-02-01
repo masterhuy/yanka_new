@@ -45,6 +45,9 @@
 							{/if}
 							<div class="entry-body">
 								<a class="post-title" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}">{$post.title nofilter}</a>
+								{if $show_introtext == '1'}
+									<div class="post-intro">{$post.introtext nofilter}</div>
+								{/if}
 								<ul class="post-meta">
 									{if $show_category == '1'}
 										<li class="post-category">
@@ -53,7 +56,7 @@
 									{/if}
 									{if $show_time == '1'}
 										<li class="post-created">
-											{$post.created|escape:'html':'UTF-8'|date_format:'%b %e, %Y'}
+											{$post.created|escape:'html':'UTF-8'|date_format:'%B %e, %Y'}
 										</li>
 									{/if}
 									{if $show_nviews == '1'}
@@ -63,11 +66,8 @@
 										<li class="post-comments">{$post.comment_count nofilter} {l s='Comment' d='Modules.Gdzblog.Addonblog'}{if $post.comment_count > 1}s{/if}</li>
 									{/if}
 								</ul>
-								{if $show_introtext == '1'}
-									<div class="post-intro">{$post.introtext nofilter}</div>
-								{/if}
 								{if $show_readmore == '1'}
-									<a class="post-readmore" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}">
+									<a class="btn-link post-readmore" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}">
 										<span>{$readmore_text nofilter}</span>
 									</a>
 								{/if}

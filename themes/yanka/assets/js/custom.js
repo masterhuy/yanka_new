@@ -566,15 +566,41 @@ jQuery(document).ready(function(){
         });
     }
 
+    ratingTestimonial();
     calcOwlnavButton();
-    calcOwnControlCarousel('producttab-products');
-    calcOwnControlCarousel('filter-products');
-    calcOwnControlCarousel('hotdeal-products');
-    calcOwnControlCarousel('catproduct-carousel');
-    calcOwnControlCarousel('categorytab-products');
+    calcOwlBlogCarousel();
+    calcOwlControlCarousel('producttab-products');
+    calcOwlControlCarousel('filter-products');
+    calcOwlControlCarousel('hotdeal-products');
+    calcOwlControlCarousel('catproduct-carousel');
+    calcOwlControlCarousel('categorytab-products');
 });
 
-function calcOwnControlCarousel(x){
+$(window).load(function() {
+    $('.carousel').carousel('pause'); 
+});
+
+function ratingTestimonial(){
+    let rating = $('.pb-testimonial-comment .pb-rating');
+    rating.each(function() {
+        let dataRating = $(this).attr('data-rating');
+        for(i = 1;i <= dataRating; i++){
+            $(this).find(".star").html('<svg><use xlink:href="#icon-review"><symbol fill="none" viewBox="0 0 16 16" id="icon-review"><path d="M7.552.272c.07-.181.2-.272.39-.272.208 0 .338.09.39.272l1.637 5.193a.35.35 0 0 0 .13.217.527.527 0 0 0 .285.082h5.197c.207 0 .337.1.39.299.069.2.017.362-.157.49L11.632 9.76a.6.6 0 0 0-.182.245.582.582 0 0 0 0 .245l1.636 5.165c.052.2-.008.363-.181.49-.156.127-.304.127-.442 0l-4.209-3.236a.485.485 0 0 0-.26-.081.452.452 0 0 0-.234.082l-4.209 3.235c-.155.127-.311.127-.467 0-.156-.127-.208-.29-.156-.49l1.637-5.165a.49.49 0 0 0-.026-.272.323.323 0 0 0-.156-.218L.2 6.552c-.173-.127-.234-.29-.182-.49.07-.199.208-.298.416-.298H5.63a.369.369 0 0 0 .234-.082.436.436 0 0 0 .182-.217L7.552.272z" fill="currentColor"></path></symbol></use></svg>');
+            $(this).find(`.star:nth-child(${i})`).css({"color": "#FFBA0A"});
+        }
+    });
+}
+
+function calcOwlBlogCarousel(){
+    var imgHeight = $('.blog-carousel .post-thumb img').outerHeight();
+    if(imgHeight > 0){
+        var btnControlHeight = $('.blog-carousel .owl-nav button').outerHeight();
+	    var space = (imgHeight/2) - (btnControlHeight/2);
+	    $('.blog-carousel .owl-nav button').css({top: space, transform: 'none'});
+    }	
+}
+
+function calcOwlControlCarousel(x){
     var carouselType = x;
     var imgHeight = $('.' + carouselType + '.owl-carousel .product-preview').outerHeight();
     var dataRow = $('.' + carouselType + '.owl-carousel').attr('data-row');
