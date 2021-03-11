@@ -1,1 +1,19 @@
 /* Demo 8 Homepage 8 */
+@import '../config/variables.scss';
+
+.h8-banner-type-1{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding: 0 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+}
+
+

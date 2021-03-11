@@ -1,1 +1,33 @@
 /* Demo 6 Homepage 6 */
+@import '../config/variables.scss';
+
+.h6-banner-type-1{
+	@include hoverBannerEffect();
+	margin-top: 10px;
+	.container-fluid{
+		padding: 0 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+	.pb-banner{
+		&:hover .btn{
+			color: #fff;
+			background: $active;
+		}
+		.btn{
+			color: #333;
+			font-size: 18px;
+			background: #fff;
+			padding: 8px 33px;
+			font-weight: 800;  
+			margin: 0 auto;
+			transition: all 0.2s;
+		}
+		
+	}
+}

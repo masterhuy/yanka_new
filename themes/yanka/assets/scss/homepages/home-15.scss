@@ -1,1 +1,6 @@
 /* Demo 15 Homepage 15 */
+@import '../config/variables.scss';
+
+.h15-lookbook{
+	@include hoverImageEffect();
+}

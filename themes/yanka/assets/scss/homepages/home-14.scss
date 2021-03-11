@@ -1,1 +1,110 @@
 /* Demo 14 Homepage 14 */
+@import '../config/variables.scss';
+
+.header-1{
+	.alert-box{
+		display: none;
+	}
+}
+.h14-promo{
+	max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h14-pt-box-layout{
+	.container > .row{
+		align-items: center;
+	}
+	.text .addon-box{
+		padding-left: 29px;
+	}
+}
+.h14-specification{
+	svg{
+		width: 36px;
+		height: 36px;
+	}
+	.hidden{
+		display: none;
+	}
+	.pt-list-layout-01 {
+		margin-top: 32px;
+	}
+	.pt-item {
+		display: flex;
+		cursor: pointer;
+		svg path{
+			transition: .2s all;
+		}
+		&:hover{
+			.pt-item-layout .pt-title span::before{
+				width: 100%;
+			}
+			svg path{
+				fill: $active;
+			}
+		}
+		&:not(:first-child){
+			margin-top: 28px;
+		}
+		.pt-item-icon{
+			width: 56px;
+			min-width: 56px;
+			padding-top: 5px;
+		}
+		.pt-item-layout .pt-title{
+			font-size: 18px;
+			line-height: 26px;
+			color: #333333;
+			font-weight: 800;
+			padding-bottom: 7px;
+			display: block;
+			span{
+				display: inline-block;
+				position: relative;
+				@include underline(3, #333, 2)
+			}
+		}
+	}
+	.pt-list-dot > li {
+		font-size: 18px;
+		line-height: 28px;
+		position: relative;
+		padding: 0 0 0 11px;
+		color: #777777;
+		&::before {
+			content: '';
+			width: 4px;
+			height: 4px;
+			background: #777777;
+			display: inline-block;
+			position: absolute;
+			top: 12px;
+			left: 0;
+			border-radius: 50%;
+		}
+	}
+}
+.h14-block-images{
+	.container-fluid > .row{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.layout-column{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.instagram-title{
+	a{
+		position: relative;
+		color: $active;
+		@include underline(4, #48CAB2, 2)
+		&::before{
+			width: 100%;
+		}
+		&:hover::before{
+			width: 0;
+		}
+	}
+}

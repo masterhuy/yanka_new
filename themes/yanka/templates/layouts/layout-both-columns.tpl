@@ -59,6 +59,9 @@
                 {if $page.page_name != 'index' && $page.page_name != 'pagenotfound' && $page.page_name != 'module-gdz_pagebuilder-page' && $page.page_name != 'module-gdz_pagebuilder-preview'}
                     <div class="container{if $shop_width != 1}-fluid{/if}">
                 {/if}
+                {if $page.page_name == 'category'}
+                    {hook h="displayWrapperTop"}
+                {/if}
                 {if $page.page_name != 'module-jmspagebuilder-preview'}
                 <div class="row">
                 {/if}

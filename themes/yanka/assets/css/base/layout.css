@@ -20,6 +20,11 @@
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px; } }
+    max-width: 1200px; }
+  .col-xl5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%; } }
 
 /*# sourceMappingURL=layout.css.map */

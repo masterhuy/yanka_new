@@ -199,6 +199,9 @@
 .productbox-1 .product-short-desc {
   display: none; }
 
+.product-miniature {
+  position: relative; }
+
 .icon-cart-disabled,
 .icon-cart-hover {
   display: none; }

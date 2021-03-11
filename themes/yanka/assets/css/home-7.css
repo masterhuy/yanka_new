@@ -1,3 +1,44 @@
 /* Demo 7 Homepage 7 */
+.h7-banner-type-1 .pb-banner .pb-banner-img img {
+  width: 100%;
+  transition: transform 1s, -webkit-transform 1s; }
 
-/*# sourceMappingURL=demo-7.css.map */
+.h7-banner-type-1 .pb-banner:hover .pb-banner-img img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1); }
+
+.h7-banner-type-1 .pb-banner:hover .pb-banner-title::before {
+  width: 100%; }
+
+.h7-banner-type-1 .pb-banner.white .pb-banner-title::before {
+  background-color: #fff; }
+
+.h7-banner-type-1 .pb-banner .pb-banner-title {
+  margin-right: auto;
+  position: relative; }
+  .h7-banner-type-1 .pb-banner .pb-banner-title::before {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background-color: #333;
+    height: 2px;
+    -webkit-transition: width 0.25s linear;
+    -o-transition: width 0.25s linear;
+    transition: width 0.25s linear; }
+
+.h7-banner-type-1 .container-fluid {
+  padding: 0 10px; }
+
+.h7-banner-type-1 .row {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.h7-banner-type-1 .layout-column {
+  padding: 0 5px; }
+
+/*# sourceMappingURL=home-7.css.map */

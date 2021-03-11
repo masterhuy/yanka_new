@@ -68,6 +68,6 @@
       background-color: #333; }
 
 .gdz-slide-content.text-center {
-  width: 100%; }
+  width: 100% !important; }
 
 /*# sourceMappingURL=sliders.css.map */

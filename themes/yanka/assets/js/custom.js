@@ -566,6 +566,9 @@ jQuery(document).ready(function(){
         });
     }
 
+    hoverLookbook();
+    closeLookbook();
+
     ratingTestimonial();
     calcOwlnavButton();
     calcOwlBlogCarousel();
@@ -619,4 +622,18 @@ function calcOwlnavButton(){
         var spaceB = (imgHeightB/2) - (btnControlHeightB/2);
 	    $(".h1-banner-type-1 .owl-nav button").css({top: spaceB, transform: 'none'});
     }
+}
+
+function hoverLookbook(){
+    $(".h16-lookbook .pt-hotspot .pt-btn").hover(function(){
+        $(".h16-lookbook .pt-hotspot").removeClass('active');
+        $(this).parent().addClass("active");
+        }, function(){
+    });
+}
+
+function closeLookbook(){
+    $(".h16-lookbook .pt-hotspot-content .pt-btn-close").click(function(){
+        $(".h16-lookbook .pt-hotspot").removeClass('active');
+    });
 }

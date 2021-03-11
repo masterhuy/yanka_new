@@ -1,1 +1,29 @@
 /* Demo 9 Homepage 9 */
+@import '../config/variables.scss';
+
+.h9-banner-type-1{
+	@include hoverBannerEffect();
+	margin-top: 10px;
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+	.pb-banner{
+		&:hover .pb-banner-title{
+			color: #fff;
+			background: $active;
+		}
+		.pb-banner-title{
+			background: #fff;
+			padding: 8px 33px;
+			font-weight: 800;
+			display: inline-block;
+			margin: 0 auto;
+			transition: all 0.2s;
+		}
+		
+	}
+}

@@ -18,39 +18,4 @@
 .h2-banner .pb-button {
   margin-top: 10px; }
 
-.h2-services-block .layout-column:hover {
-  color: #333; }
-  .h2-services-block .layout-column:hover .pt-title p::before {
-    width: 100%; }
-
-.h2-services-block .pt-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 4px; }
-  .h2-services-block .pt-title .image {
-    margin-right: 20px; }
-  .h2-services-block .pt-title p {
-    color: #333;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 800;
-    display: inline-block;
-    position: relative;
-    margin-bottom: 0; }
-    .h2-services-block .pt-title p::before {
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 0%;
-      content: '';
-      color: transparent;
-      background-color: #333;
-      height: 2px;
-      -webkit-transition: width 0.25s linear;
-      -o-transition: width 0.25s linear;
-      transition: width 0.25s linear; }
-
 /*# sourceMappingURL=home-2.css.map */

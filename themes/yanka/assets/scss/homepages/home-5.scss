@@ -1,1 +1,67 @@
 /* Demo 5 Homepage 5 */
+@import '../config/variables.scss';
+
+.h5-banner-type-1{
+	@include hoverBannerEffect();
+	margin-top: 10px;
+	.container-fluid{
+		padding: 0 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+	.pb-banner{
+		&:hover .pb-banner-title{
+			color: #fff;
+			background: $active;
+		}
+		.pb-banner-title{
+			background: #fff;
+			padding: 8px 33px;
+			font-weight: 800;
+			display: inline-block;
+			margin: 0 auto;
+			transition: all 0.2s;
+		}
+		
+	}
+}
+
+.h5-banner-type-2{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding: 0 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+	.pb-banner-text{
+		top: 50% !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%);
+		background: rgba(255,255,255,0.8); 
+		padding: 50px 38px;
+		min-width: 55%;
+		.pb-banner-subtitle{
+			font-weight: 800;
+		}
+		.pb-banner-title{
+			font-weight: 800;
+			margin: auto;
+			margin-top: 7px;
+			@include underline(0, #333, 2)
+		}
+		.pb-banner-desc{
+
+		}
+	}
+}

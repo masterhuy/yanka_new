@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:13
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:50
   from 'module:gdzfacebookconnectviewste' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e1e1a5b8_59372324',
+  'unifunc' => 'content_604975224ce813_68988979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6017d1e1e1a5b8_59372324 (Smarty_Internal_Template $_smarty_tpl) {
+function content_604975224ce813_68988979 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <!-- begin F:\xampp\htdocs\yanka/modules/gdz_facebookconnect/views/templates/hook/header.tpl -->
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8554977216017d1e1df34b8_47920403', "page_content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_788703485604975224a7716_56647732', "page_content");
 ?>
 <!-- end F:\xampp\htdocs\yanka/modules/gdz_facebookconnect/views/templates/hook/header.tpl --><?php }
 /* {block "page_content"} */
-class Block_8554977216017d1e1df34b8_47920403 extends Smarty_Internal_Block
+class Block_788703485604975224a7716_56647732 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'page_content' => 
   array (
-    0 => 'Block_8554977216017d1e1df34b8_47920403',
+    0 => 'Block_788703485604975224a7716_56647732',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:16
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:51
   from 'module:pslinklistviewstemplatesh' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e40fafe0_64623465',
+  'unifunc' => 'content_60497523c738b7_13055304',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6017d1e40fafe0_64623465 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60497523c738b7_13055304 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin F:\xampp\htdocs\yanka/themes/yanka/modules/ps_linklist/views/templates/hook/linkblock.tpl --><?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['linkBlocks']->value, 'linkBlock');
 if ($_from !== null) {

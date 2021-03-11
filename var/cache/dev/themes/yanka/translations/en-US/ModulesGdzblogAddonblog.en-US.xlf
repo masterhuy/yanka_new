@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\modules\gdz_pagebuilder\views\templates\hook\addonblog.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="4351cfebe4b61d8aa5efa1d020710005">
+        <source>View</source>
+        <target>View</target>
+        <note>Line: 63</note>
+      </trans-unit>
+      <trans-unit id="0be8406951cdfda82f00f79328cf4efc">
+        <source>Comment</source>
+        <target>Comment</target>
+        <note>Line: 66</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

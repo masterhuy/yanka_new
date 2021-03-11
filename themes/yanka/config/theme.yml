@@ -36,6 +36,10 @@ assets:
        path: assets/js/ResizeSensor.js
        priority: 3
        position: bottom
+     - id: simpleParallaxjs
+       path: assets/js/simpleParallax.js
+       priority: 4
+       position: bottom
 
 global_settings:
   configuration:

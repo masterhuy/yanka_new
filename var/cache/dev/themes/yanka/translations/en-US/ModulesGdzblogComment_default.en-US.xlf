@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\modules\gdz_blog\views\templates\front\comment_default.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="1768a313b237a2edc2c4c0fbee60edcb">
+        <source>Your comment submited</source>
+        <target>Your comment submited</target>
+        <note>Line: 25</note>
+      </trans-unit>
+      <trans-unit id="9031a28ed1c50f2485bb0fa4b299ffab">
+        <source>Please waiting approve from Admin</source>
+        <target>Please waiting approve from Admin</target>
+        <note>Line: 25</note>
+      </trans-unit>
+      <trans-unit id="8413c683b4b27cc3f4dbd4c90329d8ba">
+        <source>Comments</source>
+        <target>Comments</target>
+        <note>Line: 36</note>
+      </trans-unit>
+      <trans-unit id="b41b1fd32fe378e592693128eed809c2">
+        <source>Your email address will not be published</source>
+        <target>Your email address will not be published</target>
+        <note>Line: 61</note>
+      </trans-unit>
+      <trans-unit id="614cffa523202658a898e34a5d94d05e">
+        <source>Your Name</source>
+        <target>Your Name</target>
+        <note>Line: 67</note>
+      </trans-unit>
+      <trans-unit id="01557660faa28f8ec65992d1ddbb7b79">
+        <source>Your Email</source>
+        <target>Your Email</target>
+        <note>Line: 73</note>
+      </trans-unit>
+      <trans-unit id="76f62afe72f88cdeb5b4a0291501da15">
+        <source>Your Website</source>
+        <target>Your Website</target>
+        <note>Line: 79</note>
+      </trans-unit>
+      <trans-unit id="e868dd111353d296c2a78c9808c21337">
+        <source>Your Comment</source>
+        <target>Your Comment</target>
+        <note>Line: 83</note>
+      </trans-unit>
+      <trans-unit id="7a8dbd683001159655afc3f4935b3fd4">
+        <source>Submit Comment</source>
+        <target>Submit Comment</target>
+        <note>Line: 90</note>
+      </trans-unit>
+      <trans-unit id="5f632aa17759e66788e5eddffc496db7">
+        <source>Please Login to comment</source>
+        <target>Please Login to comment</target>
+        <note>Line: 108</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

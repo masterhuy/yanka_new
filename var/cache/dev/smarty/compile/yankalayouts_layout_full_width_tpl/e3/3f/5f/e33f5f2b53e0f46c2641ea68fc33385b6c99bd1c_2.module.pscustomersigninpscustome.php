@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:15
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:51
   from 'module:pscustomersigninpscustome' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e35b5ed4_79593183',
+  'unifunc' => 'content_60497523115623_91633141',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6017d1e35b5ed4_79593183 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60497523115623_91633141 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin F:\xampp\htdocs\yanka/themes/yanka/modules/ps_customersignin/ps_customersignin-dropdown.tpl --><div class="user-info position-relative">
 	<a href="#login" class="login hover-tooltip" data-toggle="collapse" data-display="static">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">

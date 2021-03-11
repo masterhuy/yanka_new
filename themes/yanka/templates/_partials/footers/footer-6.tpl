@@ -25,20 +25,23 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="layout-column block col">
+            <div class="col-xl-4 block block-store">
+                {include file='_partials/headers/logo.tpl'}
+                <p class="info-text">{l s='The more content you provide about you and your business, the more confident people will be when purchasing from your store.' d='Shop.jmstheme'}</p>
+                <div class="block-socials">
+                    {include file='_partials/socials.tpl'}
+                </div>
+            </div>
+            <div class="col-xl-4 block block-store">
                 <h3 class="h3 block-title">
-                    {l s='About molla' d='Shop.jmstheme'}
+                   {l s='Store' d='Shop.jmstheme'}
                 </h3>
-                {$gdzSetting.footer_html nofilter}
-                {include file='_partials/socials.tpl'}
+                <div class="block-content">
+                    {$gdzSetting.footer_html nofilter}
+                </div>
             </div>
             {block name='hook_footer'}
                 {hook h='displayFooter'}
-            {/block}
-        </div>
-        <div class="row">
-            {block name='hook_footer_after'}
-                {hook h='displayFooterAfter'}
             {/block}
         </div>
     </div>
@@ -46,14 +49,13 @@
 {block name='footer-copyright'}
     <div id="footer-copyright" class="footer-copyright{if $gdzSetting.footer_copyright_class} {$gdzSetting.footer_copyright_class}{/if}">
         <div class="container">
-            <div class="row align-items-center no-margin">
-                <div class="layout-column">
-                    <img src="{$gdzSetting.footer_payment_image}" class="img-fluid m-auto" alt="{l s='Payments' d='Shop.jmstheme'}"/>
-                    <div class="logo-footer">
-                        {include file='_partials/footers/logo.tpl'}
-                    </div>
+            <div class="row">
+                <div class="col">
+                    {$gdzSetting.footer_copyright_content nofilter}
+                </div>
+                <div class="col-auto">
                     {if isset($gdzSetting.footer_copyright_content) && $gdzSetting.footer_copyright_content}
-                        {$gdzSetting.footer_copyright_content nofilter}
+                        <img src="{$gdzSetting.footer_payment_image}" class="img-fluid" alt="{l s='Payments' d='Shop.jmstheme'}"/>
                     {/if}
                 </div>
             </div>

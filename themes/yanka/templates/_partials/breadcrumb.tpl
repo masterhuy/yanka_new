@@ -25,7 +25,7 @@
 <div class="breadcrumb-wrapper">
     <div class="breadcrumb page-header text-center">
         <div class="breadcrumb-nav">
-            <div class="container">
+            <div class="container-fluid">
                 <div data-depth="{$breadcrumb.count}" class="row align-items-center{if $gdzSetting.breadcrumb_seperator} seperator-{$gdzSetting.breadcrumb_seperator}{/if}">
                     <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="{if $gdzSetting.breadcrumb_align}align-{$gdzSetting.breadcrumb_align}{/if}">
                         {foreach from=$breadcrumb.links item=path name=breadcrumb}

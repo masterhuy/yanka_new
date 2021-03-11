@@ -35,10 +35,20 @@
     background: none;
 }
 .gdz-megamenu .nav > .menu-item .mega-nav li.mega > a::before{
-    font-family: 'molla';
-    content: '\f112';
-    position: absolute;
-    right: 0;
+    font-family: yanka;
+    font-size: 14px;
+    line-height: 28px;
+    content: "\e905";
+    float: right;
+    speak: none;
+    position: relative;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    pointer-events: none;
+    right: -6px;
+    color: #d0d0d0;
+    -webkit-transition: color .2s;
+    transition: color .2s;
 }
 .gdz-megamenu .dropdown-menu {
     background: #fff;

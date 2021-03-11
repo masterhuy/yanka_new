@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:15
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:51
   from 'F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e3eddad8_04916766',
+  'unifunc' => 'content_60497523b3b0b6_19329952',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b18cd092c127094145f7fb858597597793ff59b' => 
     array (
       0 => 'F:\\xampp\\htdocs\\yanka\\themes\\yanka\\templates\\_partials\\footer.tpl',
-      1 => 1600939392,
+      1 => 1614066442,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6017d1e3eddad8_04916766 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60497523b3b0b6_19329952 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 if (isset($_GET['footer_layout']) && $_GET['footer_layout'] != '') {?>
@@ -30,17 +30,18 @@ if (isset($_GET['footer_layout']) && $_GET['footer_layout'] != '') {?>
     <?php $_smarty_tpl->_assignInScope('footer_layout', $_smarty_tpl->tpl_vars['gdzSetting']->value['footer_layout']);?>
     <?php $_smarty_tpl->_assignInScope('footer_layout_link', "_partials/footers/footer-".((string)$_smarty_tpl->tpl_vars['gdzSetting']->value['footer_layout']).".tpl");
 }
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18491753796017d1e3eb69d7_92678750', "footer");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_96572396460497523b27835_43337556', "footer");
 ?>
+
 
 <?php }
 /* {block "footer"} */
-class Block_18491753796017d1e3eb69d7_92678750 extends Smarty_Internal_Block
+class Block_96572396460497523b27835_43337556 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_18491753796017d1e3eb69d7_92678750',
+    0 => 'Block_96572396460497523b27835_43337556',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

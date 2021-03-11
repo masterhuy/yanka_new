@@ -1,4 +1,18 @@
 /* Breadcrumb */
+.breadcrumb{
+	font-size: 12px;
+	color: #777;
+}
+.breadcrumb-item + .breadcrumb-item::before{
+	display: none;
+}
 .breadcrumb-wrapper{
 	padding: 0;
+	.container-fluid{
+		max-width: 100%;
+		padding: 0 50px;
+	}
 }
+
+
+

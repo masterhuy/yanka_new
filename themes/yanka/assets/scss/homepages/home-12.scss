@@ -1,1 +1,121 @@
 /* Demo 12 Homepage 12 */
+@import '../config/variables.scss';
+
+#header{
+	background-color: transparent;
+}
+.header-3{
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1002;
+	.header-top{
+		display: none;
+	}
+	.site-logo-text{
+		color: #fff;
+	}
+	.gdz-megamenu .nav > li{
+		&.sub-home > a, &.open > a{
+			color: $active;
+		}
+		> a{
+			color: #fff;
+		}
+	}
+	.right-module-header svg,
+	.block-collapse > a{
+		color: #fff;
+		&:hover{
+			color: $active;
+		}
+	}
+	.sticky-wrapper.sticky{
+		.site-logo-text {
+		    color: #333;
+		}
+		.gdz-megamenu .nav > li{
+			&.sub-home > a, &.open > a, &:hover > a{
+				color: $active;
+			}
+			> a {
+			    color: #333;
+			}
+		}
+		.right-module-header svg,
+		.block-collapse > a{
+			color: #333;
+			&:hover{
+				color: $active;
+			}
+		}
+	}
+	#search-form-dropdown .button-search svg{
+		color: #333;
+	}
+}
+.h12-banner-type-1{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding: 0 10px;
+		> .row{
+			margin: 0 -5px;
+		}
+	}
+	.layout-column {
+	    padding: 0 5px;
+	}
+	.pb-banner{
+		.pb-banner-subtitle{
+			font-weight: 800;
+			margin-bottom: 7px;
+		}
+		.pb-banner-title{
+			margin-bottom: 2px;
+			margin-left: auto;
+			margin-right: auto;
+			&::before{
+				bottom: 0;
+			}
+		}
+		.btn{
+			margin-top: 35px;
+		}
+	}
+}
+
+.h12-promo-fullwidth{
+	margin: 0 10px;
+	.content{
+		text-align: center;
+		color: #fff;
+		.text-1{
+			font-size: 18px;
+			margin-bottom: 3px;
+		}
+		.text-2{
+			font-size: 64px;
+			font-weight: 800;
+			line-height: 77px;
+			margin-bottom: 4px;
+		}
+		.text-3{
+			margin-bottom: 33px;
+		}
+		.btn-default{
+			padding: 0 31px;
+			font-size: 14px;
+			height: 54px;
+			text-transform: uppercase;
+			&.active{
+				color: #fff;
+				background-color: #333;
+				&:hover{
+					background-color: $active;
+				}
+			}
+		}
+	}
+}

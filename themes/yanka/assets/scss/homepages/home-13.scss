@@ -1,1 +1,46 @@
 /* Demo 13 Homepage 13 */
+@import '../config/variables.scss';
+
+#header .header-7 {
+	.top-panel{
+		display: none;
+	}
+	.container-fluid{
+		max-width: 1200px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.sticky-wrapper{
+		background-color: transparent;
+		&.sticky{
+			background-color: #333;
+		}
+		.container-fluid{
+			background-color: #333;
+			max-width: 1170px;
+		}
+	}
+	#hor-menu .gdz-megamenu .nav > li{
+		&:first-child > a{
+			padding-left: 12px;
+		}
+		&.open > a, &:hover > a, &.sub-home > a{
+			color: #fff;
+			background-color: $active;
+			span::before{
+				display: none;
+			}
+		}
+	}
+}
+.h13-banner{
+	@include hoverImageEffect();
+	.layout-column:hover .btn.btn-border::before{
+		border-width: 2px;
+	}
+	.pb-heading{
+		margin-top: 12px;
+    	line-height: 35px;
+    	margin-bottom: 11px;
+	}
+}

@@ -767,7 +767,7 @@ header .row .col-auto {
 }
 .breadcrumb {
     border-radius: 0px;
-    padding: 10px 0px;
+    padding: 0px;
 }
 .breadcrumb ul {
   list-style: none;

@@ -1,1 +1,120 @@
 /* Demo 11 Homepage 11 */
+@import '../config/variables.scss';
+
+.h11-list-category{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container > .row{
+		margin: 0 -5px;
+	}
+	.layout-column {
+	    padding: 0 5px;
+	}
+	.pb-banner .pb-banner-title::before{
+		bottom: 3px;
+	}
+	.pb-text-content{
+		padding: 20px 28px;
+		border: 1px solid #ebebeb;
+		ul{
+			margin-bottom: 0;
+			li{
+				font-size: 16px;
+				line-height: 31px;
+				a{
+					color: #777;
+					position: relative;
+					@include underline(0, #777, 1)
+					&:hover::before{
+						width: 100%;
+					}
+				}
+			}
+		}
+		p{
+			margin-bottom: 0;
+		}
+		.see-all{
+			color: $active;
+			font-size: 14px;
+			font-weight: 800;
+			display: inline-block;
+			margin-top: -10px;
+			position: relative;
+			@include underline(5, $active, 2)
+			&:hover::before{
+				width: 100%;
+			}
+		}
+	}
+}
+.h11-banner-text-center{
+	@include hoverBannerEffect();
+	margin-top: 10px;
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+	.pb-banner{
+		&:hover .pb-banner-title{
+			color: #fff;
+			background: $active;
+		}
+		.pb-banner-title{
+			background: #fff;
+			padding: 8px 33px;
+			font-weight: 800;
+			display: inline-block;
+			margin: 0 auto;
+			transition: all 0.2s;
+		}
+		
+	}
+}
+.h11-product-flex{
+	.special-products{
+		.productbox-1 .content_price .price.new{
+			color: #f8353e;
+		}
+	}
+	.product-miniature{
+		display: flex;
+	}
+	.product-preview{
+		width: 27%;
+	}
+	.productbox-1 .product-title{
+		padding-bottom: 4px !important;
+	}
+	.product-info{
+		width: 73%;
+		padding-left: 20px;
+		text-align: left;
+		margin-top: -7px;
+		padding-bottom: 0;
+		display: flex;
+		flex-direction: column;
+		#review{
+			order: 3;
+			margin-top: 5px;
+		}
+	}
+	.content_price{
+		display: flex;
+		margin-left: 0;
+		span + span{
+			margin-left: 10px;
+		}
+	}
+	.filter-products > div{
+		margin-bottom: 3rem !important;
+	}
+	.variant-links, 
+	.cart-button,
+	.btn-group{
+		display: none !important;
+	}
+}

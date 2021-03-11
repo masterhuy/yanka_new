@@ -501,7 +501,7 @@ class gdzMegamenuHelper
                 }
                 $this->menu .=  "<span>".$item['name']."</span>";
                 if (($item['level'] == 0) && isset($this->children[$itemid])) {
-                    $this->menu .= '<em class="caret"></em>';
+                    $this->menu .= '<span class="caret"></span>';
                 }
                 $this->menu .= '</a>';
             }

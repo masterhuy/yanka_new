@@ -1,1 +1,17 @@
 /* Demo 7 Homepage 7 */
+@import '../config/variables.scss';
+
+.h7-banner-type-1{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container-fluid{
+		padding: 0 10px;
+	}
+	.row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding: 0 5px;
+	}
+}

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:15
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:51
   from 'F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\headers\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e362b1d8_00827985',
+  'unifunc' => 'content_6049752314ffa4_10218770',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6017d1e362b1d8_00827985 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6049752314ffa4_10218770 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="wishlist_block"class="wishlist">
     <a class="hover-tooltip" href="index.php?fc=module&module=gdz_wishlist&controller=mywishlist">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">

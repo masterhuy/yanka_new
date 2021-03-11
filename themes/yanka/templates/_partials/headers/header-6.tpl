@@ -22,75 +22,79 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="header-intro-clearance">
-    {if ($gdzSetting.header_topbar == 1)}
-        <div id="header-top" class="{if $gdzSetting.topbar_class} {$gdzSetting.topbar_class}{/if} header-top">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="layout-column col col-left">
-                        {$gdzSetting.topbar_content nofilter}
-                    </div>
-                    <div class="layout-column col-auto col-right">
-                        <div class="row align-items-center no-margin top-menu">
-                            {include file='_partials/socials.tpl'}
-                            {if ($gdzSetting.customersignin == 1)}
-                                {widget_block name="ps_customersignin"}
-                                    {include 'module:ps_customersignin/ps_customersignin-dropdown.tpl'}
-                                {/widget_block}
-                            {/if}
-                            {widget_block name="ps_currencyselector"}
-                                {include 'module:ps_currencyselector/ps_currencyselector-dropdown.tpl'}
-                            {/widget_block}
-                            {widget_block name="ps_languageselector"}
-                                {include 'module:ps_languageselector/ps_languageselector-dropdown2.tpl'}
-                            {/widget_block}
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="header-top" class="{if $gdzSetting.topbar_class} {$gdzSetting.topbar_class}{/if} header-top top-panel">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            {$gdzSetting.header_html nofilter}
         </div>
-    {/if}   
-    <div id="header-middle" class="header-middle">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="layout-column col-auto header-left">
-                    {if $gdzSetting.search}
+    </div>
+</div>
+<div class="header-middle">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-2 left-module-header">
+                {widget_block name="ps_languageselector"}
+                    {include 'module:ps_languageselector/ps_languageselector-dropdown.tpl'}
+                {/widget_block}
+                {widget_block name="ps_currencyselector"}
+                    {include 'module:ps_currencyselector/ps_currencyselector-dropdown.tpl'}
+                {/widget_block}
+            </div>
+            <div class="col-8 text-center">
+                {include file='_partials/headers/logo.tpl'}
+            </div>
+            <div class="col-2 right-module-header d-flex align-items-center justify-content-end">
+                {if $gdzSetting.search == 1}
+                    {if $gdzSetting.search_box_type == 'dropdown'}
                         {widget_block name="gdz_ajaxsearch"}
-                            {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch.tpl'}
+                            {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                        {/widget_block}
+                    {elseif $gdzSetting.search_box_type == 'fullwidth'}
+                        {widget_block name="gdz_ajaxsearch"}
+                            {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullwidth.tpl'}
+                        {/widget_block}
+                    {else}
+                        {widget_block name="gdz_ajaxsearch"}
+                            {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
                         {/widget_block}
                     {/if}
-                    
-                </div>
-                <div class="layout-column col header-center">
-                    {include file='_partials/headers/logo.tpl'}
-                </div>
-                <div class="layout-column header-right">
-                    <div class="row">
-                        {if ($gdzSetting.wishlist == 1)}
-                            {include file='_partials/headers/wishlist2.tpl'}
-                        {/if}
-                        {if ($gdzSetting.cart == 1)}
-                            {widget_block name="ps_shoppingcart"}
-                                {include 'module:ps_shoppingcart/ps_shoppingcart.tpl'}
-                            {/widget_block}
-                        {/if}
-                    </div>
-                </div>
+                {/if}
+                {if ($gdzSetting.customersignin == 1)}
+                    {if $gdzSetting.customersignin_type =='dropdown'}
+                        {widget_block name="ps_customersignin"}
+                            {include 'module:ps_customersignin/ps_customersignin-dropdown.tpl'}
+                        {/widget_block}
+                    {else}
+                        {widget_block name="ps_customersignin"}
+                            {include 'module:ps_customersignin/ps_customersignin-sidebar.tpl'}
+                        {/widget_block}
+                    {/if}
+                {/if}
+                {if ($gdzSetting.wishlist == 1)}
+                    {include file='_partials/headers/wishlist.tpl'}
+                {/if}
+                {if ($gdzSetting.cart == 1)}
+                    {widget_block name="ps_shoppingcart"}
+                        {include 'module:ps_shoppingcart/ps_shoppingcart.tpl'}
+                    {/widget_block}
+                {/if}
             </div>
         </div>
     </div>
-    <div class="sticky-wrapper header-bottom {if $gdzSetting.header_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="layout-column position-static col">
-                    <div id="hor-menu" class="{if $gdzSetting.hormenu_class} {$gdzSetting.hormenu_class}{/if} {if $gdzSetting.hormenu_align} align-{$gdzSetting.hormenu_align}{/if}">
-                        {widget name="gdz_megamenu" hook='HorMenu'}
-                    </div>
-                </div>
-                <div class="layout-column col-auto">
-                    {$gdzSetting.header_html nofilter}
+</div>
+<div class="sticky-wrapper text-center {if $gdzSetting.header_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="layout-column">
+                <div id="hor-menu" class="{if $gdzSetting.hormenu_class} {$gdzSetting.hormenu_class}{/if} {if $gdzSetting.hormenu_align} align-{$gdzSetting.hormenu_align}{/if}">
+                    {widget name="gdz_megamenu" hook='HorMenu'}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+

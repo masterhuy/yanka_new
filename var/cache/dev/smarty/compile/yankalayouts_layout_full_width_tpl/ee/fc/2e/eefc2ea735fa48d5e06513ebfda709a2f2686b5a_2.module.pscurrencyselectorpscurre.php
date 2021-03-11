@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:15
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:51
   from 'module:pscurrencyselectorpscurre' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e378aad6_02039645',
+  'unifunc' => 'content_60497523274f29_25254528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6017d1e378aad6_02039645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60497523274f29_25254528 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin F:\xampp\htdocs\yanka/themes/yanka/modules/ps_currencyselector/ps_currencyselector-dropdown.tpl --><div class="block-collapse currency-info position-relative">
    	<a class="hover-tooltip" href="#currency" data-toggle="collapse">
 		<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['current_currency']->value['iso_code'], ENT_QUOTES, 'UTF-8');?>

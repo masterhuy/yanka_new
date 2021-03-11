@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\modules\gdz_pagebuilder\views\templates\hook\addonpopup.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="3dd8284174fd39492e93832425665b19">
+        <source>Dont show this box again</source>
+        <target>Dont show this box again</target>
+        <note>Line: 42</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

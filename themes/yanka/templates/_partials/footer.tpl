@@ -34,3 +34,4 @@
         {include file=$footer_layout_link}
     </footer>
 {/block}
+

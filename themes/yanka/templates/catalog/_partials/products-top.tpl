@@ -22,6 +22,7 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
 <div id="js-product-list-top" class="filters-panel">
 	<div class="row align-items-center">
 		<div class="col-4 sidebar-toggler">

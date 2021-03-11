@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\footers\footer-15.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="ea5ab1dcdf558a7341f96da6c9013a03">
+        <source>Sign up to newsletter</source>
+        <target>Sign up to newsletter</target>
+        <note>Line: 39</note>
+      </trans-unit>
+      <trans-unit id="ee08ac50bc48014b5c49bb4b8b1057bd">
+        <source>Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan.</source>
+        <target>Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan.</target>
+        <note>Line: 41</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\footers\footer-16.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="17a8d621e109959f069b043c05b2906a">
+        <source>About molla</source>
+        <target>About molla</target>
+        <note>Line: 30</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\footers\footer-23.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="707436a5aa13b82a4d777f64c717a625">
+        <source>Payment Method</source>
+        <target>Payment Method</target>
+        <note>Line: 34</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\footers\footer-6.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="fdb0c388de01d545017cdf9ccf00eb72">
+        <source>Store</source>
+        <target>Store</target>
+        <note>Line: 37</note>
+      </trans-unit>
+      <trans-unit id="93bf28d726c0f9e006dcdb03858a9ceb">
+        <source>The more content you provide about you and your business, the more confident people will be when purchasing from your store.</source>
+        <target>The more content you provide about you and your business, the more confident people will be when purchasing from your store.</target>
+        <note>Line: 30</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\footers\footer-9.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="5fbd3cedc2ee250ee73079dbaa893628">
+        <source>Subscribe to Our Newsletter!</source>
+        <target>Subscribe to Our Newsletter!</target>
+        <note>Line: 29</note>
+      </trans-unit>
+      <trans-unit id="75289f8e123b2e0e5dd1677b0daa64d9">
+        <source>By entering your email, you agree to our Terms of Service and Privacy Policy.</source>
+        <target>By entering your email, you agree to our Terms of Service and Privacy Policy.</target>
+        <note>Line: 35</note>
+      </trans-unit>
+      <trans-unit id="daef64964ee3b9b904f5d467586e217f">
+        <source>Payments</source>
+        <target>Payments</target>
+        <note>Line: 50</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\headers\header-21.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="d22cdc820a27bf94fb27b7d70f71a4ab">
+        <source>FREE SHIPPING FOR ALL ORDERS OVER $50</source>
+        <target>FREE SHIPPING FOR ALL ORDERS OVER $50</target>
+        <note>Line: 27</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\headers\header-23.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="188a9071337df837ecf9236de63ad783">
+        <source>Copyright © 2020 Molla Store.</source>
+        <target>Copyright © 2020 Molla Store.</target>
+        <note>Line: 39</note>
+      </trans-unit>
+      <trans-unit id="fdb3a70d5b68feaa1198036c2a572615">
+        <source>All Rights Reserved.</source>
+        <target>All Rights Reserved.</target>
+        <note>Line: 40</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\headers\header-24.tpl" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="cf23ee279844016288ea1c076638f3be">
+        <source>About us</source>
+        <target>About us</target>
+        <note>Line: 52</note>
+      </trans-unit>
+      <trans-unit id="f808bbdb08686de5b44b205a74f35c75">
+        <source>tel:0123 456 789</source>
+        <target>tel:0123 456 789</target>
+        <note>Line: 42</note>
+      </trans-unit>
+      <trans-unit id="f2e74cdca33571db9a49311caef333ee">
+        <source>Call: +0123 456 789</source>
+        <target>Call: +0123 456 789</target>
+        <note>Line: 42</note>
+      </trans-unit>
+      <trans-unit id="9cfc9b74983d504ec71db33967591249">
+        <source>Contact Us</source>
+        <target>Contact Us</target>
+        <note>Line: 55</note>
+      </trans-unit>
+      <trans-unit id="4840f4437f55e68a587d358090b948d1">
+        <source>My Wishlist</source>
+        <target>My Wishlist</target>
+        <note>Line: 47</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

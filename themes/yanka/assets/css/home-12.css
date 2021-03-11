@@ -1,3 +1,120 @@
 /* Demo 12 Homepage 12 */
+#header {
+  background-color: transparent; }
 
-/*# sourceMappingURL=demo-12.css.map */
+.header-3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1002; }
+  .header-3 .header-top {
+    display: none; }
+  .header-3 .site-logo-text {
+    color: #fff; }
+  .header-3 .gdz-megamenu .nav > li.sub-home > a, .header-3 .gdz-megamenu .nav > li.open > a {
+    color: #48CAB2; }
+  .header-3 .gdz-megamenu .nav > li > a {
+    color: #fff; }
+  .header-3 .right-module-header svg,
+  .header-3 .block-collapse > a {
+    color: #fff; }
+    .header-3 .right-module-header svg:hover,
+    .header-3 .block-collapse > a:hover {
+      color: #48CAB2; }
+  .header-3 .sticky-wrapper.sticky .site-logo-text {
+    color: #333; }
+  .header-3 .sticky-wrapper.sticky .gdz-megamenu .nav > li.sub-home > a, .header-3 .sticky-wrapper.sticky .gdz-megamenu .nav > li.open > a, .header-3 .sticky-wrapper.sticky .gdz-megamenu .nav > li:hover > a {
+    color: #48CAB2; }
+  .header-3 .sticky-wrapper.sticky .gdz-megamenu .nav > li > a {
+    color: #333; }
+  .header-3 .sticky-wrapper.sticky .right-module-header svg,
+  .header-3 .sticky-wrapper.sticky .block-collapse > a {
+    color: #333; }
+    .header-3 .sticky-wrapper.sticky .right-module-header svg:hover,
+    .header-3 .sticky-wrapper.sticky .block-collapse > a:hover {
+      color: #48CAB2; }
+  .header-3 #search-form-dropdown .button-search svg {
+    color: #333; }
+
+.h12-banner-type-1 .pb-banner .pb-banner-img img {
+  width: 100%;
+  transition: transform 1s, -webkit-transform 1s; }
+
+.h12-banner-type-1 .pb-banner:hover .pb-banner-img img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1); }
+
+.h12-banner-type-1 .pb-banner:hover .pb-banner-title::before {
+  width: 100%; }
+
+.h12-banner-type-1 .pb-banner.white .pb-banner-title::before {
+  background-color: #fff; }
+
+.h12-banner-type-1 .pb-banner .pb-banner-title {
+  margin-right: auto;
+  position: relative; }
+  .h12-banner-type-1 .pb-banner .pb-banner-title::before {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background-color: #333;
+    height: 2px;
+    -webkit-transition: width 0.25s linear;
+    -o-transition: width 0.25s linear;
+    transition: width 0.25s linear; }
+
+.h12-banner-type-1 .container-fluid {
+  padding: 0 10px; }
+  .h12-banner-type-1 .container-fluid > .row {
+    margin: 0 -5px; }
+
+.h12-banner-type-1 .layout-column {
+  padding: 0 5px; }
+
+.h12-banner-type-1 .pb-banner .pb-banner-subtitle {
+  font-weight: 800;
+  margin-bottom: 7px; }
+
+.h12-banner-type-1 .pb-banner .pb-banner-title {
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto; }
+  .h12-banner-type-1 .pb-banner .pb-banner-title::before {
+    bottom: 0; }
+
+.h12-banner-type-1 .pb-banner .btn {
+  margin-top: 35px; }
+
+.h12-promo-fullwidth {
+  margin: 0 10px; }
+  .h12-promo-fullwidth .content {
+    text-align: center;
+    color: #fff; }
+    .h12-promo-fullwidth .content .text-1 {
+      font-size: 18px;
+      margin-bottom: 3px; }
+    .h12-promo-fullwidth .content .text-2 {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 77px;
+      margin-bottom: 4px; }
+    .h12-promo-fullwidth .content .text-3 {
+      margin-bottom: 33px; }
+    .h12-promo-fullwidth .content .btn-default {
+      padding: 0 31px;
+      font-size: 14px;
+      height: 54px;
+      text-transform: uppercase; }
+      .h12-promo-fullwidth .content .btn-default.active {
+        color: #fff;
+        background-color: #333; }
+        .h12-promo-fullwidth .content .btn-default.active:hover {
+          background-color: #48CAB2; }
+
+/*# sourceMappingURL=home-12.css.map */

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-01 05:03:15
+/* Smarty version 3.1.34-dev-7, created on 2021-03-10 20:40:50
   from 'F:\xampp\htdocs\yanka\themes\yanka\templates\_partials\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6017d1e33e12c6_56500837',
+  'unifunc' => 'content_60497522ef42a2_96346024',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/headers/header-mobile-4.tpl' => 1,
   ),
 ),false)) {
-function content_6017d1e33e12c6_56500837 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60497522ef42a2_96346024 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_GET['header_layout']) && $_GET['header_layout'] != '') {?>
     <?php $_smarty_tpl->_assignInScope('header_layout', $_GET['header_layout']);?>
     <?php $_smarty_tpl->_assignInScope('header_layout_link', "_partials/headers/header-".((string)$_GET['header_layout']).".tpl");

@@ -1,3 +1,31 @@
 /* Demo 6 Homepage 6 */
+.h6-banner-type-1 {
+  margin-top: 10px; }
+  .h6-banner-type-1 .pb-banner .pb-banner-img img {
+    width: 100%;
+    transition: transform 1s, -webkit-transform 1s; }
+  .h6-banner-type-1 .pb-banner:hover .pb-banner-img img {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1); }
+  .h6-banner-type-1 .container-fluid {
+    padding: 0 10px; }
+  .h6-banner-type-1 .row {
+    margin-left: -5px;
+    margin-right: -5px; }
+  .h6-banner-type-1 .layout-column {
+    padding: 0 5px; }
+  .h6-banner-type-1 .pb-banner:hover .btn {
+    color: #fff;
+    background: #48CAB2; }
+  .h6-banner-type-1 .pb-banner .btn {
+    color: #333;
+    font-size: 18px;
+    background: #fff;
+    padding: 8px 33px;
+    font-weight: 800;
+    margin: 0 auto;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
 
-/*# sourceMappingURL=demo-6.css.map */
+/*# sourceMappingURL=home-6.css.map */

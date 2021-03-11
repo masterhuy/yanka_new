@@ -89,7 +89,7 @@ class Gdz_HotDealAllProductModuleFrontController extends ModuleFrontController
             $row = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($sql);
 
             $products[] = Product::getProductProperties($id_lang, $row);
-						$product_img = array();
+			$product_img = array();
             foreach ($products as $k => $product) {
                 $pr = new Product($product['id_product']);
                 $product_img = $pr->getImages($id_lang);

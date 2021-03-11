@@ -17,30 +17,3 @@
 	}
 }
 
-.h2-services-block{
-	.layout-column{
-		&:hover{
-			.pt-title p::before{
-				width: 100%;
-			}
-			color: #333;
-		}
-	}
-	.pt-title{
-		display: flex;
-		margin-bottom: 4px;
-		.image{
-			margin-right: 20px;
-		}
-		p{
-			color: #333;
-			font-size: 18px;
-			line-height: 26px;
-			font-weight: 800;
-			display: inline-block;
-			position: relative;
-			margin-bottom: 0;
-			@include underline(2, #333, 2)
-		}
-	}
-}
