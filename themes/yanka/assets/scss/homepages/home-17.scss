@@ -1,2 +1,95 @@
 /* Demo 17 Homepage 17 */
 @import '../config/variables.scss';
+
+#header .header-8{
+	.header-middle{
+		.container-fluid{
+			max-width: 1200px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.header-sticky{
+		background-color: transparent;
+		.container-fluid{
+			max-width: 1170px;
+			padding-left: 0;
+			padding-right: 0;
+			background-color: #333;
+		}
+		.buy-theme{
+			margin-right: 23px;
+		}
+	}
+}
+.h17-vertical-menu{
+	.gdz-megamenu{
+		li{
+			width: 100%;
+		}
+	}
+}
+.h17-banner-yanka{
+	@include hoverBannerEffect();
+	.pb-banner{
+		&:hover .pb-banner-subtitle::before{
+			width: 100%;
+		}
+		.pb-banner-subtitle{
+			font-weight: 800;
+			position: relative;
+    		display: inline-block;
+    		margin-bottom: 4px;
+    		margin-right: auto;
+    		@include underline(-1, #fff, 2)
+		}
+	}
+}
+.h17-category-link{
+	@include hoverImageEffect();
+	text-align: center;
+	.layout-column{
+		&:hover .pb-heading:before{
+			width: 100%;
+		}
+	}
+	.pb-heading{
+		margin-top: 7px;
+		position: relative;
+		display: inline-block;
+		@include underline(7, #333, 2)
+	}	
+}
+.h17-popupal-collections{
+	@include hoverBannerEffect();
+	@include hoverBannerTitleEffect();
+	.container > .row{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.layout-column{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.pb-banner-title{
+		margin: 0 auto;
+	}
+}
+
+.h17-testimonial{
+	.pb-testimonial .pb-testimonial-box .pb-testimonial-comment{
+		background: $active;
+		&::after{
+			border-top-color: $active;
+		}
+		h5{
+			color: #fff;
+			&::before{
+				background-color: #fff;
+			}
+		}
+		p{
+			color: #fff;
+		}
+	}
+}

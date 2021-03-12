@@ -23,7 +23,8 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <link rel="stylesheet" type="text/css" href="{$urls.theme_assets}css/bootstrap.min.css" />
-<link rel="stylesheet" href="{$urls.theme_assets}vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link href="{$urls.base_url}/modules/gdz_themesetting/views/fonts/font-icon.css" rel="stylesheet">
 {if $gdzSetting.body_font == 'google' && isset($gdzSetting.body_font_google)}

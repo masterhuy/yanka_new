@@ -34,7 +34,7 @@
 		</div>
 		<div class="pb-banner-text pb-banner-{$position|escape:'html':'UTF-8'} {$text_align}">
 			{if $subtitle}<span class="pb-banner-subtitle">{$subtitle nofilter}</span>{/if}
-			{if $title}<{$title_tag} class="pb-banner-title">{$title nofilter}</{$title_tag}>{/if}
+			{if $title}<{$title_tag} class="pb-banner-title"><span>{$title nofilter}</span></{$title_tag}>{/if}
 			{if $description}<div class="pb-banner-desc">{$description nofilter}</div>{/if}
 			{if $button_text}<div class="pb-banner-button btn"><span>{$button_text nofilter}</span><i class="icon-long-arrow-right"></i></div>{/if}
 		</div>
