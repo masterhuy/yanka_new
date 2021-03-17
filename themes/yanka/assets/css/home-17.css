@@ -6,6 +6,8 @@
 
 #header .header-8 .header-sticky {
   background-color: transparent; }
+  #header .header-8 .header-sticky.sticky {
+    background-color: #333; }
   #header .header-8 .header-sticky .container-fluid {
     max-width: 1170px;
     padding-left: 0;
@@ -13,6 +15,17 @@
     background-color: #333; }
   #header .header-8 .header-sticky .buy-theme {
     margin-right: 23px; }
+
+#header .header-8 .vermenu-btn {
+  width: 270px; }
+
+#header .header-8 .vermenu .dropdown-menu {
+  border: 1px solid #ebebeb;
+  border-top: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  #header .header-8 .vermenu .dropdown-menu .gdz-megamenu {
+    padding-bottom: 6px; }
 
 .h17-vertical-menu .gdz-megamenu li {
   width: 100%; }

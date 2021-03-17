@@ -776,7 +776,12 @@
     .vermenu .gdz-megamenu .nav > li a {
       padding: 0 15px;
       width: 100%;
-      line-height: 30px; }
+      line-height: 34px; }
+      .vermenu .gdz-megamenu .nav > li a > i {
+        font-size: 28px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 4px; }
       .vermenu .gdz-megamenu .nav > li a span::before {
         display: none; }
       .vermenu .gdz-megamenu .nav > li a .caret {

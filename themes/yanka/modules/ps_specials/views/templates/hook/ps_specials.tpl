@@ -22,15 +22,13 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
-<section>
-<div class="title-block">
-  <h3>{l s='On sale' d='Modules.Specials.Shop'}</h3>
-</div>
-  <div class="products">
-    {foreach from=$products item="product"}
-      {include file="catalog/_partials/miniatures/product2.tpl" product=$product}
-    {/foreach}
-  </div>
-  <a href="{$allSpecialProductsLink}" class=" btn btn-default button button-small btn-effect">{l s='All sale products' d='Modules.Specials.Shop'}</a>
+<section id="special-block">
+    <div class="title-block">
+        <h3>{l s='Special Products' d='Modules.Specials.Shop'}</h3>
+    </div>
+    <div class="products">
+        {foreach from=$products item="product"}
+            {include file="catalog/_partials/miniatures/product-flex.tpl" product=$product}
+        {/foreach}
+    </div>
 </section>

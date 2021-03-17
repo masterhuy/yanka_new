@@ -511,6 +511,8 @@ jQuery(document).ready(function(){
         $(".cart-collapse").collapse('hide');
     });
 
+    
+
     $('.js-close-search').click(function() {
         $('#gdz_ajax_search .btn-search').dropdown('toggle');
     });

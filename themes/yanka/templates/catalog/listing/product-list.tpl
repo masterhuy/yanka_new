@@ -59,13 +59,6 @@
                         {include file='catalog/_partials/products-top.tpl' listing=$listing}
                     {/block}
                 </div>
-                {if $gdzSetting.shop_activefilter == 1}
-                    {block name='product_list_active_filters'}
-                        <div id="active-filter" class="hidden-sm-down">
-                            {$listing.rendered_active_filters nofilter}
-                        </div>
-                    {/block}
-                {/if}
                 <div id="product_list" class="product_list {if $shop_list == 'grid'}products-grid grid-{$shop_grid_column}{else}products-list{/if}">
                     {if $shop_grid_column == '1-2-1-2' || $shop_grid_column == '1-3-1-3' || $shop_grid_column == '2-1-2-1' || $shop_grid_column == '3-1-3-1'}
                         {block name='product_list'}

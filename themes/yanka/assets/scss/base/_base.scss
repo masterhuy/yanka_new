@@ -107,6 +107,9 @@ input:focus::placeholder {
 .form-control::placeholder{
     color: #777;
 }
+.d-i-flex{
+    display: inline-flex;
+}
 .btn, .btn-default {
   background-color: $active;
   color: #ffffff;
@@ -606,6 +609,13 @@ input:focus::placeholder {
             margin-bottom: 0;
             @include underline(2, #333, 2)
         }
+    }
+}
+#woorebought-popup p a span{
+    position: relative;
+    @include underline(1, #333, 1)
+    &:hover::before{
+        width: 100%;
     }
 }
 

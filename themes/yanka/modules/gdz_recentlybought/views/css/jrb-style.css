@@ -13,14 +13,14 @@ body.toplevel_page_woo-notification {
 }
 
 #woorebought-popup {
+    padding: 10px;
+    padding-right: 25px;
     border: 0 none;
     border-radius: 0;
     bottom: 10px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgb(51 51 51 / 6%);
     display: none;
-    font-family: tahoma, sans-serif;
     left: 10px;
-    padding: 0;
     position: fixed;
     right: auto !important;
     text-align: left;
@@ -79,37 +79,33 @@ body.toplevel_page_woo-notification {
 }
 
 #woorebought-popup p a {
-    color: #000;
     display: block;
-    font-size: 15px;
-    font-weight: 700;
     width: 100%;
     margin: 0;
 }
 
-#woorebought-popup p a:hover {
-    color: #000;
-}
-
 #woorebought-popup p small {
-    display: block;
-    font-size: 10px;
     margin-bottom: 8px;
 }
 
-#woorebought-popup {
-    padding-right: 25px;
-}
 
 #woorebought-popup #popup-close {
     cursor: pointer;
-    height: 16px;
+    height: 14px;
     position: absolute;
-    right: 5px;
-    top: 5px;
-    width: 16px;
+    right: 10px;
+    top: 10px;
+    width: 14px;
+    color: #d0d0d0;
+    display: flex;
 }
-
+#woorebought-popup #popup-close:hover{
+    color: #333;
+}
+#woorebought-popup #popup-close svg{
+    width: 14px;
+    height: 14px;
+}
 
 #woo-notification-audio {
     display: none;
@@ -121,9 +117,6 @@ body.toplevel_page_woo-notification {
     color: #0f0f0f;
 }
 
-#woorebought-popup a {
-    color: #0f0f0f;
-}
 /*Non ajax*/
 #woorebought-popup .woorebought-content {
     display: flex;

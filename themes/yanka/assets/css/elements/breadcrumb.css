@@ -3,8 +3,10 @@
   font-size: 12px;
   color: #777; }
 
-.breadcrumb-item + .breadcrumb-item::before {
-  display: none; }
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0; }
+  .breadcrumb-item + .breadcrumb-item::before {
+    display: none; }
 
 .breadcrumb-wrapper {
   padding: 0; }

@@ -60,7 +60,14 @@
                     <div class="container{if $shop_width != 1}-fluid{/if}">
                 {/if}
                 {if $page.page_name == 'category'}
-                    {hook h="displayWrapperTop"}
+                    <div class="category-title">
+                        <h3>
+                            {$page.meta.title}
+                            {if $listing.pagination.total_items > 1}
+                                <span>({$listing.pagination.total_items})</span>
+                            {/if}
+                        </h3>
+                    </div>
                 {/if}
                 {if $page.page_name != 'module-jmspagebuilder-preview'}
                 <div class="row">

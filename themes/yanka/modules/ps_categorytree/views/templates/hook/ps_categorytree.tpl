@@ -25,42 +25,50 @@
 {function name="categories" nodes=[] depth=0}
     {strip}
         {if $nodes|count}
-            <ul class="category-sub-menu collapse show" id="category-sub-menu">
-                {foreach from=$nodes item=node}
-                <li data-depth="{$depth}" class="cat-item">
-                    {if $depth===0}
-                        <a href="{$node.link}">
-                            {$node.name}
-                        </a>
-                        {if $node.children}
-                            <span class="navbar-toggler collapse-icons collapsed" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                                <i class="ptw-icon {$gdzSetting.more_icon} closing" aria-hidden="true"></i>
-                                <i class="ptw-icon {$gdzSetting.less_icon} opening" aria-hidden="true"></i>
-                            </span>
-                        {/if}
-                        {if $node.children}
-                            <div class="sub-list collapse" id="exCollapsingNavbar{$node.id}">
-                                {categories nodes=$node.children depth=$depth+1}
-                            </div>
-                        {/if}
-                    {else}
-                        <a class="category-sub-link" href="{$node.link}">{$node.name}
+            <div class="category-sub-menu collapse show" id="category-sub-menu">
+                <ul>
+                    {foreach from=$nodes item=node}
+                    <li data-depth="{$depth}" class="cat-item">
+                        {if $depth===0}
+                            <a href="{$node.link}">
+                                {$node.name}
+                            </a>
                             {if $node.children}
-                                <span class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                                    <i class="ptw-icon {$gdzSetting.more_icon} closing" aria-hidden="true"></i>
-                                    <i class="ptw-icon {$gdzSetting.less_icon} opening" aria-hidden="true"></i>
+                                <span class="navbar-toggler collapse-icons collapsed" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
+                                    <i class="d-i-flex">
+                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                                        </svg>
+                                    </i>
                                 </span>
                             {/if}
-                        </a>
-                        {if $node.children}
-                            <div class="collapse" id="exCollapsingNavbar{$node.id}">
-                            {categories nodes=$node.children depth=$depth+1}
-                            </div>
+                            {if $node.children}
+                                <div class="sub-list collapse" id="exCollapsingNavbar{$node.id}">
+                                    {categories nodes=$node.children depth=$depth+1}
+                                </div>
+                            {/if}
+                        {else}
+                            <a class="category-sub-link" href="{$node.link}">{$node.name}
+                                {if $node.children}
+                                    <span class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
+                                        <i class="d-i-flex">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                                            </svg>
+                                        </i>
+                                    </span>
+                                {/if}
+                            </a>
+                            {if $node.children}
+                                <div class="collapse" id="exCollapsingNavbar{$node.id}">
+                                    {categories nodes=$node.children depth=$depth+1}
+                                </div>
+                            {/if}
                         {/if}
-                    {/if}
-                </li>
-                {/foreach}
-            </ul>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
         {/if}
     {/strip}
 {/function}
@@ -69,7 +77,12 @@
 	{if $page.page_name != 'index'}
 		<div class="title-block">
 			<h3 class="d-flex cursor-pointer" data-toggle="collapse" data-target="#category-sub-menu">
-                {l s='Categories' d='Shop.Theme.CategoryTree'}
+                {l s='Collections' d='Shop.Theme.CategoryTree'}
+                <i class="d-i-flex">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                    </svg>
+                </i>
             </h3>
 		</div>
 	{/if}

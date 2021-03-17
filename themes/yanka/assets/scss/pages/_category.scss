@@ -1,4 +1,22 @@
+@import '../config/variables.scss';
+
 /* Category */
+#category #wrapper > .container {
+    padding: 0 20px;
+}
+.category-title h3{
+	font-size: 36px;
+    line-height: 43px;
+    font-weight: 800;
+    padding: 0;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
+    span{
+    	color: #D0D0D0;
+    	font-weight: 400;
+    }
+}
 #category{
 	.sidebar-column{
 		.block-custom-html, .block-bestseller{
@@ -6,16 +24,148 @@
 		}
 	}
 }
+.title-block h3, 
+#search_filters .facet-title{
+	transition: color 0.2s;
+	&:hover{
+		color: $active;
+	}
+}
+#search_filters .btn-clear-all {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #333;
+    text-transform: capitalize;
+    position: relative;
+    letter-spacing: 0;
+    @include underline(6, #333, 2)
+	&:hover::before{
+		width: 100%;
+	}
+}
+#search_filters{
+	#filter-block ul{
+		margin-bottom: 0;
+	}
+	.filter-block{
+		font-size: 16px;
+		.js-search-link{
+			color: #d0d0d0;
+			margin-right: 5px;
+			&:hover{
+				color: $active;
+			}
+			&::before {
+			    content: "\e908";
+			    font-family: 'yanka';
+			    font-size: 11px;
+			    width: 16px;
+			    height: 16px;
+			}
+		}
+	}
+}
+.view-mode{
+	.button {
+		display: inline-block;
+		.view-grid{
+			&.active span{
+				border-color: #333;
+			}
+			&:hover span{
+				border-color: #333;
+			}
+			&.view-grid-2{
+				margin-right: 4px;
+				span{
+					width: 11px;
+				}
+			}
+			&.view-grid-4{
+				margin-left: 4px;
+				span{
+					width: 5px;
+				}
+			}
+			&.view-grid-6{
+				margin-left: 4px;
+				display: none;
+				span{
+					width: 3px;
+				}
+			}
+			span{
+				width: 7px;
+				height: 12px;
+				display: block;
+				float: left;
+				border: 1px solid #D0D0D0;
+				transition: border 0.2s;
+				margin: 0 0.5px;
+			}
+		}
+		.view-list{
+			margin-left: 4px;
+			&.active span{
+				background-color: #333;
+			}
+			&:hover span{
+				background-color: #333;
+			}
+			span{
+				width: 24px;
+				height: 5px;
+				display: block;
+				position: relative;
+				background-color: #D0D0D0;
+				transition: background-color 0.2s;
+				&:first-child{
+					margin-bottom: 2px;
+				}
+				&::before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 6px;
+					background-color: #ffffff;
+					display: block;
+					width: 2px;
+					height: 5px;
+				}
+			}
+		}
+		a{
+			display: inline-block;
+		}
+	}
+}
 #product_list{
-	margin-top: 2rem;
-	.productbox-12{
-		margin-bottom: 2rem;
+	margin-top: 33px;
+	.pagination{
+		display: block;
+		font-size: 14px;
+		ul li{
+			&.current a{
+				color: $active;
+			}
+			a{
+				color: #777;
+				&:hover{
+					color: $active;
+				}
+			}
+		}
 	}
 }
 .products-list{
 	.col-product{
 		flex: 0 0 100%;
 		max-width: 100%;
+		margin-bottom: 60px;
 	}
 	.product-miniature{
 		display: flex;
@@ -213,17 +363,18 @@
 	}
 }
 .col-product{
-	padding: 0 10px;
+	padding: 0 15px;
 	flex: 0 0 50%;
 	max-width: 50%;
+	margin-bottom: 60px;
 }
 
 #category{
 	.sidebar-column{
-		margin-top: -1rem;
+		margin-top: 2px;
 	}
 	.breadcrumb-wrapper{
-		margin-bottom: 2rem;
+		margin-bottom: 93px;
 	}
 	.breadcrumb-nav{
 		margin-bottom: 0;
@@ -331,18 +482,6 @@
 	}
 	.select-title{
 		position:relative;
-		&::after{
-			font-family: "yanka";
-			content: '\f110';
-			position: absolute;
-			display: inline-block;
-			right: .9rem;
-			top: 50%;
-			font-size: 1rem;
-			transform: translateY(-51%);
-			color: #333;
-			z-index: -1;
-		}
 	}
 	.sort-by {
 		display: flex;
@@ -356,26 +495,49 @@
 			margin-right: 1.6rem;
 		}
 	}
-	.view-mode{
-		display: none;
-		.switch-view{
-			&:not(:first-child){
-				margin-left: 1.5rem;
+	.block-pagination{
+		display: block;
+	}
+}
+#special-block .product-miniature + .product-miniature{
+	margin-top: 30px;
+}
+.block-custom-html{
+	margin-top: 50px;
+	text-align: center;
+	.html-block{
+		&:hover{
+			.banner-text .top-text::before{
+				width: 100%;
 			}
-			&:hover svg{
-				fill: #333;
-			}
-			&.active svg{
-				fill: #333;
-			}
-			svg{
-				fill: #dadada;
-				transition: fill 0.35s;
+			.image img{
+				width: 100%;
+				transform: scale3d(1.1, 1.1, 1);
 			}
 		}
 	}
-	.block-pagination{
+	.image{
 		display: block;
+		overflow: hidden;
+		img{
+			transition: transform 1s, -webkit-transform 1s;
+		}
+	}
+	.banner-text{
+		margin-top: 16px;
+		.top-text {
+			font-size: 24px;
+			font-weight: 800;
+			color: #333;
+			padding-bottom: 3px;
+			position: relative;
+			display: inline-block;
+			@include underline(4, #333, 2)
+		}
+		.bottom-text {
+			font-size: 16px;
+			color: #333;
+		}
 	}
 }
 

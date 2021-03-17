@@ -23,10 +23,14 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="inlude_sort_by">
-	<span class="hidden-sm-down label-sort-by">{l s='Sort by' d='Shop.Theme.Actions'}:</span>
 	<div class="{if !empty($listing.rendered_facets)}{else}{/if}  products-sort-order dropdown">
 		<a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<span>{if isset($listing.sort_selected)}{$listing.sort_selected}{else}{l s='Select' d='Shop.Theme.Actions'}{/if}</span>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
+				<g>
+					<polygon fill="currentColor" points="12.5,17.6 2.9,8.1 4.1,6.9 12.5,15.4 20.9,6.9 22.1,8.1 	"></polygon>
+				</g>
+			</svg>
 		</a>
 		<div class="dropdown-menu">
 			{foreach from=$listing.sort_orders item=sort_order}

@@ -22,21 +22,9 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
 <div id="js-product-list-top" class="filters-panel">
 	<div class="row align-items-center">
-		<div class="col-4 sidebar-toggler">
-			<a href="#" class="js-open-filter">
-				<i class="icon-bars"></i>
-				{l s='Filters' d='Shop.Theme.Catalog'}
-			</a>
-		</div>
-		<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-pagination text-left">
-			{block name='pagination'}
-				{include file='_partials/pagination.tpl' pagination=$listing.pagination}
-			{/block}
-		</div>
-		<div class="col-12 col-sm-12 col-md-6 col-lg-8 col-sort text-right">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-sort text-right">
 			<div class="sort-by">
 				{if $gdzSetting.shop_sortby == 1}
 					{block name='sort_by'}
@@ -45,44 +33,27 @@
 				{/if}
 				{if $gdzSetting.shop_switchlist == 1}
 					<div class="view-mode">
-						<a class="switch-view view-list {if $gdzSetting.shop_list == 'list'}active{/if}" href="#">
-							<svg width="16" height="10">
-								<rect x="0" y="0" width="4" height="4"></rect>
-								<rect x="6" y="0" width="10" height="4"></rect>
-								<rect x="0" y="6" width="4" height="4"></rect>
-								<rect x="6" y="6" width="10" height="4"></rect>
-							</svg>
-						</a>
-						<a class="switch-view view-grid view-grid-2" href="#">
-							<svg width="10" height="10">
-								<rect x="0" y="0" width="4" height="4"></rect>
-								<rect x="6" y="0" width="4" height="4"></rect>
-								<rect x="0" y="6" width="4" height="4"></rect>
-								<rect x="6" y="6" width="4" height="4"></rect>
-							</svg>
-						</a>
-						<a class="switch-view view-grid view-grid-3 {if $gdzSetting.shop_list == 'grid'}active{/if}" href="#">
-							<svg width="16" height="10">
-								<rect x="0" y="0" width="4" height="4"></rect>
-								<rect x="6" y="0" width="4" height="4"></rect>
-								<rect x="12" y="0" width="4" height="4"></rect>
-								<rect x="0" y="6" width="4" height="4"></rect>
-								<rect x="6" y="6" width="4" height="4"></rect>
-								<rect x="12" y="6" width="4" height="4"></rect>
-							</svg>
-						</a>
-						<a class="switch-view view-grid view-grid-4" href="#">
-							<svg width="22" height="10">
-								<rect x="0" y="0" width="4" height="4"></rect>
-								<rect x="6" y="0" width="4" height="4"></rect>
-								<rect x="12" y="0" width="4" height="4"></rect>
-								<rect x="18" y="0" width="4" height="4"></rect>
-								<rect x="0" y="6" width="4" height="4"></rect>
-								<rect x="6" y="6" width="4" height="4"></rect>
-								<rect x="12" y="6" width="4" height="4"></rect>
-								<rect x="18" y="6" width="4" height="4"></rect>
-							</svg>
-						</a>
+						<div class="button">
+							<a class="switch-view view-grid view-grid-2" href="#">
+								<span></span>
+								<span></span>
+							</a>
+							<a class="switch-view view-grid view-grid-3 {if $gdzSetting.shop_list == 'grid'}active{/if}" href="#">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+							<a class="switch-view view-grid view-grid-4" href="#">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+							<a class="switch-view view-list {if $gdzSetting.shop_list == 'list'}active{/if}" href="#">
+								<span></span>
+								<span></span>
+							</a>
+						</div>
 					</div>
 				{/if}
 			</div>

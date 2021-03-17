@@ -49,7 +49,9 @@
     <div class="woorebought-content"></div>
     {if $setting.GRB_CLOSE_ICON}
         <span id="popup-close">
-            <i class="icon-close"></i>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve">
+                <polygon fill="currentColor" points="15.6,1.6 14.4,0.4 8,6.9 1.6,0.4 0.4,1.6 6.9,8 0.4,14.4 1.6,15.6 8,9.1 14.4,15.6 15.6,14.4 9.1,8 "></polygon>
+            </svg>
         </span>
     {/if}
 </div>
@@ -139,10 +141,10 @@
                 /*Get data*/
                 var index = woorebought.random(0, products.length - 1);
                 var product = products[index];
-                var data_address = product.address;
+                var data_address = '<small>' + 'ago from ' + product.address + ' </small>';
                 var data_product = product.title;
-                var data_product_link = '<a target="_blank" href="' + product.product_link + '">' + product.title + '</a>';
-                var data_time = '<small>{l s='About' d='Shop.Theme.Actions'} ' + product.time + ' {l s='ago' d='Shop.Theme.Actions'}</small>';
+                var data_product_link = '<a target="_blank" title="'+ product.title +'" href="' + product.product_link + '">' + '<span>' + product.title + '</span>' + '</a>';
+                var data_time =  '<small>' + product.time + ' </small>';
                 var image_html = '';
                 var img = $('<img src="' + product.image_link + '">');
                 var image_html = $('<div>').append($(img).clone()).html();

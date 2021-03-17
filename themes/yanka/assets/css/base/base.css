@@ -115,6 +115,11 @@ input:focus::placeholder {
 .form-control::placeholder {
   color: #777; }
 
+.d-i-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
 .btn, .btn-default {
   background-color: #48CAB2;
   color: #ffffff;
@@ -604,6 +609,25 @@ input:focus::placeholder {
       -webkit-transition: width 0.25s linear;
       -o-transition: width 0.25s linear;
       transition: width 0.25s linear; }
+
+#woorebought-popup p a span {
+  position: relative; }
+  #woorebought-popup p a span::before {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background-color: #333;
+    height: 1px;
+    -webkit-transition: width 0.25s linear;
+    -o-transition: width 0.25s linear;
+    transition: width 0.25s linear; }
+  #woorebought-popup p a span:hover::before {
+    width: 100%; }
 
 /* Animation for lazyload */
 @-webkit-keyframes rotating {

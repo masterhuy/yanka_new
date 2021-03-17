@@ -11,6 +11,9 @@
 	}
 	.header-sticky{
 		background-color: transparent;
+		&.sticky{
+			background-color: #333;
+		}
 		.container-fluid{
 			max-width: 1170px;
 			padding-left: 0;
@@ -19,6 +22,19 @@
 		}
 		.buy-theme{
 			margin-right: 23px;
+		}
+	}
+	.vermenu-btn{
+		width: 270px;
+	}
+	.vermenu{
+		.dropdown-menu{
+			border: 1px solid #ebebeb;
+			border-top: 0;
+			box-shadow: none;
+			.gdz-megamenu{
+				padding-bottom: 6px;
+			}
 		}
 	}
 }

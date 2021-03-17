@@ -874,7 +874,13 @@
 				a{
 					padding: 0 15px;
 					width: 100%;
-					line-height: 30px;
+					line-height: 34px;
+					> i{
+						font-size: 28px;
+						margin-right: 6px;
+						position: relative;
+						bottom: 4px;
+					}
 					span::before{
 						display: none;
 					}

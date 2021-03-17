@@ -27,26 +27,36 @@
         {block name='facets_clearall_button'}
             {if $activeFilters|count}
                 {block name='facets_title'}
-                    <div class="facet filter-by">
-                        <p class="facet-title">{l s='Filters' d='Shop.Theme.Actions'}:</p>
-                        <div id="_desktop_search_filters_clear_all" class="clear-all-wrapper">
-                            <button data-search-url="{$clear_all_link}" class="btn-default js-search-filters-clear-all">
-                                {l s='Clean all' d='Shop.Theme.Actions'}
-                            </button>
-                        </div>
+                    <div class="facet filter-by" data-target="#filter-block" data-toggle="collapse">
+                        <h3 class="facet-title">
+                            {l s='Filters' d='Shop.Theme.Actions'}
+                            <i class="d-i-flex">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                                </svg>
+                            </i>
+                        </h3>
                     </div>
                 {/block}
-                <ul>
-                    {foreach from=$activeFilters item="filter"}
-                        {block name='active_filters_item'}
-                            <li class="filter-block">
-                                {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
-                                {$filter.label}
-                                <a class="js-search-link icon-close" href="{$filter.nextEncodedFacetsURL}"></a>
-                            </li>
-                        {/block}
-                    {/foreach}
-                </ul>
+                <div id="filter-block" class="collapse show">
+                    <ul>
+                        {foreach from=$activeFilters item="filter"}
+                            {block name='active_filters_item'}
+                                <li class="filter-block">
+                                    <a class="js-search-link icon-close" href="{$filter.nextEncodedFacetsURL}"></a>
+                                    {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
+                                    {$filter.label}
+                                    
+                                </li>
+                            {/block}
+                        {/foreach}
+                    </ul>
+                    <div id="_desktop_search_filters_clear_all" class="clear-all-wrapper">
+                        <button data-search-url="{$clear_all_link}" class="btn-clear-all js-search-filters-clear-all">
+                            {l s='Clear all' d='Shop.Theme.Actions'}
+                        </button>
+                    </div>
+                </div>
             {/if}
         {/block}
         {foreach from=$displayedFacets item="facet"}
@@ -57,7 +67,15 @@
                     {if $filter.active}{assign var=_collapse value=false}{/if}
                 {/foreach}
                 <div class="title" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
-                    <h3 class="facet-title">{$facet.label}</h3>
+                    <h3 class="facet-title">
+                        {$facet.label}
+                        <i class="d-i-flex">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                            </svg>
+                        </i>
+                    </h3>
+                    
                 </div>
                 {if in_array($facet.widgetType, ['radio', 'checkbox'])}
                     {block name='facet_item_other'}
@@ -79,7 +97,7 @@
                                                     >
                                                     <span class="checkmark"></span>
                                                     {if isset($filter.properties.color)}
-                                                        <span class="color" style="background-color:{$filter.properties.color}"></span>
+                                                        <span class="color" style="background-color:{$filter.properties.color}; {if $filter.properties.color == "#ffffff"}border: 1px solid #ebebeb{/if}"></span>
                                                     {elseif isset($filter.properties.texture)}
                                                         <span class="color texture" style="background-image:url({$filter.properties.texture})"></span>
                                                     {else}

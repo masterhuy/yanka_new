@@ -227,6 +227,10 @@ $catalogue = new MessageCatalogue('en-US', array (
     '403 Forbidden' => '403 Forbidden',
     'You cannot access this store from your country. We apologize for the inconvenience.' => 'You cannot access this store from your country. We apologize for the inconvenience.',
   ),
+  'Shopjmstheme' => 
+  array (
+    'About us' => 'About us',
+  ),
   'AdminAdvparametersFeature' => 
   array (
     'Menu' => 'Menu',
