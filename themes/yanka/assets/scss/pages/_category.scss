@@ -165,34 +165,30 @@
 	.col-product{
 		flex: 0 0 100%;
 		max-width: 100%;
-		margin-bottom: 60px;
+		margin-bottom: 70px;
 	}
 	.product-miniature{
 		display: flex;
-		flex-wrap: wrap;
-		margin-right: -10px;
-		margin-left: -10px;
-		padding-bottom: 2rem;
-		margin-bottom: 2rem;
 		text-align: left;
 		&:hover{
 			box-shadow: none;
+			.btn-group{
+				display: none;
+			}
 		}
 		&::before{
 			content: "";
 			position: absolute;
-			bottom: 0;
-			width: calc(100% - 2rem);
+			bottom: -30px;
+			width: 100%;
 			height: .1rem;
 			background-color: #ebebeb;
-			left: 1rem;
-			right: 1rem;
+			left: 0;
+			right: 0;
 		}
 		.product-preview{
-			flex: 0 0 25%;
-			max-width: 25%;
-			padding-right: 10px;
-			padding-left: 10px;
+			width: 220px;
+			min-width: 220px;
 			.wrapp-buttons{
 				display: none;
 			}
@@ -203,20 +199,25 @@
 				display: none;
 			}
 		}
+		.product-link{
+			font-size: 18px;
+		}
+		h3.product-title{
+			padding-bottom: 3px;
+		}
 		.product-info{
-			flex: 0 0 50%;
-			max-width: 50%;
-			padding: 1rem;
+			padding: 0 20px;
 			text-align: left;
 			transition: none;
+			margin-top: -10px;
 			#review{
 				display: none;
 			}
 			.category-name{
 				display: inline-block;
 			}
-			.content_price{
-				display: none;
+			.product_action{
+				display: none !important;
 			}
 			.addToWishlist{
 				display: inline-flex;
@@ -227,139 +228,64 @@
 			.variant-links{
 				display: flex;
 				position: static;
-				margin-top: 3.7rem;
+				margin-top: 0;
 				justify-content: flex-start;
 			}
 		}
-		.product-footer{
-			display: none;
-		}
-		.product-actions{
-			flex: 0 0 25%;
-			max-width: 25%;
-			padding-right: 10px;
-			padding-left: 10px;
-			padding-top: 3.3rem;
-			position: static;
-			opacity: 1;
-			visibility: visible;
-			transform: none;
-			transition: none;
-			display: block;
-			.content_price{
-				display: block;
-				margin-bottom: -.1rem;
-			}
-			#review{
-				display: block;
-				margin-bottom: 1.9rem;
-			}
-			.quick-view {
+		.product-list-action{
+			display: flex;
+			flex-direction: column;
+			width: 166px;
+    		min-width: 166px;
+    		.cart-button{
+    			padding-bottom: 4px;
+    			margin-bottom: 4px;
+    			padding-left: 21px;
+    			padding-right: 21px;
+    			&:hover{
+    				.text-addcart{
+    					margin-left: 7px;
+    				}
+    			}
+    		}
+    		.content_price{
+    			margin-left: 0;
+    			margin-bottom: 15px;
+    			.price{
+    				display: inline-block;
+    			}
+    		}
+    		.text-addcart{
+    			width: auto;
+			    font-size: 13px;
+			    line-height: 1;
+			    margin-left: 7px;
+			    transition: none;
+    		}
+    		a.product-btn{
+    			font-size: 14px;
 			    display: flex;
 			    align-items: center;
-			    font-size: 1.2rem;
-				color: #777;
-				font-weight: 400;
-				text-transform: lowercase;
-				margin-bottom: 1.2rem;
-				line-height: 1.4;
-				&::before{
-					font-size: 1.8rem;
-				}
-				span{
-					margin-left: .5rem;
-				}
-			}
-
-			.product-btn{
-				line-height: 1;
-				padding-top: 1rem;
-				padding-bottom: 1rem;
-				border: .1rem solid;
-				display: flex;
-				justify-content: center;
-				text-transform: uppercase;
-				&.disabled{
-					cursor: not-allowed;
-				}
-			}
+			    font-weight: 700;
+			    margin-top: 11px;
+			    svg{
+			    	width: 24px;
+			    	height: 24px;
+			    }
+			    span{
+			    	margin-left: 9px;
+			    }
+    		}
 		}
 		.product-list-reviews{
 			justify-content: flex-start;
 		}
 		.product-short-desc{
 			display: block;
-			margin-top: 1.2rem;
-			line-height: 1.45;
+			font-size: 16px;
+			margin-top: 16px;
+			line-height: 25px;
 		}
-	}
-	.productbox-8{
-		.product-info{
-			transform: none !important;
-		}
-		#review{
-			margin-top: .4rem;
-			margin-bottom: 0;
-		}
-	}
-	.productbox-9{
-		.product-preview{
-			.quick-view{
-				display: none;
-			}
-		}
-		.product-actions{
-			.content_price, #review{
-				display: block;
-			}
-			.quick-view{
-				transform: none;
-				&:hover{
-					background-color: transparent;
-				}
-				&::before{
-					display: block;
-				}
-			}
-		}
-		.ajax-add-to-cart{
-			i{
-				display: none;
-			}
-		}
-	}
-	.productbox-12{
-		border: none;
-		&:hover .product-info .product-footer{
-			display: none;
-		}
-		.product-preview{
-			margin: 0;
-		}
-	}
-	.productbox-13{
-		&:hover .product-info .product-footer{
-			display: none;
-		}
-	}
-	.productbox-14{
-		&:hover{
-			margin-bottom: 2rem !important;
-			.product-info{
-				transform: none;
-			}
-		}
-		.product-info{
-			.product-detail{
-				display: none;
-			}
-			.product-action{
-				display: none;
-			}
-		}
-	}
-	.productbox-15:hover .product-info{
-		transform: none;
 	}
 }
 .col-product{

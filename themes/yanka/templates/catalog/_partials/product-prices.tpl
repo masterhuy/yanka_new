@@ -30,13 +30,13 @@
                 <span itemprop="sku">{$product.reference_to_display}</span>
             </div>
         {/if}
-        <div itemprop="price" content="{$product.price_amount}" class="price new">{$product.price}</div>
         {block name='product_discount'}
             {if $product.has_discount}
                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
                 <div class="price old">{$product.regular_price}</div>
             {/if}
         {/block}
+        <div itemprop="price" content="{$product.price_amount}" class="price new">{$product.price}</div>
         {block name='product_price'}
             <div
                 class="product-price h5 {if $product.has_discount}has-discount{/if}"

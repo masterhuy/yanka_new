@@ -189,6 +189,8 @@
       height: 24px; }
   .product-miniature .product-short-desc {
     display: none; }
+  .product-miniature .product-list-action {
+    display: none; }
 
 .productbox-flex {
   display: -webkit-box;

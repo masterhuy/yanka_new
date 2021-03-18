@@ -43,17 +43,58 @@
             {/block}
         {/block}
 
+        {block name='product_prices'}
+            {include file='catalog/_partials/product-prices.tpl'}
+        {/block}
+
         <div class="rating">
             {hook h='displayProductAdditionalInfo' product=$product}
         </div>
 
-        {block name='product_prices'}
-            {include file='catalog/_partials/product-prices.tpl'}
-        {/block}
         <div class="product-information">
+            <ul class="other-info">
+                {if $product.reference}
+                    <li id="product_reference">
+                        <label>{l s='Product Code:' d='Shop.Theme.Catalog'}</label>
+                        <span class="editable">{$product.reference}</span>
+                    </li>
+                {/if}
+                <li>
+                    {block name='product_availability'}
+                        {if $product.show_availability && $product.availability_message}
+                            <li>
+                                <label>{l s='Availability:' d='Shop.Theme.Catalog'}</label>
+                                <span class="editable">
+                                    {if $product.availability == 'available'}
+                                        {$product.availability_message}
+                                    {elseif $product.availability == 'last_remaining_items'}
+                                        <i class="material-icons product-last-items">&#xE002;</i>
+                                    {else}
+                                        {$product.availability_message}
+                                    {/if}
+                                </span>
+                            </li>
+                        {/if}
+                    {/block}
+                </li>
+                {if $product.id_manufacturer}
+                    <li id="product_vendor">
+                        <label>{l s='Vendor:' d='Shop.Theme.Catalog'}</label>
+                        <span class="editable">{Manufacturer::getnamebyid($product.id_manufacturer)}</span>
+                    </li>
+                {/if}
+                <li class="product-category">
+                    <label>{l s='Product Type: '}</label>
+                    <a class="editable" href="{url entity='category' id=$product.id_category_default}">
+                        {$product.category|escape:'html':'UTF-8'}
+                    </a
+                </li>
+            </ul>
+
             {block name='product_description_short'}
                 <div id="product-description-short-{$product.id}" class="product-desc">{$product.description_short|truncate:400:"..." nofilter}</div>
             {/block}
+
             {if isset($product.specific_prices.to) && $product.specific_prices.to > 0}
                 <div class="specific_prices">
                     <div class="countdown-box">
@@ -105,6 +146,10 @@
                             {include file='catalog/_partials/product-variants.tpl'}
                         {/block}
 
+                        {block name='hook_display_reassurance'}
+                            {hook h='displayReassurance'}
+                        {/block}
+
                         {block name='product_add_to_cart'}
                             {include file='catalog/_partials/product-add-to-cart.tpl'}
                         {/block}
@@ -125,7 +170,7 @@
                     </form>
                 {/block}
             </div>
-            {hook h='displayReassurance'}
+            
         </div>
     </div>
 </div>

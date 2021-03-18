@@ -579,7 +579,11 @@ jQuery(document).ready(function(){
     calcOwlControlCarousel('hotdeal-products');
     calcOwlControlCarousel('catproduct-carousel');
     calcOwlControlCarousel('categorytab-products');
+
+    $(".qty .bootstrap-touchspin-down").append('<svg><use xlink:href="#icon_minus"><svg fill="none" viewBox="0 0 16 16" id="icon_minus" xmlns="http://www.w3.org/2000/svg"><path d="M0 8h16" stroke="currentColor" stroke-width="1.6"></path></svg></use></svg>');
+    $(".qty .bootstrap-touchspin-up").append('<svg><use xlink:href="#icon_add"><svg fill="none" viewBox="0 0 16 16" id="icon_add"><path d="M0 8h16M8 0v16" stroke="currentColor" stroke-width="1.6"></path></svg></use></svg>')
 });
+
 
 $(window).load(function() {
     $('.carousel').carousel('pause'); 

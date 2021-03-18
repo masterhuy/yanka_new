@@ -1,4 +1,6 @@
 // Product Details pages
+@import '../config/variables.scss';
+
 .accordion{
 	.panel-title{
 		margin-bottom: 0;
@@ -307,6 +309,9 @@
 }
 #product .product-name{
 	text-transform: initial;
+	font-size: 36px;
+    font-weight: 800;
+    line-height: 44px;
 }
 .product-name {
 	font-weight: 400;
@@ -319,20 +324,28 @@
 .rating{
 	margin-bottom: .4rem;
 }
+.product-comments-additional-info .comments-note{
+	color: $active;
+	font-weight: 800;
+}
 .product-prices.content_price {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 	.old.price{
-		font-size: 1.8rem;
+		font-size: 24px;
 		margin-bottom: 0;
 		text-decoration: line-through;
-		margin-right: 2rem;
+		margin-right: 5px;
+		+ .price.new{
+			color: #e12c43;
+		}
 	}
 	.price.new{
-		font-size: 2.4rem;
+		font-size: 36px;
+		font-weight: 800;
 		margin-bottom: 0;
-		margin-right: .5rem;
+		color: $active;
 	}
 	#gdz_productvideo{
 		margin-top: 2rem;
@@ -341,6 +354,18 @@
 	}
 }
 .product-information{
+	.other-info{
+		font-size: 16px;
+		line-height: 25px;
+		label{
+			margin-bottom: 0;
+		}
+		> li .editable{
+			font-weight: 800;
+		    color: #333;
+		    text-transform: capitalize;
+		}
+	}
 	.specific_prices{
 		margin-bottom: 3rem;
 		.countdown-section{
@@ -400,7 +425,63 @@
 		}
 	}
 }
+.blockreassurance_product{
+	display: flex;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    > div{
+    	display: flex;
+    	align-items: center;
+    	&:hover .block-title::before{
+    		width: 100%;
+    	}
+    	+ div{
+    		margin-left: 25px;
+    	}
+    }
+    .block-title{
+    	margin-bottom: 0;
+    	position: relative;
+    	@include underline(3, #333, 2)
+    }
+    .item-product{
+    	width: 25px;
+    	height: 25px;
+    	padding-top: 0;
+    }
+}
+#product, .quickview{
+	.product-variants-item{
+		&.size, &.taille{
+			input{
+				+ span{
+					display: flex;
+					width: 44px;
+				    height: 44px;
+				    align-items: center;
+				    justify-content: center;
+				    border: 1px solid #ebebeb;
+				    transition: .2s all;
+				    z-index: 0;
+				}
+				&:checked + span, &:hover + span{
+				    position: relative;
+				    border: 2px solid #333;
+				}
+			}
+		}
+	}
+}
 .product-variants{
+	font-size: 16px;
+	ul li + li{
+		margin-left: 6px;
+	}
+	.collapse .radio-label{
+		font-weight: 800;
+		color: #333;
+	}
 	.select-option{
 		position: relative;
 		&::before{
@@ -432,52 +513,56 @@
 	}
 }
 .product-add-to-cart, .cart-overview{
-	.add-to-cart{
-		padding: 1rem 1.5rem;
-		min-width: 198px;
-		line-height: 1;
-		border: .1rem solid;
-		background-color: transparent;
-		text-transform: uppercase;
-		position: relative;
+	.bootstrap-touchspin{
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all .35s ease;
-		&:hover{
-			color: #fff;
-		}
-		&::before{
-			content: '\e812';
-			font-family: "yanka";
-			margin-right: .4rem;
-			font-size: 1.8rem;
+	    justify-content: center;
+	    align-items: center;
+	    z-index: 0;
+	    background: #f8f8f8;
+	    width: 138px;
+	}
+	.cart-button{
+		height: 54px;
+		width: 100%;
+    	justify-content: center;
+		text-transform: uppercase;
+		svg{
+			width: 24px;
+			height: 24px;
 		}
 	}
 	.addToWishlist::before {
 		font-size: 1.6rem;
 	}
-	.bootstrap-touchspin{
-		display: inline-flex;
-		width: auto;
-		padding-left: 2.6rem;
-		border: .1rem solid #dadada;
-	}
 	#quantity_wanted{
-		border: none;
-		background: transparent;
-		height: 4rem;
-		max-width: 7.9rem;
-		font-weight: 400;
-		text-align: center;
+		width: 100%;
+	    height: 54px;
+	    border: 0;
+	    text-align: center;
+	    background: transparent;
+	    font-size: 20px;
+	    font-weight: 800;
+	    padding: 0 50px;
+	    color: #333;
 	}
 	.btn-touchspin{
-		border: 0;
-		width: 2.4rem;
-		height: 4rem;
-		min-width: auto;
-		padding: 0;
-		font-size: 1rem;
+		background-color: transparent;
+		border-radius: 0;
+	    padding: 0;
+	    width: 54px;
+	    height: 54px;
+	    display: inline-block;
+	    position: absolute;
+	    top: 0;
+	    z-index: 9;
+	    &:hover svg{
+	    	color: $active;
+	    }
+	    svg{
+	    	color: #d0d0d0;
+	    	transition: color 0.2s;
+
+	    }
 		i{
 			display: none;
 		}
@@ -487,17 +572,19 @@
 		}
 	}
 	.bootstrap-touchspin-up{
-		&::before{
-			content: '\f2c2';
-		}
+		right: 0;
 	}
 	.bootstrap-touchspin-down{
-		position: absolute;
-		top: 0;
 		left: 0;
-		&::before{
-			content: '\f28e';
-		}
+	}
+}
+.product-quantity{
+	display: flex;
+	.text-addcart {
+	    width: auto;
+	    line-height: normal;
+	    font-size: 13px;
+	    margin-left: 7px;
 	}
 }
 .product-details-top {
