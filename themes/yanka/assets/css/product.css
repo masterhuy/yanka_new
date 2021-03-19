@@ -14,7 +14,7 @@
     position: relative;
 }
 #product #footer{
-    margin-top: 50px;
+    margin-top: 92px;
 }
 
 .vertical-thumbs.images-container {
@@ -29,42 +29,25 @@
 }
 .product-cover .zoom-icon {
     position: absolute;
-    right: 2rem;
-    bottom: 2rem;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
-    box-shadow: 2px 6px 16px rgba(51,51,51,0.05);
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: all .35s ease;
     z-index: 1000;
-}
-.product-cover .zoom-icon:hover{
-    color: #fff;
 }
 .product-cover .zoom-icon i {
   font-size:2rem;
 }
 .vertical-thumbs{
-    margin-left: -.5rem;
-    margin-right: -.5rem;
+    
 }
 .vertical-thumbs .js-qv-mask {
     overflow: hidden;
     position: relative;
-    width: 107px;
-    flex: 0 0 20%;
-    max-width: 20%;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    width: 70px;
 }
 .vertical-thumbs .product-cover{
-    flex: 0 0 80%;
-    max-width: 80%;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    
 }
 .vertical-thumbs .slick-arrow {
     transform: translateY(0);
@@ -86,13 +69,11 @@
 .images-container .slick-arrow,
 #product .product-cover .expander > span,
 #product-modal .modal-body .slick-arrow {
-    color: #000;
-    border:2px solid #000;
     position:absolute;
     z-index:100;
     font-size:0px;
-    visibility: hidden;
 }
+
 .thumbs-right .js-qv-mask {
     
 }
@@ -100,7 +81,14 @@
     
 }
 .vertical-thumbs .slick-prev {
-    top:0px;
+    bottom: 0px;
+    left: auto;
+    width: 50%;
+}
+.vertical-thumbs .slick-next {
+    bottom: 0px;
+    right: auto;
+    width: 50%;
 }
 .horizonal-thumbs .slick-prev {
     left:0px;
@@ -173,7 +161,16 @@
 .product-images .thumb-container > .thumb {
     cursor: pointer;
     width: 100%;
-    border: .1rem solid transparent;
+    border: 2px solid transparent;
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+}
+.product-images .thumb-container > .thumb.selected,
+.product-images .thumb-container > .thumb:hover{
+    border-color: #333;
 }
 .product-layout-3columns .product-quantity {
     display: inline-block;
@@ -269,14 +266,19 @@
     background-size: cover;
 }
 
-.product-variants-item input:checked ~ .color{
-    
+.product-variants-item input ~ .color{
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
 }
 .product-variants-item input:checked ~ .color::after{
     display: block;
 }
 .product-variants-item input:checked ~ .color,
-.product-variants-item input:checked ~ .color:hover{
+.product-variants-item input:checked ~ .color:hover,
+.product-variants-item li:hover .color{
     box-shadow: 0 0 0 2px #333;
 }
 
@@ -299,7 +301,7 @@
 .product-variants .product-variants-item {
     position: relative;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 21px;
 }
 .product-variants-item ul {
   display: inline-block;
@@ -486,22 +488,8 @@
     margin-bottom: 1.5rem;
 	width:100%;
 }
-#more_info_block .panel-heading a {
-    font-size: 1.6rem;
-    position: relative;
-    display: block;
-    letter-spacing: -.01em;
-    padding: 14px 0;
-    font-weight: 400;
-}
 #more_info_block .panel-heading a.collapsed{
     color: #333;
-}
-#more_info_block .panel-heading a.collapsed::after {
-    content: '\f110';
-}
-#more_info_block .panel.panel-default:not(:last-child) {
-    border-bottom: 1px solid #e5e5e5;
 }
 #more_info_block li {
     float: none;
@@ -541,12 +529,6 @@
 #more_info_block #review{
     height: auto;
 }
-#more_info_block .label {
-    padding: 0;
-    color: #555;
-    font-weight: 400;
-    font-size: 15px;
-}
 #more_info_block .tab-content {
     border: .1rem solid #dadada;
     margin-top: -.1rem;
@@ -558,7 +540,7 @@
 	font-weight: 700;
 }
 #product-details > div {
-    line-height: 25px;
+    line-height: 20px;
 }
 .same-category, .product-accessories{
     margin-top: 51px;

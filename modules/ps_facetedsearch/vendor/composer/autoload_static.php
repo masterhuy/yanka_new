@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e
+class ComposerStaticInitfc712e2c82d34ee23b67bea69f4df1ab
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
@@ -60,6 +60,7 @@ class ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e
         'PrestaShop\\Module\\FacetedSearch\\Constraint\\UrlSegmentValidator' => __DIR__ . '/../..' . '/src/Constraint/UrlSegmentValidator.php',
         'PrestaShop\\Module\\FacetedSearch\\Filters\\Block' => __DIR__ . '/../..' . '/src/Filters/Block.php',
         'PrestaShop\\Module\\FacetedSearch\\Filters\\Converter' => __DIR__ . '/../..' . '/src/Filters/Converter.php',
+        'PrestaShop\\Module\\FacetedSearch\\Filters\\DataAccessor' => __DIR__ . '/../..' . '/src/Filters/DataAccessor.php',
         'PrestaShop\\Module\\FacetedSearch\\Filters\\Products' => __DIR__ . '/../..' . '/src/Filters/Products.php',
         'PrestaShop\\Module\\FacetedSearch\\Form\\Feature\\FormDataProvider' => __DIR__ . '/../..' . '/src/Form/Feature/FormDataProvider.php',
         'PrestaShop\\Module\\FacetedSearch\\Form\\Feature\\FormModifier' => __DIR__ . '/../..' . '/src/Form/Feature/FormModifier.php',
@@ -91,10 +92,10 @@ class ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit7953c1acd473a73af0a5a3dd724cae7e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitfc712e2c82d34ee23b67bea69f4df1ab::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitfc712e2c82d34ee23b67bea69f4df1ab::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitfc712e2c82d34ee23b67bea69f4df1ab::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitfc712e2c82d34ee23b67bea69f4df1ab::$classMap;
 
         }, null, ClassLoader::class);
     }

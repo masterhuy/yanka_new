@@ -76,11 +76,7 @@
             {include file='catalog/product-content.tpl'}
         {/if}
         
-        {if $gdzSetting.product_page_moreinfos_type == 'accordion'}
-            {include file='catalog/more-infos-accordion.tpl'}
-        {else}
-            {include file='catalog/more-infos-tab.tpl'}
-        {/if}
+        <div class="line"></div>
 
         {block name='product_accessories'}
             {if $accessories && $gdzSetting.product_page_accessories}

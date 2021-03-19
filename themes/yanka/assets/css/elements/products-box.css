@@ -59,7 +59,8 @@
     .product-miniature .product-link:hover {
       text-decoration: underline; }
   .product-miniature .variant-links {
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    margin-left: 3px; }
     .product-miniature .variant-links .color {
       height: 20px;
       width: 20px;

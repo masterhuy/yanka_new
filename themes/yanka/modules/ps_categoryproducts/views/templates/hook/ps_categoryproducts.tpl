@@ -24,10 +24,10 @@
  *}
 <div class="same-category">
     <h3 class="title text-center">
-        {l s='You May Also Like' d='Shop.Theme.Catalog'}
+        {l s='Related Products' d='Shop.Theme.Catalog'}
     </h3>
     <div class="product_box">
-        <div class="products customs-carousel-product owl_carousel customs"> 
+        <div class="products customs-carousel-product customs" data-row="1"> 
             {foreach from=$products item="product"}
                 <div class="item ajax_block_product">
                     {include file="catalog/_partials/miniatures/product.tpl" product=$product}

@@ -60,31 +60,23 @@
             </div>
             {if $gdzSetting.productbox_wishlist}
                 <a 
-                    href="#" 
-                    class="addToWishlist" 
-                    onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|escape:'html'}', false, 1); return false;" 
-                    data-id-product="{$product.id_product|escape:'html'}" 
+                    href="#"
+                    class="btn btn-border w-100 addToWishlist"
+                    onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|escape:'html'}', false, 1); return false;"
+                    data-id-product="{$product.id_product|escape:'html'}"
                     title="{l s='Add to Wishlist' d='Shop.Theme.Actions'}"
                 >
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+                        <path fill="currentColor" d="M6.9,2.6c1.4,0,2.7,0.6,3.8,1.6l0.2,0.2L12,5.6l1.1-1.1l0.2-0.2c1-1,2.3-1.6,3.8-1.6s2.8,0.6,3.8,1.6
+                            c2.1,2.1,2.1,5.6,0,7.7L12,20.7l-8.9-8.9C1,9.7,1,6.2,3.1,4.1C4.2,3.2,5.5,2.6,6.9,2.6z M6.9,1C5.1,1,3.3,1.7,2,3.1
+                            c-2.7,2.7-2.7,7.2,0,9.9l10,10l10-9.9c2.7-2.8,2.7-7.3,0-10c-1.4-1.4-3.1-2-4.9-2c-1.8,0-3.6,0.7-4.9,2L12,3.3l-0.2-0.2
+                            C10.4,1.7,8.7,1,6.9,1z">
+                        </path>
+                    </svg>
                     <span>{l s='Add to Wishlist' d='Shop.Theme.Actions'}</span>
                 </a>
             {/if}
             <div class="clearfix"></div>
-        {/block}
-
-        {block name='product_availability'}
-            <span id="product-availability">
-                {if $product.show_availability && $product.availability_message}
-                    {if $product.availability == 'available'}
-                        <i class="la la-check"></i>
-                    {elseif $product.availability == 'last_remaining_items'}
-                        <i class="la la-exclamation-triangle"></i>
-                    {else}
-                        <i class="la la-ban"></i>
-                    {/if}
-                    {$product.availability_message}
-                {/if}
-            </span>
         {/block}
 
         {block name='product_minimal_quantity'}

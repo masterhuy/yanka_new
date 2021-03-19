@@ -46,7 +46,7 @@ jQuery.fn.rating = function(generalOptions) {
       input: null,
       min: 1,
       max: 5,
-      starWidth: 14
+      starWidth: 16
     }, options);
 
     const minValue = Math.min(componentOptions.min, componentOptions.max);
@@ -140,13 +140,13 @@ jQuery.fn.rating = function(generalOptions) {
           newStar = emptyStar.clone();
           newStar.css('visibility', 'hidden');
           newStar.css('width', fullWidth);
+          newStar.css('margin-right', 0);
           emptyStars.append(newStar);
 
           newStar = emptyStar.clone();
           newStar.css('width', emptyWidth);
           newStar.css('background-position', '0px -'+fullWidth+'px');
           newStar.css('background-position', '-'+fullWidthNew+'px 0px');
-          newStar.css('marginLeft', 0);
           emptyStars.append(newStar);
 
           fullStar.css('width', fullWidth);

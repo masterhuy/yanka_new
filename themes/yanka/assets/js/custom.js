@@ -22,7 +22,7 @@ jQuery(function ($) {
         $(this).owlCarousel({
             loop: false,
             rtl:rtl,
-            margin: 20,
+            margin: 30,
             nav: false,
             dots: false,
             autoplay: false,
@@ -51,12 +51,13 @@ jQuery(function ($) {
     var rtl = false;
 	if ($("body").hasClass("rtl")) rtl = true;
     $.each( $(".customs-carousel-product"), function( key, value ) {
+        $(this).addClass("owl-carousel");
         $(this).owlCarousel({
             loop: false,
             rtl:rtl,
-            margin: 20,
+            margin: 30,
             nav: true,
-            dots: false,
+            dots: true,
             autoplay: false,
             lazyLoad: lazyload_sc,
             responsive:{
@@ -575,6 +576,7 @@ jQuery(document).ready(function(){
     calcOwlnavButton();
     calcOwlBlogCarousel();
     calcOwlControlCarousel('producttab-products');
+    calcOwlControlCarousel('customs-carousel-product');
     calcOwlControlCarousel('filter-products');
     calcOwlControlCarousel('hotdeal-products');
     calcOwlControlCarousel('catproduct-carousel');

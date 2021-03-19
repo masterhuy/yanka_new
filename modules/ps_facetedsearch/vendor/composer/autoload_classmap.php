@@ -25,6 +25,7 @@ return array(
     'PrestaShop\\Module\\FacetedSearch\\Constraint\\UrlSegmentValidator' => $baseDir . '/src/Constraint/UrlSegmentValidator.php',
     'PrestaShop\\Module\\FacetedSearch\\Filters\\Block' => $baseDir . '/src/Filters/Block.php',
     'PrestaShop\\Module\\FacetedSearch\\Filters\\Converter' => $baseDir . '/src/Filters/Converter.php',
+    'PrestaShop\\Module\\FacetedSearch\\Filters\\DataAccessor' => $baseDir . '/src/Filters/DataAccessor.php',
     'PrestaShop\\Module\\FacetedSearch\\Filters\\Products' => $baseDir . '/src/Filters/Products.php',
     'PrestaShop\\Module\\FacetedSearch\\Form\\Feature\\FormDataProvider' => $baseDir . '/src/Form/Feature/FormDataProvider.php',
     'PrestaShop\\Module\\FacetedSearch\\Form\\Feature\\FormModifier' => $baseDir . '/src/Form/Feature/FormModifier.php',

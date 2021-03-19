@@ -49,7 +49,7 @@
     {block name='product_features'}
         {if $product.features}
             <div class="product-features">
-                <h3 class="h6">{l s='Data sheet' d='Shop.Theme.Catalog'}</h3>
+                <h6>{l s='Data sheet' d='Shop.Theme.Catalog'}</h6>
                 <dl class="data-sheet">
                     {foreach from=$product.features item=feature}
                         <dt class="name">{$feature.name}</dt>
@@ -64,7 +64,7 @@
     {block name='product_specific_references'}
         {if isset($product.specific_references)}
             <div class="product-features">
-                <h3 class="h6">{l s='Specific References' d='Shop.Theme.Catalog'}</h3>
+                <h6>{l s='Specific References' d='Shop.Theme.Catalog'}</h6>
                 <dl class="data-sheet">
                     {foreach from=$product.specific_references item=reference key=key}
                         <dt class="name">{$key}</dt>

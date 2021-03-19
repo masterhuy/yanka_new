@@ -29,7 +29,14 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="" data-toggle="collapse" data-parent="#accordion" href="#description">{l s='Description' d='Shop.Theme.Catalog'}</a>
+                    <a class="" data-toggle="collapse" data-parent="#accordion" href="#description">
+                        {l s='Description' d='Shop.Theme.Catalog'}
+                        <span class="pt-icon">
+                            <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                            </svg>
+                        </span>
+                    </a>
                 </h4>
             </div>
             <div id="description" class="panel-collapse collapse show">
@@ -46,6 +53,11 @@
                 <h4 class="panel-title">
                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#product-details">
                         {l s='Product Details' d='Shop.Theme.Catalog'}
+                        <span class="pt-icon">
+                            <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                            </svg>
+                        </span>
                     </a>
                 </h4>
             </div>
@@ -61,7 +73,14 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#attachments">
+                        {l s='Attachments' d='Shop.Theme.Catalog'}
+                        <span class="pt-icon">
+                            <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                            </svg>
+                        </span>
+                    </a>
                 </h4>
             </div>
             <div id="attachments" class="panel-collapse collapse">
@@ -93,6 +112,11 @@
                 <h4 class="panel-title">
                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#review-panel">
                         {l s='Reviews' d='Shop.Theme.Catalog'}
+                        <span class="pt-icon">
+                            <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                            </svg>
+                        </span>
                     </a>
                 </h4>
             </div>
@@ -108,7 +132,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#extra-{$extraKey}">{$extra.title}</a>
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#extra-{$extraKey}">
+                            {$extra.title}
+                            <span class="pt-icon">
+                                <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 0.992188L6 5.98947L11 0.992187" stroke="#D0D0D0" stroke-width="1.1"></path>
+                                </svg>
+                            </span>
+                        </a>
                     </h4>
                 </div>
                 <div id="extra-{$extraKey}" class="panel-collapse collapse">

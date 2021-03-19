@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3be6646cd79e663bb2447ceeab7dcfa8
+class ComposerStaticInitf090401cc62507ccfd16d54b966b8c7c
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
@@ -28,9 +28,11 @@ class ComposerStaticInit3be6646cd79e663bb2447ceeab7dcfa8
         'PrestaShop\\Module\\LinkList\\Core\\Grid\\LinkBlockGridFactory' => __DIR__ . '/../..' . '/src/Core/Grid/LinkBlockGridFactory.php',
         'PrestaShop\\Module\\LinkList\\Core\\Grid\\Query\\LinkBlockQueryBuilder' => __DIR__ . '/../..' . '/src/Core/Grid/Query/LinkBlockQueryBuilder.php',
         'PrestaShop\\Module\\LinkList\\Core\\Search\\Filters\\LinkBlockFilters' => __DIR__ . '/../..' . '/src/Core/Search/Filters/LinkBlockFilters.php',
+        'PrestaShop\\Module\\LinkList\\DataMigration' => __DIR__ . '/../..' . '/src/DataMigration.php',
         'PrestaShop\\Module\\LinkList\\Form\\ChoiceProvider\\AbstractDatabaseChoiceProvider' => __DIR__ . '/../..' . '/src/Form/ChoiceProvider/AbstractDatabaseChoiceProvider.php',
         'PrestaShop\\Module\\LinkList\\Form\\ChoiceProvider\\CMSCategoryChoiceProvider' => __DIR__ . '/../..' . '/src/Form/ChoiceProvider/CMSCategoryChoiceProvider.php',
         'PrestaShop\\Module\\LinkList\\Form\\ChoiceProvider\\CMSPageChoiceProvider' => __DIR__ . '/../..' . '/src/Form/ChoiceProvider/CMSPageChoiceProvider.php',
+        'PrestaShop\\Module\\LinkList\\Form\\ChoiceProvider\\CategoryChoiceProvider' => __DIR__ . '/../..' . '/src/Form/ChoiceProvider/CategoryChoiceProvider.php',
         'PrestaShop\\Module\\LinkList\\Form\\ChoiceProvider\\HookChoiceProvider' => __DIR__ . '/../..' . '/src/Form/ChoiceProvider/HookChoiceProvider.php',
         'PrestaShop\\Module\\LinkList\\Form\\ChoiceProvider\\PageChoiceProvider' => __DIR__ . '/../..' . '/src/Form/ChoiceProvider/PageChoiceProvider.php',
         'PrestaShop\\Module\\LinkList\\Form\\LinkBlockFormDataProvider' => __DIR__ . '/../..' . '/src/Form/LinkBlockFormDataProvider.php',
@@ -48,9 +50,9 @@ class ComposerStaticInit3be6646cd79e663bb2447ceeab7dcfa8
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3be6646cd79e663bb2447ceeab7dcfa8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3be6646cd79e663bb2447ceeab7dcfa8::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit3be6646cd79e663bb2447ceeab7dcfa8::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf090401cc62507ccfd16d54b966b8c7c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf090401cc62507ccfd16d54b966b8c7c::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf090401cc62507ccfd16d54b966b8c7c::$classMap;
 
         }, null, ClassLoader::class);
     }

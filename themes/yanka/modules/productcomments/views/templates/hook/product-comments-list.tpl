@@ -22,23 +22,22 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
 <script type="text/javascript">
     var productCommentUpdatePostErrorMessage = '{l s='Sorry, your review appreciation cannot be sent.' d='Modules.Productcomments.Shop' js=1}';
     var productCommentAbuseReportErrorMessage = '{l s='Sorry, your abuse report cannot be sent.' d='Modules.Productcomments.Shop' js=1}';
 </script>
 <div id="product-comments">
-    <h3>{l s='Reviews' d='Modules.Productcomments.Shop'} ({$nb_comments})</h3>
+    <div>{l s='Customer Reviews' d='Modules.Productcomments.Shop'}</div>
     {if $post_allowed && $nb_comments != 0}
         <div class="row">
             <div class="col-md-8 col-sm-12" id="product-comments-list-header">
-                <div class="comments-nb">
-                    <span>{l s='Based on' d='Modules.Productcomments.Shop'} {$nb_comments} {l s='Reviews' d='Modules.Productcomments.Shop'}</span>
-                </div>
                 {include file='module:productcomments/views/templates/hook/average-grade-stars.tpl' grade=$average_grade}
+                <div class="comments-nb">
+                    <span>{l s='Based on' d='Modules.Productcomments.Shop'} {$nb_comments} {l s='reviews' d='Modules.Productcomments.Shop'}</span>
+                </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <button class="btn btn-outline-dark post-product-comment write-review">
+                <button class="btn btn-border post-product-comment write-review float-right">
                     {l s='Write a review' d='Modules.Productcomments.Shop'}
                 </button>
             </div>

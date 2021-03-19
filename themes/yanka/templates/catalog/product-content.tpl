@@ -153,27 +153,30 @@
                         {block name='product_add_to_cart'}
                             {include file='catalog/_partials/product-add-to-cart.tpl'}
                         {/block}
-                        <div class="product-details-footer">
-                            <div class="product-cat">
-                                <span>{l s='Category' d='Shop.Theme.Catalog'}:</span>
-                                <a href="{url entity='category' id=$product.id_category_default}">
-                                    {$product.category_name|escape:'html':'UTF-8'}
-                                </a>
-                            </div>
-                            {if $gdzSetting.product_page_sharing}
-                                {hook h='displayProductButtons' product=$product}
-                            {/if}
-                        </div>
+                        
+                        {if $gdzSetting.product_page_sharing}
+                            {hook h='displayProductButtons' product=$product}
+                        {/if}
+                        
                         {block name='product_refresh'}
                             <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
                         {/block}
                     </form>
                 {/block}
-            </div>
-            
+            </div> 
         </div>
+
+        {include file='catalog/_partials/product-guaranteed.tpl'}
+        
+        {if $gdzSetting.product_page_moreinfos_type == 'accordion'}
+            {include file='catalog/more-infos-accordion.tpl'}
+        {else}
+            {include file='catalog/more-infos-tab.tpl'}
+        {/if}
     </div>
 </div>
+
+
 
 <div id="sticky-bar">
     <div class="container">

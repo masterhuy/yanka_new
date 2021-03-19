@@ -535,7 +535,7 @@ jQuery(function ($) {
             })
     } else if (this.attr('type') == 'checkbox') {
 			if (options.filed == '1') {
-				this.attr('checked','checked');
+				this.is(':checked');
 			} else {
 				this.removeAttr('checked');
 			}
