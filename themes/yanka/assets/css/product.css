@@ -130,9 +130,14 @@
     right:0px;
 }
 .vertical-thumbs .product-cover {
-    width: calc(100% - 117px);
+    width: calc(100% - 100px);
 	display:flex;
+}
+.vertical-thumbs.thumbs-left .product-cover {
     margin-left: auto;
+}
+.vertical-thumbs.thumbs-right .product-cover {
+    margin-right: auto;
 }
 .vertical-thumbs .thumb-container {
 	margin-bottom: 1rem;
