@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="row product-detail product-layout-gallery">
-	<div class="pb-left-column col-12">
+	<div class="pb-left-column col-12 col-md-6">
 		<div class="pd-left-content">
 			{block name='page_content_container'}
 				<section class="page-content" id="content">
@@ -36,118 +36,147 @@
 			{/block}
 		</div>
 	</div>
-	<div class="pb-right-column col-12">
-		<div class="row">
-			<div class="col-12 col-md-6">
-				{block name='page_header_container'}
-					{block name='page_header'}
-						<h1 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h1>
-					{/block}
-				{/block}
-				<div class="rating">
-					{block name='product_reviews'}
-						{hook h='displayProductListReviews' product=$product}
-					{/block}
-				</div>
-				{block name='product_prices'}
-					{include file='catalog/_partials/product-prices.tpl'}
-				{/block}
-				<div class="product-information">
-					{block name='product_description_short'}
-						<div id="product-description-short-{$product.id}" class="product-desc">{$product.description_short|truncate:400:"..." nofilter}</div>
-					{/block}
-					{if isset($product.specific_prices.to) && $product.specific_prices.to > 0}
-						<div class="specific_prices">
-							<div class="countdown-box">
-								<div class="countdown">{$product.specific_prices.to}</div>
-							</div>
-						</div>
-					{/if}
-					{if $product.is_customizable && count($product.customizations.fields)}
-						{block name='product_customization'}
-							{include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
-						{/block}
-					{/if}
-					<div class="product-actions">
-						{block name='product_buy'}
-							<form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
-								<input type="hidden" name="token" value="{$static_token}">
-								<input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-								<input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
-								{block name='product_pack'}
-									{if $packItems}
-										<section class="product-pack">
-											<h6>{l s='This pack contains' d='Shop.Theme.Catalog'}</h6>
-											<article>
-												<div class="pack-product-container">
-													<table class="table">
-														<thead>
-															<tr>
-																<th>{l s='Products' d='Shop.Theme.Catalog'}</th>
-																<th>{l s='Price' d='Shop.Theme.Catalog'}</th>
-																<th>{l s='Quantity' d='Shop.Theme.Catalog'}</th>
-															</tr>
-														</thead>
-														{foreach from=$packItems item="product_pack"}
-															{block name='product_miniature'}
-																{include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
-															{/block}
-														{/foreach}
-													</table>
-												</div>
-											</article>
-										</section>
-									{/if}
-								{/block}
-								{block name='product_discounts'}
-									{include file='catalog/_partials/product-discounts.tpl'}
-								{/block}
-									
-								{block name='product_variants'}
-									{include file='catalog/_partials/product-variants.tpl'}
-								{/block}
+	<div class="pb-right-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        {block name='page_header_container'}
+            {block name='page_header'}
+                <h1 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h1>
+            {/block}
+        {/block}
 
-								{block name='product_add_to_cart'}
-									{include file='catalog/_partials/product-add-to-cart.tpl'}
-								{/block}
-							</form>
-						{/block}
-					</div>
-					{hook h='displayReassurance'}
-				</div>
-			</div>
-			<div class="col-12 col-md-6">
-				<div class="product-details-footer">
-					{if $gdzSetting.productbox_wishlist}
-                        <a 
-                            href="#" 
-                            class="addToWishlist" 
-                            onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|escape:'html'}', false, 1); return false;" 
-                            data-id-product="{$product.id_product|escape:'html'}" 
-                            title="{l s='Add to Wishlist'}"
-                        >
-                            <span>Add to Wishlist</span>
-                        </a>
-                    {/if}
-					<div class="product-cat">
-						<span>{l s='Category' d='Shop.Theme.Catalog'}:</span>
-						<a href="{url entity='category' id=$product.id_category_default}">
-							{$product.category_name|escape:'html':'UTF-8'}
-						</a>
-					</div>
-					{if $gdzSetting.product_page_sharing}
-						{hook h='displayProductButtons' product=$product}
-					{/if}
-				</div>
-				{block name='product_refresh'}
-					<input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
-				{/block}
-			</div>
-		</div>
-	</div>
+        {block name='product_prices'}
+            {include file='catalog/_partials/product-prices.tpl'}
+        {/block}
+
+        <div class="rating">
+            {hook h='displayProductAdditionalInfo' product=$product}
+        </div>
+
+        <div class="product-information">
+            <ul class="other-info">
+                {if $product.reference}
+                    <li id="product_reference">
+                        <label>{l s='Product Code:' d='Shop.Theme.Catalog'}</label>
+                        <span class="editable">{$product.reference}</span>
+                    </li>
+                {/if}
+                <li>
+                    {block name='product_availability'}
+                        {if $product.show_availability && $product.availability_message}
+                            <li>
+                                <label>{l s='Availability:' d='Shop.Theme.Catalog'}</label>
+                                <span class="editable">
+                                    {if $product.availability == 'available'}
+                                        {$product.availability_message}
+                                    {elseif $product.availability == 'last_remaining_items'}
+                                        <i class="material-icons product-last-items">&#xE002;</i>
+                                    {else}
+                                        {$product.availability_message}
+                                    {/if}
+                                </span>
+                            </li>
+                        {/if}
+                    {/block}
+                </li>
+                {if $product.id_manufacturer}
+                    <li id="product_vendor">
+                        <label>{l s='Vendor:' d='Shop.Theme.Catalog'}</label>
+                        <span class="editable">{Manufacturer::getnamebyid($product.id_manufacturer)}</span>
+                    </li>
+                {/if}
+                <li class="product-category">
+                    <label>{l s='Product Type: '}</label>
+                    <a class="editable" href="{url entity='category' id=$product.id_category_default}">
+                        {$product.category|escape:'html':'UTF-8'}
+                    </a
+                </li>
+            </ul>
+
+            {block name='product_description_short'}
+                <div id="product-description-short-{$product.id}" class="product-desc">{$product.description_short|truncate:400:"..." nofilter}</div>
+            {/block}
+
+            {if isset($product.specific_prices.to) && $product.specific_prices.to > 0}
+                <div class="specific_prices">
+                    <div class="countdown-box">
+                        <div class="countdown">{$product.specific_prices.to}</div>
+                    </div>
+                </div>
+            {/if}
+            {if $product.is_customizable && count($product.customizations.fields)}
+                {block name='product_customization'}
+                    {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
+                {/block}
+            {/if}
+            <div class="product-actions">
+                {block name='product_buy'}
+                    <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                        <input type="hidden" name="token" value="{$static_token}">
+                        <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+                        <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+                        {block name='product_pack'}
+                            {if $packItems}
+                                <section class="product-pack">
+                                    <h6>{l s='This pack contains' d='Shop.Theme.Catalog'}</h6>
+                                    <article>
+                                        <div class="pack-product-container">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{l s='Products' d='Shop.Theme.Catalog'}</th>
+                                                        <th>{l s='Price' d='Shop.Theme.Catalog'}</th>
+                                                        <th>{l s='Quantity' d='Shop.Theme.Catalog'}</th>
+                                                    </tr>
+                                                </thead>
+                                                {foreach from=$packItems item="product_pack"}
+                                                    {block name='product_miniature'}
+                                                        {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
+                                                    {/block}
+                                                {/foreach}
+                                            </table>
+                                        </div>
+                                    </article>
+                                </section>
+                            {/if}
+                        {/block}
+                        {block name='product_discounts'}
+                            {include file='catalog/_partials/product-discounts.tpl'}
+                        {/block}
+                            
+                        {block name='product_variants'}
+                            {include file='catalog/_partials/product-variants.tpl'}
+                        {/block}
+
+                        {block name='hook_display_reassurance'}
+                            {hook h='displayReassurance'}
+                        {/block}
+
+                        {block name='product_add_to_cart'}
+                            {include file='catalog/_partials/product-add-to-cart.tpl'}
+                        {/block}
+                        
+                        {if $gdzSetting.product_page_sharing}
+                            {hook h='displayProductButtons' product=$product}
+                        {/if}
+                        
+                        {block name='product_refresh'}
+                            <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
+                        {/block}
+                    </form>
+                {/block}
+            </div> 
+        </div>
+
+        {include file='catalog/_partials/product-guaranteed.tpl'}
+        
+        {if $gdzSetting.product_page_moreinfos_type == 'accordion'}
+            {include file='catalog/more-infos-accordion.tpl'}
+        {else}
+            {include file='catalog/more-infos-tab.tpl'}
+        {/if}
+    </div>
 </div>
 
-<div id="sticky-bar">
+<div id="sticky-bar" class="hidden">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-auto col-left">
@@ -157,14 +186,21 @@
                             <img class="zoom_01 js-qv-product-cover" src="{$product.cover.bySize.small_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
                         </div>
                     {/block}
-                    <h4 class="product-title">{$product.name}</h4>
+                    <div class="info">
+                        <h4 class="product-title">{$product.name}</h4>
+                        {block name='product_discount'}
+                            {if $product.has_discount}
+                                {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                                <div class="price old">{$product.regular_price}</div>
+                            {/if}
+                        {/block}
+                        <div itemprop="price" content="{$product.price_amount}" class="price new">{$product.price}</div>
+                    </div>
                 </div>
             </div>
             <div class="col-auto col-right">
-                <div class="d-flex align-items-center content">
-                    {block name='product_prices'}
-                        {include file='catalog/_partials/product-prices.tpl'}
-                    {/block}
+                <div class="d-flex align-items-center">
+                    
                 </div>
             </div>
         </div>

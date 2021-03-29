@@ -152,6 +152,10 @@ select, textarea {
     color: #ffffff;
     outline: none;
   }
+  &.active{
+    color: #fff;
+    background-color: #333;
+  }
 }
 .btn.btn-border{
     background: transparent;

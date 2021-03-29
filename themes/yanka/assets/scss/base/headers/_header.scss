@@ -209,6 +209,14 @@
 		text-align: right;
 	}
 }
+.sticky{
+	#cart_block .ajax_cart_quantity{
+		background: transparent;
+	    color: #333;
+	    top: -9px;
+	    right: -9px;
+	}
+}
 .vermenu{
 	position: relative;
 	&.show .vermenu-btn .pt-icon{
@@ -381,7 +389,9 @@
 		}
 	}
 }
-
+.header-sticky{
+	position: relative;
+}
 
 // megamenu
 .sticky #hor-menu .gdz-megamenu .nav.level0 > li > a{
@@ -391,6 +401,18 @@
 	}
 }
 .gdz-megamenu{
+	position: static;
+	.nav > li.item-fullwidth{
+		position: static;
+	}
+	.dropdown-menu.fullwidth{
+		width: 100%;
+		> .mega-dropdown-inner {
+		    max-width: 1170px;
+		    margin: auto;
+		    padding: 0;
+		}
+	}
 	.nav > .menu-item .mega-nav li.group > a {
 	    font-size: 18px;
 	    display: block;
@@ -398,17 +420,22 @@
 	    padding-top: 8px;
 	    font-weight: 800;
 	}
+	.nav > .menu-item.item-fullwidth .mega-nav li > a{
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.nav > .menu-item .mega-nav li > a,
 	.nav > .menu-item .mega-nav li .mod-content .title {
 		border-bottom: medium none;
 		line-height: 31px;
-		padding: 0;
+		padding: 0 40px;
 		letter-spacing: 0;
 		display: block;
 		position: relative;
 		font-size: 16px;
 		font-weight: 400;
 		color: #333;
+		text-transform: initial;
 		&:hover{
 			color: $active;
 		}

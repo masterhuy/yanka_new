@@ -22,6 +22,8 @@
 @import url(elements/testimonials.css);
 /*--------------------- Testimonials -------------------- */
 @import url(elements/popup-newsletter.css);
+/*--------------------- Modal addtocart -------------------- */
+@import url(elements/blockcart-modal.css);
 /*--------------------- 5.Pages -------------------- */
 /*--------------------- Category -------------------- */
 @import url(pages/category.css);
@@ -29,6 +31,10 @@
 @import url(pages/product.css);
 /*--------------------- Typography -------------------- */
 @import url(pages/typography.css);
+/*--------------------- About us -------------------- */
+@import url(pages/cms-page.css);
+/*--------------------- Contact -------------------- */
+@import url(pages/contact.css);
 /*--------------------- 6.Spacing + Helpers -------------------- */
 @import url(config/spacing.css);
 /*--------------------- 7.Sliders -------------------- */

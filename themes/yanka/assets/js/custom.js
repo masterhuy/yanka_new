@@ -1,7 +1,6 @@
 jQuery(function ($) {
     "use strict";
 
-
     //collapse
     $('.card.card-box').on('show.bs.collapse', function (e) {
         $('.card.card-box .collapse').not(e.target).collapse('hide');
@@ -112,6 +111,7 @@ jQuery(function ($) {
         });
     });
 
+    //top panel carousel
     var lazyload_hcr = false;
     if(gdzSetting.carousel_lazyload)
     var lazyload_hcr = true;
@@ -169,6 +169,20 @@ jQuery(function ($) {
         });
     }
 
+    //sticky bar
+    var win = $(window),
+        stickybar = $('#sticky-bar');
+    if(stickybar.length > 0) {
+        //var offset = (header.offset().top);
+        win.scroll(function() {
+            if (win.scrollTop() > 400) {
+                stickybar.removeClass('hidden');
+            } else {
+                stickybar.addClass('hidden');
+            }
+        });
+    }
+
     //search
     $( ".btn-search-full" ).click(function() {
         $('#search-form-full').toggleClass('open');
@@ -201,11 +215,6 @@ jQuery(function ($) {
         zoomWindowFadeIn: 500,
         zoomWindowFadeOut: 750
     });
-
-    //remove short desc
-    if($('body').hasClass('page-index')){
-        $('.product-miniature .product-short-desc').remove();
-    }
 
 });
 
@@ -275,8 +284,8 @@ function footerCollapse() {
 }
 
 function stickyBar(){
-    var blockAddtocart = $('#product .pb-right-column .product-actions form').clone();
-    $('#sticky-bar .col-right .content').append(blockAddtocart);
+    var blockAddtocart = $('#product .pb-right-column .product-actions form').clone(true);
+    $('#sticky-bar .col-right > div').html(blockAddtocart);
     $('#sticky-bar .bootstrap-touchspin-up').click(function(e){
         // Stop acting like a button
         e.preventDefault();
@@ -312,7 +321,8 @@ function imageThumbCarousel(){
     var lazyload_pm = true;
     if($(".productModal-carousel").length) {
 		var productModalCarousel = $(".productModal-carousel");
-		var rtl = false;
+        var rtl = false;
+        productModalCarousel.addClass('owl-carousel');
 		if ($("body").hasClass("rtl")){
             rtl = true;
             productModalCarousel.addClass('owl-carousel');
@@ -394,7 +404,7 @@ function paginationToTop(){
 
 jQuery(document).ready(function(){
     $('#hor-menu .gdz-megamenu').jmsMegaMenu({
-        event: 'hover',
+        event: 'click',
         duration: 100
     });
     $('.vermenu .gdz-megamenu').jmsMegaMenu({
@@ -572,6 +582,8 @@ jQuery(document).ready(function(){
     hoverLookbook();
     closeLookbook();
 
+    imageParallaxAboutus();
+
     ratingTestimonial();
     calcOwlnavButton();
     calcOwlBlogCarousel();
@@ -597,6 +609,22 @@ jQuery(document).ready(function(){
 $(window).load(function() {
     $('.carousel').carousel('pause'); 
 });
+
+function imageParallaxAboutus(){
+	let imageUp = document.getElementsByClassName('js-up');
+	new simpleParallax(imageUp, {
+		orientation: 'up',
+		overflow: 'true',
+		transition: 'cubic-bezier(0,0,0,1)'
+	});
+
+	let imageDown = document.getElementsByClassName('js-down');
+	new simpleParallax(imageDown, {
+		orientation: 'down',
+		overflow: 'true',
+		transition: 'cubic-bezier(0,0,0,1)'
+	});
+}
 
 function ratingTestimonial(){
     let rating = $('.pb-testimonial-comment .pb-rating');

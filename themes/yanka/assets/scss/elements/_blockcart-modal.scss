@@ -1,0 +1,133 @@
+@import '../config/variables.scss';
+
+#blockcart-modal{
+	&.modal.fade{
+		&.show .modal-dialog{
+			transform: translateY(-50%);
+		}
+		.modal-dialog{
+			top: 50%;
+			transform: translateY(-75%);
+		}
+	}
+	.modal-dialog{
+		width: 450px;
+		margin: 0 auto;
+	}
+	#myModalLabel{
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 800;
+		color: #333333;
+		padding-bottom: 0;
+	}
+	.modal-header{
+		border: 0;
+		padding: 15px;
+		justify-content: center;
+	}
+	.modal-body{
+		text-align: center;
+		padding: 5px 0 40px;
+		.row{
+			margin: 0;
+			.layout-column{
+				padding: 0 40px;
+			}
+		}
+	}
+	.modal-content{
+		border: 0;
+		padding-top: 25px;
+	}
+	.close{
+		color: #d0d0d0;
+		padding: 0;
+	    top: 25px;
+	    right: 25px;
+		&:hover{
+			color: #333;
+		}
+	}
+	.product-name{
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 400;
+		color: #333333;
+		margin: 17px 0 0 0;
+		padding-bottom: 2px;
+	}
+	.product-image{
+		width: 98px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.cart-content{
+		padding: 23px 0 0;
+		border-top: 1px solid #ebebeb;
+		p{
+			font-size: 18px;
+			color: $active;
+			font-weight: 800;
+			margin-bottom: 0;
+			&.cart-products-count {
+				font-size: 16px;
+				color: #333;
+				font-weight: 400;
+			}
+		}
+		button.btn-default{
+			margin-top: 22px;
+			margin-bottom: 10px;
+			text-transform: capitalize;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			svg{
+				width: 24px;
+				height: 20px;
+				margin-right: 10px;
+			}
+		}
+		.btn-default{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		.btn-border{
+			margin-bottom: 10px;
+		}
+	}
+	.content_price{
+		margin: 6px 0 24px;
+		.price.new{
+			font-size: 14px;
+			color: $active;
+    		font-weight: 800;
+		}
+	}
+	.property-value{
+		span{
+			display: block;
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+	.view-cart {
+		display: block;
+		font-size: 14px;
+		font-weight: 800;
+		border: 1px solid #ebebeb;
+		margin-bottom: 10px;
+		height: 44px;
+		line-height: 44px;
+		color: #333;
+		transition: 0s all;
+		&:hover{
+			border: 2px solid #333;
+			line-height: 42px;
+		}
+	}
+	
+}

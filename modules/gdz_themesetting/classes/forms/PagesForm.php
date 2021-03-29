@@ -354,9 +354,14 @@ class gdzPagesForm
                                     'img' => 'product/3-columns.jpg'
                                 ),
                                 array(
-                                    'id_option' => 'sticky-info',
-                                    'name' => $this->module->l('Sticky info', 'PagesForm'),
-                                    'img' => 'product/sticky-info.jpg'
+                                    'id_option' => 'tabfullwidth-1',
+                                    'name' => $this->module->l('Tabfullwidth 1', 'PagesForm'),
+                                    'img' => 'product/tabfullwidth-1.jpg'
+                                ),
+                                array(
+                                    'id_option' => 'tabfullwidth-2',
+                                    'name' => $this->module->l('Tabfullwidth 2', 'PagesForm'),
+                                    'img' => 'product/tabfullwidth-2.jpg'
                                 ),
                             ),
                             'id' => 'id_option',

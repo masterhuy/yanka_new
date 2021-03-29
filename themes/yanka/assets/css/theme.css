@@ -551,16 +551,6 @@ header .row .col-auto {
 .shoppingcart-sidebar .cart-title {
   display:block;
 }
-#blockcart-modal .modal-header {
-    background: #ebebeb;
-    border-radius: 3px;
-    position: relative;
-}
-#blockcart-modal .modal-dialog .close {
-    top: 50%;
-    transform: translateY(-50%);
-    margin-top: 0;
-}
 .modal-dialog .close {
     opacity: 1;
     position: absolute;
@@ -569,52 +559,11 @@ header .row .col-auto {
     color: #000;
     z-index: 99;
 }
-#blockcart-modal .modal-title {
-    font-size: 15px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#blockcart-modal .modal-body {
-    background: #fff;
-    padding: 3.125rem 1.875rem;
-    border-radius: 3px;
-}
-#blockcart-modal.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 50%);
-    -ms-transform: translate(0, 50%);
-    transform: translate(0, 50%);
-}
-#blockcart-modal.modal.fade .modal-dialog {
-    -webkit-transform: translate(0, 20%);
-    -ms-transform: translate(0, 20%);
-    transform: translate(0, 20%);
-}
-#blockcart-modal .modal-dialog {
-    margin: 0 auto;
-    max-width: 1140px;
-    width: 100%;
-}
 .fade.in {
     opacity: 1;
 }
 .modal-backdrop.in {
     opacity: 0.3;
-}
-#blockcart-modal .product-image {
-    width: 100%;
-    border: 1px solid #ebebeb;
-}
-#blockcart-modal .product-name {
-    font-size: 1.1rem;
-    margin: 0;
-    padding-bottom: 4px;
-    color: #000;
-    font-weight: 400;
-}
-#blockcart-modal .divide-left {
-    border-left: #ebebeb 1px solid;
 }
 .number-bounce.bounce .ajax_cart_quantity {
     -webkit-animation: bounceIconUp 1s ease-in-out 2 forwards;

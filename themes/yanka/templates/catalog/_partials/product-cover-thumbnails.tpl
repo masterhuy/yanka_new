@@ -33,8 +33,8 @@
     {include file='catalog/_partials/product-cover-thumbnails-left.tpl'}
 {elseif $product_content_layout == 'thumbs-right'}
     {include file='catalog/_partials/product-cover-thumbnails-right.tpl'}
-{elseif $product_content_layout == '3-columns' || $product_content_layout == 'sticky-info'}
-    {include file='catalog/_partials/product-cover-thumbnails-vertical.tpl'}
+{elseif $product_content_layout == '3-columns'}
+    {include file='catalog/_partials/product-cover-thumbnails-gallery2.tpl'}
 {else}
     {include file='catalog/_partials/product-cover-thumbnails-bottom.tpl'}
 {/if}

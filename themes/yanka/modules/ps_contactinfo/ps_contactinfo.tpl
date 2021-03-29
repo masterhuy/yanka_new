@@ -22,11 +22,9 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<h3 class="title">{l s='Contact Information' d='Shop.Theme.Global'}</h3>
-<p class="mb-3">{l s='Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna' d='Shop.Theme.Global'}.</p>
 <div class="block-contact wrapper block">
     <div class="block-content contact-info">
-        <h3>{l s='The Office' d='Shop.Theme.Global'}</h3>
+        <h3>{l s='Store' d='Shop.Theme.Global'}</h3>
         <div class="address section">
             <p class="info-address">
                 <i class="icon-map-marker"></i>
@@ -36,7 +34,7 @@
         {if $contact_infos.phone}
             <div class="phone section">
                 {* [1][/1] is for a HTML tag. *}
-                <i class="icon-phone"></i>
+                {l s='Call Us:' d='Shop.Theme.Global'}
                 {l s='[1]%phone%[/1]'
                     sprintf=[
                     '[1]' => '<span>',

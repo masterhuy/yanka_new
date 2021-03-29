@@ -25,9 +25,9 @@
 <div class="images-container thumbs-gallery">
     {block name='product_images'}
         <div class="js-qv-mask mask">
-            <div id="gal1" class="product-images">
+            <div id="gal1" class="product-imagess row">
                 {foreach from=$product.images item=image}
-                    <div class="thumb-container {if $image.id_image == $product.cover.id_image} selected {/if}" data-image="{$image.bySize.large_default.url}" data-zoom-image="{$image.bySize.large_default.url}">
+                    <div class="col-12 col-sm-6 thumb-container {if $image.id_image == $product.cover.id_image} selected {/if}" data-image="{$image.bySize.large_default.url}" data-zoom-image="{$image.bySize.large_default.url}">
                         <img
                             class="thumb js-thumb {if $gdzSetting.product_image_zoom == 'elevatezoom'} product-image-zoom{/if} {if $image.id_image == $product.cover.id_image} selected {/if}"
                             data-image-medium-src="{$image.bySize.medium_default.url}"

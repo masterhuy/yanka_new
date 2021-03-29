@@ -1,0 +1,40 @@
+#contact .breadcrumb-wrapper {
+  margin-top: 100px; }
+
+#contact .title {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 800;
+  color: #333333;
+  margin-top: -7px;
+  margin-bottom: 33px; }
+
+#contact .contact-map:hover iframe {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0); }
+
+#contact .contact-map iframe {
+  width: 100%;
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%); }
+
+#contact #contact-info .address {
+  margin-top: 17px; }
+
+#contact #contact-info .phone {
+  margin-top: 22px; }
+  #contact #contact-info .phone span {
+    font-weight: 800;
+    color: #333; }
+
+#contact #contact-info .email {
+  font-weight: 800;
+  color: #48CAB2; }
+
+#contact .contact-map {
+  margin-top: 30px; }
+
+#contact #footer {
+  margin-top: 100px; }
+
+/*# sourceMappingURL=contact.css.map */

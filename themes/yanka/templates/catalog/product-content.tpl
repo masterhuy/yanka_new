@@ -167,8 +167,14 @@
         </div>
 
         {include file='catalog/_partials/product-guaranteed.tpl'}
+
+        {if isset($smarty.get.product_page_moreinfos_type) && $smarty.get.product_page_moreinfos_type !=''}
+            {assign var='product_page_moreinfos_type' value=$smarty.get.product_page_moreinfos_type}
+        {else}
+            {assign var='product_page_moreinfos_type' value=$gdzSetting.product_page_moreinfos_type}
+        {/if}
         
-        {if $gdzSetting.product_page_moreinfos_type == 'accordion'}
+        {if $product_page_moreinfos_type == 'accordion'}
             {include file='catalog/more-infos-accordion.tpl'}
         {else}
             {include file='catalog/more-infos-tab.tpl'}
@@ -176,9 +182,7 @@
     </div>
 </div>
 
-
-
-<div id="sticky-bar">
+<div id="sticky-bar" class="hidden">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-auto col-left">
@@ -188,14 +192,21 @@
                             <img class="zoom_01 js-qv-product-cover" src="{$product.cover.bySize.small_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
                         </div>
                     {/block}
-                    <h4 class="product-title">{$product.name}</h4>
+                    <div class="info">
+                        <h4 class="product-title">{$product.name}</h4>
+                        {block name='product_discount'}
+                            {if $product.has_discount}
+                                {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                                <div class="price old">{$product.regular_price}</div>
+                            {/if}
+                        {/block}
+                        <div itemprop="price" content="{$product.price_amount}" class="price new">{$product.price}</div>
+                    </div>
                 </div>
             </div>
             <div class="col-auto col-right">
-                <div class="d-flex align-items-center content">
-                    {block name='product_prices'}
-                        {include file='catalog/_partials/product-prices.tpl'}
-                    {/block}
+                <div class="d-flex align-items-center">
+                    
                 </div>
             </div>
         </div>

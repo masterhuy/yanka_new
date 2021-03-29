@@ -1,0 +1,50 @@
+@import '../config/variables.scss';
+
+#contact{
+	.breadcrumb-wrapper{
+		margin-top: 100px;
+	}
+	.title{
+		font-size: 36px;
+	    line-height: 43px;
+	    font-weight: 800;
+	    color: #333333;
+	    margin-top: -7px;
+	    margin-bottom: 33px;
+	}
+	.contact-map{
+		&:hover iframe{
+			filter: grayscale(0);
+		}
+		iframe {
+		    width: 100%;
+		    -webkit-filter: grayscale(90%);
+		    filter: grayscale(90%);
+		}
+	}
+	#contact-info{
+		.address{
+			margin-top: 17px;
+		}
+		.phone{
+			margin-top: 22px;
+			span{
+				font-weight: 800;
+    			color: #333;
+			}
+		}
+		.email{
+			font-weight: 800;
+			color: $active;
+		}
+	}
+	.contact-map{
+		margin-top: 30px;
+	}
+	#contact-form{
+		
+	}
+	#footer{
+		margin-top: 100px;
+	}
+}

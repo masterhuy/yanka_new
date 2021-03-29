@@ -183,6 +183,9 @@ select, textarea {
     background: #333333;
     color: #ffffff;
     outline: none; }
+  .btn.active, .btn-default.active {
+    color: #fff;
+    background-color: #333; }
 
 .btn.btn-border {
   background: transparent;

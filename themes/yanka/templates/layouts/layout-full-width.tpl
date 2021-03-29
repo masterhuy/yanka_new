@@ -29,7 +29,6 @@
 
 {block name='content_wrapper'}
     <div id="content-wrapper" {if $page.page_name != "index"}class="col-12 col-lg-12"{/if}>
-        {hook h="displayContentWrapperTop"}
         {block name='content'}
             <p>Hello world! This is HTML5 Boilerplate.</p>
         {/block}

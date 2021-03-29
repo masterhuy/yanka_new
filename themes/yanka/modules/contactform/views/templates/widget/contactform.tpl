@@ -22,8 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<h2 class="title mb-1">{l s='Got Any Questions' d='Shop.Theme.Global'}?</h2>
-<p class="mb-2">{l s='Use the form below to get in touch with the sales team' d='Shop.Theme.Global'}</p>
+<h3>{l s='Drop Us a Line' d='Shop.Theme.Global'}</h3>
 <section class="contact-form">
     <form action="{$urls.pages.contact}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
         {if $notifications}
@@ -37,14 +36,14 @@
         {/if}
         {if !$notifications || $notifications.nw_error}
             <section class="form-fields row">
-                <div class="form-group col-6">
+                <div class="form-group col-12">
                     <select name="id_contact" class="form-control form-control-select">
                         {foreach from=$contact.contacts item=contact_elt}
                         <option value="{$contact_elt.id_contact}">{$contact_elt.name}</option>
                         {/foreach}
                     </select>
                 </div>
-                <div class="form-group col-6">
+                <div class="form-group col-12">
                     <input
                         class="form-control"
                         name="from"

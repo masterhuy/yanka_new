@@ -24,28 +24,20 @@
  *}
 {block name='page_header_container'}{/block}
 {block name='page_content'}
-    <div class="contact-layout-5 mb-7" id="contact-wrapper">
-        <div class="container">
-            {if {$gdzSetting.contact_page_image}}
-                <div class="row contact-row mb-5">
-                    <div class="col-12">
-                        <img width="100%" src="{$gdzSetting.contact_page_image}" />
+    <div class="contact-layout-5" id="contact-wrapper">
+        <h3 class="title">{l s='Contact Us' d='Shop.Theme.Global'}</h3>
+        <div class="row contact-row">
+            <div class="col-md-5" id="contact-info">
+                {widget name="ps_contactinfo"}
+                {if $gdzSetting.contact_page_map_src}
+                    <div class="contact-map" id="contact-map">
+                        <iframe width="100%" height="240" style="border:0" src="{$gdzSetting.contact_page_map_src}" allowfullscreen=""></iframe>
                     </div>
-                </div>
-            {/if}
-            <div class="row contact-row">
-                <div class="col-md-6" id="contact-info">
-                    {widget name="ps_contactinfo"}
-                </div>
-                <div class="col-md-6" id="contact-form">
-                    {widget name="contactform"}
-                </div>
+                {/if}
+            </div>
+            <div class="col-md-7" id="contact-form">
+                {widget name="contactform"}
             </div>
         </div>
     </div>
-    {if $gdzSetting.contact_page_map_src}
-        <div class="contact-map" id="contact-map">
-            <iframe width="100%" height="500" style="border:0" src="{$gdzSetting.contact_page_map_src}" allowfullscreen=""></iframe>
-        </div>
-    {/if}
 {/block}
