@@ -153,6 +153,140 @@
     	padding: 20px 20px;
 	}
 }
+
+.pt-tabs-top01 {
+  	margin-top: 32px;
+  	svg{
+  		width: 153px;
+  		height: 24px;
+  		color: #d0d0d0;
+  	}
+}
+.container-indent-tab {
+	margin: 142px 0 0;
+	.no-gutters{
+		.row{
+			margin: 0;
+		}
+		.col-sm-6{
+			padding: 0;
+		}
+	}
+	+ .container-indent-tab{
+		margin-top: 126px;
+	}
+}
+#more_info_block{
+	&.tabs{
+		.tab-content {
+		    padding-top: 56px;
+		}
+		> ul{
+			position: relative;
+			&::before{
+				content:"";
+				width: 1000%;
+				height: 1px;
+				background-color: #ebebeb;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%); 
+			}
+			li{
+				+ li{
+					margin-left: 30px;
+				}
+				a{
+					padding: 0 20px;
+				    color: #333;
+				    text-transform: capitalize;
+				    font-size: 18px;
+				    font-weight: 800;
+				    padding: 0;
+				    position: relative;
+				    line-height: 52px;
+				    border: 0;
+				    border-bottom: 2px solid transparent;
+				    &.active{
+				    	color: $active;
+				    	border-bottom-color: $active;
+				    }
+				}
+			}
+		}
+	}
+	.tab-fullwidth-1{
+		.pt-title{
+			font-size: 24px;
+			padding-bottom: 25px;
+		}
+		.pt-list-dot, .pt-list-number{
+			li{
+				margin: 0;
+				display: block;
+				a{
+					font-weight: 400;
+					line-height: 28px;
+					color: #777;
+					text-transform: initial;
+					&:hover{
+						color: $active;
+					}
+				}
+			}
+		}
+		dl dt {
+			font-size: 24px;
+			line-height: 35px;
+			color: #333333;
+			font-weight: 800;
+			padding: 0 0 20px 0;
+			&:not(:first-child){
+				margin-top: 39px;
+			}
+		}
+		.pt-list-number{
+			margin-top: 23px;
+		}
+		.row.pt-col-smallindent {
+			margin: 0 -5px;
+			.col-md-12{
+				margin-bottom: 10px;
+			}
+			> div{
+				padding: 0 5px;
+			}
+		}
+	}
+}
+.block-fullwidth{
+	margin-top: 45px;
+	margin-bottom: 100px;
+	 ~ .container .line{
+	 	display: none;
+	 }
+	#more_info_block{
+		.panel-body{
+			max-width: 1200px;
+		    width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.panel.panel-default{
+			border-bottom: 1px solid #ebebeb;
+		}
+		.panel-title{
+			padding-left: 15px;
+			padding-right: 15px;
+			> a .pt-icon{
+				display: none;
+			}
+		}
+	}
+}
 #product .product-name{
 	text-transform: initial;
 }

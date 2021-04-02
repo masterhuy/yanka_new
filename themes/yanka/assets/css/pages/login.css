@@ -1,0 +1,174 @@
+#authentication #footer {
+  margin-top: 100px; }
+
+#authentication #wrapper .login-layout-5 {
+  max-width: 400px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#authentication .login-form .fb-login-button {
+  margin-top: 20px; }
+
+#authentication .show-pass button {
+  font-size: 0px;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #777; }
+
+#authentication #wrapper {
+  padding-top: 0; }
+
+#authentication .form-group .form-control {
+  margin-bottom: 24px; }
+
+#authentication #login-wrapper select, #authentication #login-wrapper input {
+  height: 42px; }
+
+#authentication .login-form h1, #authentication .register-form h1 {
+  font-size: 36px;
+  padding-bottom: 11px; }
+
+#authentication .login-form h3, #authentication .register-form h3 {
+  padding-bottom: 4px;
+  font-size: 24px; }
+
+#authentication .show-pass {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 11; }
+  #authentication .show-pass button:before {
+    content: "\f06e";
+    font-family: "FontAwesome";
+    font-size: 14px; }
+  #authentication .show-pass button:hover {
+    color: #333 !important; }
+  #authentication .show-pass:hover {
+    color: #333; }
+
+#authentication .forgot-password {
+  text-align: center; }
+  #authentication .forgot-password a:hover {
+    color: #333; }
+
+#authentication .form-footer {
+  text-align: center; }
+
+#authentication .forgot-password {
+  margin-top: 15px;
+  width: 100%; }
+
+#authentication .form-footer {
+  margin-top: 6px; }
+  #authentication .form-footer button {
+    font-size: 14px; }
+
+#authentication .input-group.js-parent-focus {
+  display: block; }
+
+#authentication .form-group.row label {
+  line-height: 30px;
+  font-size: 16px;
+  margin-bottom: 1px; }
+  #authentication .form-group.row label .required {
+    float: right;
+    font-size: 14px; }
+
+#authentication .form-group .form-control {
+  margin-bottom: 22px; }
+
+#authentication .form-control-comment {
+  line-height: 40px;
+  font-size: 16px; }
+
+#authentication .form-control-valign {
+  line-height: 32px; }
+
+#authentication #login-form .form-group {
+  margin-bottom: 0; }
+
+#authentication .register-form .custom-radio input {
+  margin-top: 7px; }
+
+#authentication .no-account {
+  margin-top: 47px; }
+  #authentication .no-account h3 {
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 35px; }
+  #authentication .no-account .content {
+    margin-bottom: 23px; }
+  #authentication .no-account ul li {
+    padding-left: 16px;
+    line-height: 23px;
+    position: relative; }
+    #authentication .no-account ul li::before {
+      display: inline-block;
+      content: '';
+      margin-bottom: 2px;
+      margin-right: 10px;
+      margin-left: -16px;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: #333; }
+
+.content .pt-layout-content .pt-list-dot {
+  display: block; }
+
+.forgot-password > a {
+  font-size: 14px;
+  font-weight: 800;
+  position: relative;
+  color: #333 !important;
+  display: inline-block; }
+  .forgot-password > a::before {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background-color: #333;
+    height: 2px;
+    -webkit-transition: width 0.25s linear;
+    -o-transition: width 0.25s linear;
+    transition: width 0.25s linear; }
+  .forgot-password > a:hover::before {
+    width: 100%; }
+
+#password .page-content {
+  max-width: 570px;
+  margin: 0 auto; }
+
+#password .breadcrumb-wrapper {
+  margin-bottom: 93px; }
+
+#password #footer {
+  margin-top: 90px; }
+
+@media (max-width: 1199px) {
+  #authentication {
+    border: 0; } }
+
+@media (max-width: 481px) {
+  #authentication #wrapper > .container {
+    max-width: 100%; } }
+
+/*# sourceMappingURL=login.css.map */

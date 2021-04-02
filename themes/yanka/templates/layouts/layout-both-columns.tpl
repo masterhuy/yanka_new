@@ -47,17 +47,23 @@
                 {/block}
             </header>
 
-    		{if $page.page_name != 'index' && $gdzSetting.breadcrumb}
-    			{block name='breadcrumb'}
-    			   {include file='_partials/breadcrumb.tpl'}
-    			{/block}
-    		{/if}
+    		
             <div id="wrapper">
+                {if $page.page_name != 'index' && $gdzSetting.breadcrumb}
+                    {block name='breadcrumb'}
+                    {include file='_partials/breadcrumb.tpl'}
+                    {/block}
+                {/if}
                 {block name='notifications'}
                     {include file='_partials/notifications.tpl'}
                 {/block}
+                {if isset($smarty.get.product_content_layout) && $smarty.get.product_content_layout !=''}
+                    {assign var='product_content_layout' value=$smarty.get.product_content_layout}
+                {else}
+                    {assign var='product_content_layout' value=$gdzSetting.product_content_layout}
+                {/if}
                 {if $page.page_name != 'index' && $page.page_name != 'module-gdz_pagebuilder-page' && $page.page_name != 'module-gdz_pagebuilder-preview'}
-                    <div class="container{if $shop_width != 1}-fluid{/if}">
+                    <div class="container{if $shop_width != 1 || $product_content_layout == 'tabfullwidth-2'}-fluid{/if}">
                 {/if}
                 {if $page.page_name == 'category'}
                     <div class="category-title">

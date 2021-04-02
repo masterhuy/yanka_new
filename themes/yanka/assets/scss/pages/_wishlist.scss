@@ -1,0 +1,35 @@
+@import '../config/variables.scss';
+
+#mywishlist{
+	.wishlist-header{
+		margin-bottom: 20px;
+	}
+	.table{
+		thead th, td{
+			padding-left: 0;
+	    	padding-right: 0;
+	    	font-weight: 400;
+	    	font-size: 16px;
+	    	border-bottom-width: 1px;
+		}
+	}
+	.wishlist-add{
+		font-size: 16px;
+	}
+	.wishlist-container{
+		font-size: 16px;
+	}
+	.wlp_bought_list .wishlist-box{
+		border: none;
+		padding: 0;
+	}
+	.wishlist_product_detail {
+	    font-size: 16px;
+	    .form-control{
+	    	margin-bottom: 10px;
+	    }
+	}
+	.wishlist-footer-links{
+		margin-top: 50px;
+	}
+}

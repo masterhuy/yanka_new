@@ -35,6 +35,12 @@
 @import url(pages/cms-page.css);
 /*--------------------- Contact -------------------- */
 @import url(pages/contact.css);
+/*--------------------- Login -------------------- */
+@import url(pages/login.css);
+/*--------------------- Wishlist -------------------- */
+@import url(pages/wishlist.css);
+/*--------------------- My account -------------------- */
+@import url(pages/my-account.css);
 /*--------------------- 6.Spacing + Helpers -------------------- */
 @import url(config/spacing.css);
 /*--------------------- 7.Sliders -------------------- */

@@ -29,7 +29,7 @@
 {/if}
 {if $product_content_layout == 'thumbs-gallery'}
     {include file='catalog/_partials/product-cover-thumbnails-gallery.tpl'}
-{elseif $product_content_layout == 'thumbs-left'}
+{elseif $product_content_layout == 'thumbs-left' || $product_content_layout == 'tabfullwidth-1'}
     {include file='catalog/_partials/product-cover-thumbnails-left.tpl'}
 {elseif $product_content_layout == 'thumbs-right'}
     {include file='catalog/_partials/product-cover-thumbnails-right.tpl'}

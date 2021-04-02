@@ -29,10 +29,10 @@
     <div class="form-group row align-items-center {if !empty($field.errors)}has-error{/if}">
         <label class="col-md-12 form-control-label{if $field.required} required{/if}">
             {if $field.type !== 'checkbox'}
-                {$field.label}{if $field.required}*{/if}
+                {$field.label}{if $field.required} <span class="required float-right">* {l s='Required Field' d='Shop.Forms.Labels'}</span>{/if}
             {/if}
         </label>
-        <div class="col-md-10{if ($field.type === 'radio-buttons')} form-control-valign{/if}">
+        <div class="col-md-12{if ($field.type === 'radio-buttons')} form-control-valign{/if}">
             {if $field.type === 'select'}
                 <select class="form-control form-control-select" name="{$field.name}" {if $field.required}required{/if}>
                     <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
@@ -99,10 +99,11 @@
                     }
                 </div>
             {elseif $field.type === 'password'}
-                <div class="input-group js-parent-focus pasword-form">
+                <div class="js-parent-focus pasword-form">
                     <input
                         class="form-control js-child-focus js-visible-password"
                         name="{$field.name}"
+                        placeholder="{l s='Enter your password' d='Shop.Forms.Labels'}"
                         type="password"
                         value=""
                         pattern=".{literal}{{/literal}5,{literal}}{/literal}"
@@ -110,7 +111,7 @@
                     >
                     <span class="input-group-btn show-pass">
                         <button
-                        class=""
+                        class="btn btn-default"
                         type="button"
                         data-action="show-password"
                         data-text-show="{l s='Show' d='Shop.Theme.Actions'}"
@@ -127,6 +128,7 @@
                     {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}
                     {if $field.maxLength}maxlength="{$field.maxLength}"{/if}
                     {if $field.required}required{/if}
+                    {if $field.name === "email"}placeholder="{l s='john.smith@example.com' d='Shop.Forms.Labels'}"{/if}
                 >
                 {if isset($field.availableValues.comment)}
                     <span class="form-control-comment">
@@ -135,11 +137,6 @@
                 {/if}
             {/if}
             {include file='_partials/form-errors.tpl' errors=$field.errors}
-        </div>
-        <div class="col-md-2 form-control-comment">
-            {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
-                {l s='Optional' d='Shop.Forms.Labels'}
-            {/if}
         </div>
     </div>
 {/if}

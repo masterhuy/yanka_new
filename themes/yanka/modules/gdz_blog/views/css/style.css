@@ -23,33 +23,16 @@
     margin-bottom: 15px;
     width: 100%;
 }
-.blog-widget .widget-title {
-	color: #333;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 1.1;
-    letter-spacing: -.01em;
-    margin-bottom: 2rem;
-}
 .blog-widget ul li{
     position: relative;
-}
-.blog-widget ul li a{
-    color: #333;
-    display: block;
-    font-weight: 300;
-    font-size: 1.4rem;
-    line-height: 1.5;
-}
-.blog-widget ul li:not(:last-child){
-    margin-bottom: 1rem;
 }
 .blog-widget ul li .navbar-toggler{
     cursor: pointer;
     position: absolute;
     right: 0;
     z-index: 9;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .widget-tabs h6 {
 	font-size: 13px;

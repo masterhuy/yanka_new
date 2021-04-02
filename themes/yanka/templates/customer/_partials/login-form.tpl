@@ -2,7 +2,7 @@
 
 {* TODO StarterTheme: HOOKS!!! *}
 
-<form id="login-form" action="{$action}" method="post">
+<form id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post">
     <section>
         {block name='form_fields'}
             {foreach from=$formFields item="field"}
@@ -15,8 +15,8 @@
     <footer class="form-footer text-xs-center clearfix">
         <input type="hidden" name="submitLogin" value="1">
         {block name='form_buttons'}
-        <button class="btn btn-outline-primary-2 btn-minwidth-sm text-uppercase" data-link-action="sign-in" type="submit" class="form-control-submit">
-            {l s='Log in' d='Shop.Theme.Customeraccount'}
+        <button class="btn btn-default w-100 text-uppercase" data-link-action="sign-in" type="submit" class="form-control-submit">
+            {l s='Login' d='Shop.Theme.Customeraccount'}
             <i class="icon-long-arrow-right"></i>
         </button>
         {/block}
@@ -28,7 +28,7 @@
         <div class="authentication-links">
             <div class="forgot-password">
                 <a href="{$urls.pages.password}" rel="nofollow">
-                    {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+                    {l s='Lost your password?' d='Shop.Theme.Customeraccount'}
                 </a>
             </div>
         </div>

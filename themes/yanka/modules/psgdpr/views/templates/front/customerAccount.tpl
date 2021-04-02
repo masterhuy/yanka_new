@@ -13,8 +13,9 @@
 * International Registered Trademark & Property of PrestaShop SA
 *}
 
-<a id="identity-link" class="color-dark" href="{$link->getModuleLink('psgdpr', 'gdpr')}">
+<a id="identity-link" class="color-dark col-12 col-md-6 col-lg-4" href="{$link->getModuleLink('psgdpr', 'gdpr')}">
     <span class="link-item">
-        <i class="icon-user"></i> {l s='GDPR - Personal data' mod='psgdpr'}
+        <i class="las la-digital-tachograph"></i> 
+        {l s='GDPR - Personal data' mod='psgdpr'}
     </span>
 </a>

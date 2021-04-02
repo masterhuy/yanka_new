@@ -1,0 +1,167 @@
+#notifications ul {
+  margin-bottom: 0; }
+
+#my-account .page-content .links > a {
+  margin-bottom: 20px; }
+
+#my-account .page-content .link-item {
+  background: white none repeat scroll 0 0;
+  border: 1px solid #ebebeb;
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  word-break: break-all;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px; }
+  #my-account .page-content .link-item i {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 10px; }
+
+#identity .page-content {
+  font-size: 16px; }
+  #identity .page-content form {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
+
+#identity .js-parent-focus.pasword-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+#addresses .page-header {
+  border-bottom: 0; }
+  #addresses .page-header h1 {
+    text-transform: uppercase;
+    font-size: 26px;
+    padding: 0; }
+
+#addresses .address-body h4 {
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 800;
+  padding-bottom: 21px; }
+
+#addresses .address-body .pt-wrapper {
+  margin-top: 72px; }
+
+#addresses .address-body .pt-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-bottom: 25px; }
+
+#addresses .address-body .pt-table-shop-02 {
+  border-bottom: 1px solid #ebebeb;
+  width: 100%; }
+  #addresses .address-body .pt-table-shop-02 tbody td {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-right: 10px; }
+    #addresses .address-body .pt-table-shop-02 tbody td:first-child {
+      width: 20%;
+      min-width: 134px;
+      padding-top: 9px;
+      padding-bottom: 8px;
+      color: #333;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 800; }
+  #addresses .address-body .pt-table-shop-02 tbody tr {
+    border-top: 1px solid #ebebeb; }
+
+#addresses .address-footer a {
+  margin-right: 26px; }
+  #addresses .address-footer a:hover svg {
+    color: #48CAB2; }
+
+#addresses .address-footer svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  -webkit-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms; }
+
+#addresses .address {
+  background: white none repeat scroll 0 0;
+  margin-bottom: 0; }
+  #addresses .address .address-body {
+    margin-top: -7px; }
+    #addresses .address .address-body address {
+      line-height: 28px;
+      font-size: 16px; }
+  #addresses .address .address-footer {
+    padding: 10px 0 0;
+    margin-top: 12px;
+    text-align: left; }
+    #addresses .address .address-footer a:last-child {
+      margin-right: 0;
+      margin-left: 6px; }
+
+#addresses #content-wrapper .fa {
+  font-size: 15px; }
+
+#addresses .btn-link::before {
+  display: none; }
+
+.address-top .addresses-create-new .btn-default {
+  padding: 0 20px; }
+
+.address-top .btn-link {
+  margin-top: 57px; }
+  .address-top .btn-link:hover svg {
+    color: #48CAB2; }
+  .address-top .btn-link svg {
+    width: 24px;
+    height: 24px;
+    margin-left: -7px;
+    margin-right: 10px;
+    -webkit-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms; }
+
+#address .js-address-form form {
+  margin-top: 50px; }
+
+#address .form-fields .form-group {
+  margin-bottom: 0; }
+
+#address .page-header {
+  border-bottom: 0; }
+  #address .page-header h1 {
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.9);
+    font-size: 26px;
+    padding: 0; }
+
+#address .form-control.form-control-select {
+  width: 100%;
+  padding-right: 0;
+  margin-bottom: 20px; }
+
+.address-form {
+  font-size: 16px; }
+
+#history .page-content table {
+  margin-top: 20px;
+  font-size: 16px; }
+
+#history .page-content .table-bordered thead td, #history .page-content .table-bordered thead th,
+#history .page-content .table-bordered td, #history .page-content .table-bordered th {
+  font-weight: 400; }
+
+@media (max-width: 767px) {
+  #addresses .card.card-block {
+    padding: 15px 0px; }
+  #addresses #wrapper > .row {
+    margin-right: 0;
+    margin-left: 0; } }
+
+@media (max-width: 481px) {
+  #addresses .address .address-footer a:last-child {
+    margin-left: 0;
+    margin-top: 10px; } }
+
+/*# sourceMappingURL=my-account.css.map */

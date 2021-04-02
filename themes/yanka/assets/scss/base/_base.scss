@@ -78,7 +78,7 @@ svg {
     width: 16px;
     height: 16px;
 }
-input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, textarea.form-control:focus, textarea:focus {
     border-color: transparent;
     outline: none;
     box-shadow: 0px 2px 12px rgba(51, 51, 51, 0.08);
@@ -128,6 +128,7 @@ select, textarea {
 .btn, .btn-default {
   background-color: $active;
   color: #ffffff;
+  text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.04em;
   padding: 5px 20px 4px;
@@ -138,6 +139,7 @@ select, textarea {
   outline: none;
   position: relative;
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   cursor: pointer;
@@ -148,13 +150,16 @@ select, textarea {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   &:hover{
-    background: #333333;
+    background-color: #333333;
     color: #ffffff;
     outline: none;
   }
   &.active{
     color: #fff;
     background-color: #333;
+    &:hover{
+        background-color: $active;
+    }
   }
 }
 .btn.btn-border{
@@ -541,7 +546,17 @@ select, textarea {
     animation: spin .5s linear infinite;
   }
 }
-
+body{
+    &.page-index #footer{
+        margin-top: 0;
+    }
+    .breadcrumb-wrapper{
+        margin-bottom: 93px;
+    }
+    #footer{
+        margin-top: 100px;
+    }
+}
 
 
 @keyframes spin {

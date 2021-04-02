@@ -30,83 +30,83 @@
 
 {block name='page_content'}
   <div class="">
-    <div class="links row ml-0 mr-0">
-      <div class="col">
-          <a class="color-dark" id="identity-link" href="{$urls.pages.identity}">
+    <div class="links row">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="identity-link" href="{$urls.pages.identity}">
             <span class="link-item">
-              <i class="fa fa-user-o"></i>
+              <i class="las la-info-circle"></i>
               {l s='Information' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {if $customer.addresses|count}
-      <div class="col">
-          <a class="color-dark" id="addresses-link" href="{$urls.pages.addresses}">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="addresses-link" href="{$urls.pages.addresses}">
             <span class="link-item">
-              <i class="fa fa-address-card"></i>
+              <i class="las la-address-card"></i>
               {l s='Addresses' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {else}
-      <div class="col">
-          <a class="color-dark" id="address-link" href="{$urls.pages.address}">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="address-link" href="{$urls.pages.address}">
             <span class="link-item">
-              <i class="fa fa-address-card"></i>
+              <i class="las la-address-card"></i>
               {l s='Add first address' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {/if}
 
       {if !$configuration.is_catalog}
-      <div class="col">
-          <a class="color-dark" id="history-link" href="{$urls.pages.history}">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="history-link" href="{$urls.pages.history}">
             <span class="link-item">
-              <i class="icon-calendar"></i>
+              <i class="las la-history"></i>
               {l s='Order history and details' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {/if}
 
       {if !$configuration.is_catalog}
-      <div class="col">
-          <a class="color-dark" id="order-slips-link" href="{$urls.pages.order_slip}">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="order-slips-link" href="{$urls.pages.order_slip}">
             <span class="link-item">
-              <i class="fa fa-list-alt"></i>
+              <i class="las la-credit-card"></i>
               {l s='Credit slips' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {/if}
 
       {if $configuration.voucher_enabled && !$configuration.is_catalog}
-      <div class="col">
-          <a class="color-dark" id="discounts-link" href="{$urls.pages.discount}">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="discounts-link" href="{$urls.pages.discount}">
             <span class="link-item">
-              <i class="fa fa-tags"></i>
+              <i class="las la-gift"></i>
               {l s='Vouchers' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {/if}
 
       {if $configuration.return_enabled && !$configuration.is_catalog}
-      <div class="col">
-          <a class="color-dark" id="returns-link" href="{$urls.pages.order_follow}">
+      
+          <a class="color-dark col-12 col-md-6 col-lg-4" id="returns-link" href="{$urls.pages.order_follow}">
             <span class="link-item">
-              <i class="fa fa-box-open"></i>
+              <i class="las la-undo"></i>
               {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
             </span>
           </a>
-      </div>
+      
       {/if}
-      <div class="col">
+      
         {block name='display_customer_account'}
           {hook h='displayCustomerAccount'}
         {/block}
-      </div>
+      
     </div>
   </div>
 {/block}

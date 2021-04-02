@@ -246,6 +246,12 @@
     margin-right: 0;
     min-width: 50px;
 }
+.bootstrap-touchspin-up {
+    background: url("../images/icon/plus.png") no-repeat center;
+}
+.bootstrap-touchspin-down {
+    background: url("../images/icon/minus.png") no-repeat center;
+}
 .product-variants-item .input-color {
 	position: absolute;
     opacity: 0;
@@ -517,9 +523,6 @@
 #more_info_block.tab-left .nav.nav-tabs {
     justify-content: flex-start;
 }
-#more_info_block .nav-tabs .nav-item {
-    margin: 0 10px;
-}
 #more_info_block li a {
     color: #333333;
     font-size: 1.6rem;
@@ -535,10 +538,7 @@
     height: auto;
 }
 #more_info_block .tab-content {
-    border: .1rem solid #dadada;
-    margin-top: -.1rem;
-    border-radius: .3rem;
-    padding: 2.7rem 3rem;
+    
 }
 #product-details .product-features h3 {
 	font-size:120%;

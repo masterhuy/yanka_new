@@ -890,12 +890,6 @@ header .row .col-auto {
 .no-account {
 		margin-top:20px;
 }
-.input-group-btn button,
-.input-group-btn .btn {
-    height: 100%;
-    background:none;
-    padding: 0px;
-}
 .links > div {
   padding: 1rem;
   border: 1px solid #ebebeb;
@@ -991,6 +985,8 @@ header .row .col-auto {
 }
 .label-pill {
     color:#fff;
+    font-size: 14px;
+    padding: 0 5px;
 }
 .page-order-detail #order-history .history-lines .history-line{
     padding:.5rem 0;border-bottom:1px solid hsla(0,0%,63%,.25)

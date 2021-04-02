@@ -40,62 +40,50 @@
 				{block name="page_content"}
 				{capture name=path}{$current_category.title|escape:'html':'UTF-8'}{/capture}
 				{if isset($posts) AND $posts}
-					<div class="cat-post-list more-columns row">
+					<div class="cat-post-list row justify-content-center">
 						{foreach from=$posts item=post}
 							{assign var=params value=['post_id' => $post.post_id, 'category_slug' => $post.category_alias, 'slug' => $post.alias]}
 							{assign var=catparams value=['category_id' => $post.category_id, 'slug' => $post.category_alias]}
-							<div class="item col-12">
+							<div class="item col-12 {if $page_layout == 'no'}col-lg-10 col-xl-8{/if}">
 								<div class="blog-post">
-									<div class="row align-items-center">
-										<div class="col-12 col-sm-5 mb-2 mb-sm-0">
-											<div class="post-thumb">
-												{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-													{$post.link_video}
-												{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-													<a class="link" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}">
-														<img src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt=""/>
-													</a>
+									<div class="post-thumb">
+										{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+											{$post.link_video}
+										{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+											<a class="link" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}">
+												<img src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt=""/>
+											</a>
+										{/if}
+									</div>
+									<div class="entry-body">
+										
+										<div class="post-info">
+											<h4 class="post-title">
+												<a class="blog-list-title" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}" alt="{l s='Blog Images' d='Modules.Gdzblog.Post'}">{$post.title|escape:'htmlall':'UTF-8'}</a>
+											</h4>
+											
+											<div class="post-intro">
+												{$post.introtext|truncate:380:'...' nofilter}
+											</div>
+											<ul class="post-meta">
+												<li class="post-created">{$post.created|escape:'htmlall':'UTF-8'|date_format:"%B %e, %Y"}</li>
+												{if $gdz_blog_setting.GDZBLOG_SHOW_VIEWS}
+													<li class="post-views">{$post.views nofilter} <span>{l s='Views' d='Modules.Gdzblog.Post'}</span></li>		
 												{/if}
-											</div>
-										</div>
-										<div class="col-12 col-sm-7">
-											<div class="entry-body">
-												<ul class="post-meta">
-													<li class="post-created">{$post.created|escape:'htmlall':'UTF-8'|date_format:"%B %e, %Y"}</li>
-													{if $gdz_blog_setting.GDZBLOG_SHOW_VIEWS}
-														<li class="post-views">{$post.views nofilter} <span>{l s='Views' d='Modules.Gdzblog.Post'}</span></li>		
-													{/if}
-													{if $gdz_blog_setting.GDZBLOG_SHOW_COMMENTS}
-														<li>
-															<span>
-																{$post.comment_count|escape:'html':'UTF-8'}
-																{if $post.comment_count > 0}
-																	{l s='Comments' d='Modules.Gdzblog.Post'}
-																{else}
-																	{l s='Comment' d='Modules.Gdzblog.Post'}
-																{/if}
-															</span>
-														</li>
-													{/if}
-												</ul>
-												<div class="post-info">
-													<h4 class="post-title">
-														<a class="blog-list-title" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}" alt="{l s='Blog Images' d='Modules.Gdzblog.Post'}">{$post.title|escape:'htmlall':'UTF-8'}</a>
-													</h4>
-													{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
-														<div class="post-category">
-															<span>{l s='in' d='Modules.Gdzblog.Post'} </span> 
-															<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams) nofilter}">{$post.category_name nofilter}</a>
-														</div>
-													{/if}
-													<div class="post-intro">
-														{$post.introtext|truncate:380:'...' nofilter}
-													</div>
-												</div>
-												<a class="read-more" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}">
-													{l s='Continue Reading' d='Modules.Gdzblog.Post'}
-												</a>
-											</div>
+												
+												{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
+													<li class="post-category">
+														<span>{l s='in' d='Modules.Gdzblog.Post'} </span> 
+														<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams) nofilter}">{$post.category_name nofilter}</a>
+													</li>
+												{/if}
+												{if $gdz_blog_setting.GDZBLOG_SHOW_COMMENTS}
+													<li class="comment">
+														<span class="pt-icon"></span>
+														<span>{$post.comment_count nofilter}{l s=' Comment(s)' d='Modules.JmsBlog'}</span>
+													</li>
+												{/if}
+											</ul>
 										</div>
 									</div>
 								</div>

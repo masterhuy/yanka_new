@@ -72,10 +72,32 @@
             {include file='catalog/product-thumbs-gallery.tpl'}
         {elseif $product_content_layout == 'sticky-info'}
             {include file='catalog/product-sticky-info.tpl'}
+        {elseif $product_content_layout == 'tabfullwidth-1'}
+            {include file='catalog/product-tabfullwidth-1.tpl'}
+        {elseif $product_content_layout == 'tabfullwidth-2'}
+            {include file='catalog/product-tabfullwidth-2.tpl'}
         {else}
             {include file='catalog/product-content.tpl'}
         {/if}
+
+        {if $product_content_layout == 'tabfullwidth-2'}
+            {if isset($smarty.get.product_page_moreinfos_type) && $smarty.get.product_page_moreinfos_type !=''}
+                {assign var='product_page_moreinfos_type' value=$smarty.get.product_page_moreinfos_type}
+            {else}
+                {assign var='product_page_moreinfos_type' value=$gdzSetting.product_page_moreinfos_type}
+            {/if}
+            <div class="block-fullwidth">
+                {if $product_page_moreinfos_type == 'accordion'}
+                    {include file='catalog/more-infos-accordion.tpl'}
+                {else}
+                    {include file='catalog/more-infos-tab.tpl'}
+                {/if}
+            </div>
+        {/if}
         
+        {if $product_content_layout == 'tabfullwidth-2'}
+            <div class="container">
+        {/if}
         <div class="line"></div>
 
         {block name='product_accessories'}
@@ -107,5 +129,8 @@
         {block name='page_footer_container'}
 
         {/block}
+        {if $product_content_layout == 'tabfullwidth-2'}
+            </div>
+        {/if}
     </section>
 {/block}

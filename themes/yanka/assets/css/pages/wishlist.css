@@ -1,0 +1,29 @@
+#mywishlist .wishlist-header {
+  margin-bottom: 20px; }
+
+#mywishlist .table thead th, #mywishlist .table td {
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom-width: 1px; }
+
+#mywishlist .wishlist-add {
+  font-size: 16px; }
+
+#mywishlist .wishlist-container {
+  font-size: 16px; }
+
+#mywishlist .wlp_bought_list .wishlist-box {
+  border: none;
+  padding: 0; }
+
+#mywishlist .wishlist_product_detail {
+  font-size: 16px; }
+  #mywishlist .wishlist_product_detail .form-control {
+    margin-bottom: 10px; }
+
+#mywishlist .wishlist-footer-links {
+  margin-top: 50px; }
+
+/*# sourceMappingURL=wishlist.css.map */

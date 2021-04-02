@@ -27,16 +27,44 @@
     <div class="product-line-grid-left col col-12 col-sm-6 col-md-6 mb-2 mb-sm-0">
         <div class="row align-items-center small-gutters">
             <div class="col-auto">
+                <div class="col-12 col-auto col-md cart-line-product-actions">
+                    <a
+                        class                       = "remove-from-cart"
+                        rel                         = "nofollow"
+                        href                        = "{$product.remove_from_cart_url}"
+                        data-link-action            = "delete-from-cart"
+                        data-id-product             = "{$product.id_product|escape:'javascript'}"
+                        data-id-product-attribute   = "{$product.id_product_attribute|escape:'javascript'}"
+                        data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
+                    >
+                    {if !isset($product.is_gift) || !$product.is_gift}
+                        <i>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                <g>
+                                    <path fill="currentColor" d="M5,24h14l1-17H4L5,24z M18.3,8.6l-0.8,13.8h-11L5.7,8.6H18.3z"></path>
+                                    <rect x="2" y="3.2" fill="currentColor" width="20" height="1.6"></rect>
+                                    <rect x="10" y="0.2" fill="currentColor" width="4" height="1.6"></rect>
+                                </g>
+                            </svg>
+                        </i>
+                    {/if}
+                    </a>
+                    {block name='hook_cart_extra_product_actions'}
+                        {hook h='displayCartExtraProductActions' product=$product}
+                    {/block}
+                </div>
+            </div>
+            <div class="col-auto">
                 {if $product.cover.bySize.cart_default.url}
                     <div class="product-image media-middle">
-                        <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}">
+                        <img src="{$product.cover.bySize.home_default.url}" alt="{$product.name|escape:'quotes'}">
                     </div>
                 {/if}
             </div>
             <!--  product left body: description -->
             <div class="col-auto">
                 <div class="product-line-info">
-                    <a class="product-title" href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
+                    <a class="product-link" href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
                 </div>
 
                 <div class="product-line-info product-price h5 {if $product.has_discount}has-discount{/if}">
@@ -142,24 +170,6 @@
                         {$product.total}
                     {/if}
                 </span>
-            </div>
-            <div class="col-12 col-auto col-md cart-line-product-actions">
-                <a
-                    class                       = "remove-from-cart"
-                    rel                         = "nofollow"
-                    href                        = "{$product.remove_from_cart_url}"
-                    data-link-action            = "delete-from-cart"
-                    data-id-product             = "{$product.id_product|escape:'javascript'}"
-                    data-id-product-attribute   = "{$product.id_product_attribute|escape:'javascript'}"
-                    data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
-                >
-                {if !isset($product.is_gift) || !$product.is_gift}
-                    <i class="icon-close"></i>
-                {/if}
-                </a>
-                {block name='hook_cart_extra_product_actions'}
-                {hook h='displayCartExtraProductActions' product=$product}
-                {/block}
             </div>
         </div>
     </div>

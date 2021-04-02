@@ -1,0 +1,214 @@
+@import '../config/variables.scss';
+
+#authentication {
+	#footer{
+		margin-top: 100px;
+	}
+  #wrapper .login-layout-5 {
+    max-width: 400px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login-form .fb-login-button{
+  	margin-top: 20px;
+  }
+  .show-pass button {
+    font-size: 0px;
+    border: none;
+    background: none;
+    padding: 0;
+    color: #777;
+  }
+
+  #wrapper {
+    padding-top: 0;
+  }
+  .form-group .form-control {
+    margin-bottom: 24px;
+}
+  #login-wrapper select, #login-wrapper input {
+    height: 42px;
+}
+  .login-form h1, .register-form h1 {
+    font-size: 36px;
+    padding-bottom: 11px;
+  }
+
+  .login-form h3, .register-form h3 {
+    padding-bottom: 4px;
+    font-size: 24px;
+  }
+
+  .show-pass {
+    button {
+      &:before {
+        content: "\f06e";
+        font-family: "FontAwesome";
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #333 !important;
+      }
+    }
+
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .forgot-password {
+    a:hover {
+      color: #333;
+    }
+
+    text-align: center;
+  }
+
+  .form-footer {
+    text-align: center;
+  }
+
+  .forgot-password {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .form-footer {
+    margin-top: 6px;
+
+    button {
+      font-size: 14px;
+    }
+  }
+
+  .input-group.js-parent-focus {
+    display: block;
+  }
+
+  .form-group {
+    &.row label {
+      line-height: 30px;
+      font-size: 16px;
+      margin-bottom: 1px;
+
+      .required {
+        float: right;
+        font-size: 14px;
+      }
+    }
+
+    .form-control {
+      margin-bottom: 22px;
+    }
+  }
+
+  .form-control-comment {
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  .form-control-valign {
+    line-height: 32px;
+  }
+
+  #login-form .form-group {
+    margin-bottom: 0;
+  }
+
+  .register-form .custom-radio input {
+    margin-top: 7px;
+  }
+
+  .no-account {
+    margin-top: 47px;
+
+    h3 {
+      padding-bottom: 0px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    	line-height: 35px;
+    }
+
+    .content {
+      margin-bottom: 23px;
+    }
+
+    ul li {
+      padding-left: 16px;
+      line-height: 23px;
+      position: relative;
+
+      &::before {
+        display: inline-block;
+        content: '';
+        margin-bottom: 2px;
+        margin-right: 10px;
+        margin-left: -16px;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        background-color: #333;
+      }
+    }
+  }
+}
+
+.content .pt-layout-content .pt-list-dot {
+  display: block;
+}
+
+.forgot-password > a{
+	font-size: 14px;
+	font-weight: 800;
+	position: relative;
+	color: #333 !important;
+	display: inline-block;
+	@include underline(6, #333, 2)
+	&:hover::before{
+		width: 100%;
+	}
+}
+
+//password
+#password{
+	.page-content{
+		max-width: 570px;
+    	margin: 0 auto;
+	}
+	.enter-email-fields{
+		.email{
+
+		}
+	}
+	.breadcrumb-wrapper{
+		margin-bottom: 93px;
+	}
+	#footer{
+		margin-top: 90px;
+	}
+}
+
+
+@media (max-width: 1199px) {
+  #authentication {
+    border: 0;
+  }
+}
+
+@media (max-width: 481px) {
+  #authentication #wrapper > .container {
+    max-width: 100%;
+  }
+}

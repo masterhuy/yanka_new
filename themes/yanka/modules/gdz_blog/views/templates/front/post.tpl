@@ -42,15 +42,7 @@
 				{capture name=path}{$post.title|escape:'html':'UTF-8'}{/capture}
 				<div class="single-blog">
 					<div class="blog-post">
-						{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-							<div class="post-video">
-								{$post.link_video}
-							</div>
-						{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-							<div class="post-thumb">
-								<img class="img-responsive w-100" src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt="{l s='Image Blog' d='Modules.JmsBlog'}" />
-							</div>
-						{/if}
+						<h1 class="title">{$post.title|escape:'html':'UTF-8'}</h1>
 						{assign var=params value=['post_id' => $post.post_id, 'category_slug' => $post.category_alias, 'slug' => $post.alias]}
 						{assign var=catparams value=['category_id' => $post.category_id, 'slug' => $post.category_alias]}
 						<ul class="post-meta">
@@ -64,14 +56,24 @@
 									<span> {l s='Comments' d='Modules.Gdzblog.Post'}</span>
 								</li>
 							{/if}
+							{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
+								<li class="post-category">
+									<span>{l s='In' d='Modules.Gdzblog.Post'}</span> 
+									<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams) nofilter}">{$post.category_name nofilter}</a>
+								</li>
+							{/if}
 						</ul>
-						<h1 class="title">{$post.title|escape:'html':'UTF-8'}</h1>
-						{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
-							<div class="post-category">
-								<span>{l s='Category' d='Modules.Gdzblog.Post'} :</span> 
-								<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams) nofilter}">{$post.category_name nofilter}</a>
+						{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+							<div class="post-video">
+								{$post.link_video}
+							</div>
+						{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+							<div class="post-thumb">
+								<img class="img-responsive w-100" src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt="{l s='Image Blog' d='Modules.JmsBlog'}" />
 							</div>
 						{/if}
+						
+
 						<div class="post-fulltext">
 							{$post.fulltext nofilter}
 						</div>
@@ -123,18 +125,23 @@
 								{if $comments}
 									<div id="accordion" class="panel-group">
 										<div class="panels">
-											<div class="comment-heading">
-												<h3>{l s='Comments' d='Modules.Gdzblog.Post'}</h3>
-											</div>
 											<div id="post-comments">
 												{foreach from=$comments item=comment key = k}
 													<div class="post-comment clearfix">
 														<div class="post-comment-info">
-															<img class="attachment-widget img-responsive" src="{$image_baseurl nofilter}user.png" />
+															<div class="user-image">
+																<svg fill="none" viewBox="0 0 24 24" id="icon_avatar" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="transparent" d="M0 0h24v24H0z"></path><path d="M2.826 23.2c.36-5.393 4.323-9.4 9.174-9.4 4.851 0 8.815 4.007 9.174 9.4H2.826z" stroke="currentColor" stroke-width="1.6"></path><circle cx="12" cy="6" r="5.2" stroke="currentColor" stroke-width="1.6"></circle></svg>
+															</div>
 															<div class="info">
-																<h6>{$comment.customer_name nofilter}</h6>
-																<span class="customer_site">{$comment.customer_site nofilter}</span>
-																<span class="time_add">{$comment.time_add nofilter}</span>
+																<div class="title">
+																	<div>
+																		{l s='By' d='Modules.JmsBlog'}
+																		<span>{$comment.customer_name|escape:'html':'UTF-8'}</span>
+																	</div>
+																	<div>
+																		{$comment.time_add|escape:'html':'UTF-8'|date_format:'%B %e, %Y'}
+																	</div>
+																</div>
 																<p class="post-comment-content">{$comment.comment nofilter}</p>
 															</div>
 														</div>
@@ -149,36 +156,39 @@
 									<form id="commentForm" enctype="multipart/form-data" method="post" action="index.php?fc=module&module=gdz_blog&controller=post&post_id={$post.post_id|escape:'html':'UTF-8'}&action=submitComment">
 										<div class="row">
 											<div class="col-sm-12">
-												<h4 class="heading">{l s='Leave A Reply' d='Modules.Gdzblog.Post'}</h4>
-												<p class="h-info">{l s='Your email address will not be published. Required fields are marked' d='Modules.Gdzblog.Post'} *</p>
+												<h4 class="heading">{l s='Leave a Comment' d='Modules.Gdzblog.Post'}</h4>
 											</div>
 										</div>
-										<div class="form-group">
-											<textarea id="comment" placeholder="{l s='Your message' d='Modules.Gdzblog.Post'}" class="form-control" name="comment" rows="3" required></textarea>
-										</div>
+										
 										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="col-12">
+												<label for="comment_name">{l s='Name' d='Modules.Gdzblog.Post'}</label>
 												<div class="form-group">
-													<input id="customer_name" placeholder="{l s='Name' d='Modules.Gdzblog.Post'} *" class="form-control" name="customer_name" type="text" value="{$customer.firstname}{$customer.lastname}" required />
+													<input id="customer_name" placeholder="{l s='Enter your name' d='Modules.Gdzblog.Post'} *" class="form-control" name="customer_name" type="text" value="{$customer.firstname}{$customer.lastname}" required />
 												</div>
 											</div>
-											<div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="col-12">
+												<label for="comment_title">{l s='Email address' d='Modules.Gdzblog.Post'}</label>
 												<div class="form-group">
-													<input id="comment_title" placeholder="{l s='Email' d='Modules.Gdzblog.Post'} *" class="form-control" name="email" type="text" value="{$customer.email}" required />
+													<input id="comment_title" placeholder="{l s='john.smith@example.com' d='Modules.Gdzblog.Post'} *" class="form-control" name="email" type="text" value="{$customer.email}" required />
 												</div>
 											</div>
-											<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="col-12">
+												<label for="comment_title">{l s='Your Website' d='Modules.Gdzblog.Post'}</label>
 												<div class="form-group">
-													<input id="customer_site" placeholder="{l s='Website' d='Modules.Gdzblog.Post'}" class="form-control" name="customer_site" type="text" value=""/>
+													<input id="customer_site" placeholder="{l s='Your website' d='Modules.Gdzblog.Post'}" class="form-control" name="customer_site" type="text" value=""/>
 												</div>
+											</div>
+											<div class="col-12">
+												<label for="content">{l s='Your Comment' d='Modules.Gdzblog.Post'}</label>
+												<textarea id="comment" placeholder="{l s='Write your comments here' d='Modules.Gdzblog.Post'}" class="form-control" name="comment" rows="3" required></textarea>
 											</div>
 										</div>
 										<div id="new_comment_form_footer">
 											<input id="item_id_comment_send" name="post_id" type="hidden" value="{$post.post_id|escape:'html':'UTF-8'}" />
 											<input id="item_id_comment_reply" name="post_id_comment_reply" type="hidden" value="" />
-											<button id="submitComment" class="btn btn-outline-primary-2 text-uppercase" name="submitComment" type="submit">
+											<button id="submitComment" class="btn active text-uppercase" name="submitComment" type="submit">
 												{l s='Post Comment' d='Modules.Gdzblog.Post'}
-												<i class="icon-long-arrow-right"></i>
 											</button>
 										</div>
 									</form>

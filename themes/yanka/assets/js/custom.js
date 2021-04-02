@@ -216,6 +216,10 @@ jQuery(function ($) {
         zoomWindowFadeOut: 750
     });
 
+    $(".addToWishlist").on('click', function(e){
+        e.preventDefault();
+    });
+
 });
 
 $(document).mouseup(function(e){
@@ -419,18 +423,19 @@ jQuery(document).ready(function(){
         event: 'click',
         duration: 100
     });
-    prestashop.on('updateProductList', function (event) {
+    prestashop.on('updateProductList', function () {
         paginationToTop();
     });
    
-    prestashop.on('clickQuickView', function (e) {
+    prestashop.on('clickQuickView', function () {
 		setTimeout(function(){ slickImage(); }, 2000);
 	});
-    prestashop.on('updatedProduct', function (e) {
+    prestashop.on('updatedProduct', function () {
         slickImage();
         imageThumbCarousel();
         calcOwnControlProductModal();
     });
+    
     setTimeout(() => {
         $('#product-modal .owl-stage .owl-item:first-child').addClass('active');
     }, 1000);
@@ -594,21 +599,23 @@ jQuery(document).ready(function(){
     calcOwlControlCarousel('catproduct-carousel');
     calcOwlControlCarousel('categorytab-products');
 
-    $(".qty .bootstrap-touchspin-down").append('<svg><use xlink:href="#icon_minus"><svg fill="none" viewBox="0 0 16 16" id="icon_minus" xmlns="http://www.w3.org/2000/svg"><path d="M0 8h16" stroke="currentColor" stroke-width="1.6"></path></svg></use></svg>');
-    $(".qty .bootstrap-touchspin-up").append('<svg><use xlink:href="#icon_add"><svg fill="none" viewBox="0 0 16 16" id="icon_add"><path d="M0 8h16M8 0v16" stroke="currentColor" stroke-width="1.6"></path></svg></use></svg>')
+    // $(".qty .bootstrap-touchspin-down").append('<svg><use xlink:href="#icon_minus"><svg fill="none" viewBox="0 0 16 16" id="icon_minus" xmlns="http://www.w3.org/2000/svg"><path d="M0 8h16" stroke="currentColor" stroke-width="1.6"></path></svg></use></svg>');
+    // $(".qty .bootstrap-touchspin-up").append('<svg><use xlink:href="#icon_add"><svg fill="none" viewBox="0 0 16 16" id="icon_add"><path d="M0 8h16M8 0v16" stroke="currentColor" stroke-width="1.6"></path></svg></use></svg>')
     $(".images-container .product-video > *:not(.jms-videos)").remove();
 
     $('.product-detail .product-images').slick({
         vertical: true,
         slidesToShow: 5,
         dots: true,
-      });
+    });
 });
 
 
 $(window).load(function() {
     $('.carousel').carousel('pause'); 
 });
+
+
 
 function imageParallaxAboutus(){
 	let imageUp = document.getElementsByClassName('js-up');

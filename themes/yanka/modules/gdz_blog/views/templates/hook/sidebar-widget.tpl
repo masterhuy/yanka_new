@@ -57,20 +57,29 @@
 {/if}
 {if $widget_setting.GBW_SB_SHOW_RECENT}
 	<aside class="blog-widget widget-recent">
-		<h3 class="widget-title"><span>{l s='Recent' d='Modules.Gdzblog.Sidebar-widget'}</span></h3>
+		<h3 class="widget-title"><span>{l s='Recent Posts' d='Modules.Gdzblog.Sidebar-widget'}</span></h3>
 		{foreach from=$latestpost key=k item=post}
 			{assign var="show_view" value=$post.views + 1}
 			{assign var=params value=['post_id' => $post.post_id, 'category_slug' => $post.category_alias, 'slug' => $post.alias]}
 			<article class="item-post clearfix">
-				<a href="{gdz_blog::getPageLink('gdz_blog-post', $params) nofilter}" class="post-img">
-				{if $post.image}
-					<img src="{$image_baseurl nofilter}thumb_{$post.image nofilter}" class="img-responsive" />
-				{else}
-					<img src="{$image_baseurl nofilter}no-img.jpg" class="img-responsive" />
-				{/if}
-				<p class="post-created">{$post.created|escape:'htmlall':'UTF-8'|date_format:"%B %e, %Y"}</p>
-				<h6>{$post.title nofilter}</h6>
+				<a href="{gdz_blog::getPageLink('gdz_blog-post', $params) nofilter}" class="post-title">
+					{$post.title nofilter}
 				</a>
+				<div class="intro-text">{$post.introtext nofilter}</div>
+				
+				<ul class="post-meta">
+					<li class="created">
+						<span>
+							<span>{$post.created|escape:'html':'UTF-8'|date_format:"%B %e, %Y"}</span>
+						</span>
+					</li>
+					<li class="post-category">
+						{l s='In' d='Modules.JmsBlog'} 
+						<a href="{gdz_blog::getPageLink('jmsblog-post', $params)}">
+							{$post.category_name|escape:'html':'UTF-8'}
+						</a>
+					</li>
+				</ul>
 			</article>
 		{/foreach}
 	</aside>

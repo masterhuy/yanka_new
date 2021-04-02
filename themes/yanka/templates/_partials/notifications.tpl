@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($notifications)}
-    <aside id="notifications" class="container">
+    <aside id="notifications">
         {if $notifications.error}
             {block name='notifications_error'}
                 <article class="alert alert-danger mb-2" role="alert" data-alert="danger">

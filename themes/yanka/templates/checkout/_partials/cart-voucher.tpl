@@ -55,8 +55,8 @@
                                 <input type="hidden" name="token" value="{$static_token}">
                                 <input type="hidden" name="addDiscount" value="1">
                                 <input class="promo-input" type="text" name="discount_name" placeholder="{l s='Promo code' d='Shop.Theme.Checkout'}">
-                                <button type="submit" class="btn btn-outline-primary-2">
-                                    <i class="icon-long-arrow-right"></i>
+                                <button type="submit" class="btn btn-default text-uppercase">
+                                    {l s='Add' d='Shop.Theme.Checkout'}
                                 </button>
                             </form>
                         {/block}
@@ -65,9 +65,6 @@
                                 <span class="ml-1 js-error-text"></span>
                             </div>
                         {/block}
-                        <a class="collapse-button promo-code-button cancel-promo" role="button" data-toggle="collapse" data-target="#promo-code" aria-expanded="true" aria-controls="promo-code">
-                            {l s='Close' d='Shop.Theme.Checkout'}
-                        </a>
                     </div>
                 </div>
 

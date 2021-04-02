@@ -31,7 +31,7 @@
 {block name='page_content'}
   <div class="row">
   {foreach $customer.addresses as $address}
-    <div class="col-4">
+    <div class="col-12">
     {block name='customer_address'}
       {include file='customer/_partials/block-address.tpl' address=$address}
     {/block}
@@ -39,9 +39,4 @@
   {/foreach}
   </div>
   <div class="clearfix"></div>
-  <div class="addresses-footer">
-    <a href="{$urls.pages.address}" data-link-action="add-address" class="btn btn-primary">
-      <span>{l s='Create new address' d='Shop.Theme.Actions'}</span>
-    </a>
-  </div>
 {/block}
