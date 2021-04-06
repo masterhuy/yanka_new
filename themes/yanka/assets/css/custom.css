@@ -3,49 +3,48 @@
 @import url(cart.css);
 @import url(checkout.css);
 /* Main CSS File */
-@import url(config/fonts.css);
+@import 'config/fonts.css';
 /*--------------------- 1.General Styles ---------- */
-@import url(base/base.css);
-@import url(base/layout.css);
+@import 'base/base.css';
+@import 'base/layout.css';
 /*--------------------- 2.Headers -------------------- */
-@import url(base/headers/header.css);
+@import 'base/headers/header.css';
 /*--------------------- 3.Footer -------------------- */
-@import url(base/footers/footer.css);
+@import 'base/footers/footer.css';
 /*--------------------- 4.Elements -------------------- */
 /*--------------------- Blogs -------------------- */
-@import url(elements/blogs.css);
+@import 'elements/blogs.css';
 /*--------------------- BreadCrumbs -------------------- */
-@import url(elements/breadcrumb.css);
+@import 'elements/breadcrumb.css';
 /*--------------------- Products box -------------------- */
-@import url(elements/products-box.css);
+@import 'elements/products-box.css';
 /*--------------------- Testimonials -------------------- */
-@import url(elements/testimonials.css);
+@import 'elements/testimonials.css';
 /*--------------------- Testimonials -------------------- */
-@import url(elements/popup-newsletter.css);
+@import 'elements/popup-newsletter.css';
 /*--------------------- Modal addtocart -------------------- */
-@import url(elements/blockcart-modal.css);
+@import 'elements/blockcart-modal.css';
 /*--------------------- 5.Pages -------------------- */
 /*--------------------- Category -------------------- */
-@import url(pages/category.css);
+@import 'pages/category.css';
 /*--------------------- Product Pages -------------------- */
-@import url(pages/product.css);
+@import 'pages/product.css';
 /*--------------------- Typography -------------------- */
-@import url(pages/typography.css);
+@import 'pages/typography.css';
 /*--------------------- About us -------------------- */
-@import url(pages/cms-page.css);
+@import 'pages/cms-page.css';
 /*--------------------- Contact -------------------- */
-@import url(pages/contact.css);
+@import 'pages/contact.css';
 /*--------------------- Login -------------------- */
-@import url(pages/login.css);
+@import 'pages/login.css';
 /*--------------------- Wishlist -------------------- */
-@import url(pages/wishlist.css);
+@import 'pages/wishlist.css';
 /*--------------------- My account -------------------- */
-@import url(pages/my-account.css);
+@import 'pages/my-account.css';
 /*--------------------- 6.Spacing + Helpers -------------------- */
-@import url(config/spacing.css);
+@import 'config/spacing.css';
 /*--------------------- 7.Sliders -------------------- */
-@import url(elements/sliders.css);
+@import 'elements/sliders.css';
 /*--------------------- 8.Tooltips -------------------- */
-@import url(elements/tooltips.css);
-
+@import 'elements/tooltips.css';
 /*# sourceMappingURL=custom.css.map */

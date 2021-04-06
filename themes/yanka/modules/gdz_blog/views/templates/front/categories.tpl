@@ -43,7 +43,7 @@
 						<div class="cat-post-list more-columns row">
 							{foreach from=$categories item=category}
 								{assign var=catparams value=['category_id' => $category.category_id, 'slug' => $category.alias]}
-								<div class="item col-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="item mb-5 col-12 col-sm-6 col-md-6 col-lg-6">
 									<div class="category-post">
 										{if $category.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
 											<div class="post-thumb">
@@ -57,7 +57,7 @@
 												<a class="category-title" href="{gdz_blog::getPageLink('gdz_blog-category', $catparams)}">{$category.title|escape:'htmlall':'UTF-8'}</a></h4>
 											<div class="cat-intro">{$category.introtext|truncate:120:'...' nofilter}</div>
 										</div>
-										<a class="read-more" href="{gdz_blog::getPageLink('gdz_blog-category', $catparams)}">
+										<a class="btn btn-default read-more" href="{gdz_blog::getPageLink('gdz_blog-category', $catparams)}">
 											{l s='Read more' d='Modules.Gdzblog.Post'}
 										</a>
 									</div>

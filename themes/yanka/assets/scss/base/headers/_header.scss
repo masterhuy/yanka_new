@@ -2,7 +2,12 @@
 /*# sourceMappingURL=_header.css.map */
 @import '../../config/variables.scss';
 
-.header-1 {
+#header{
+	background: #fff;
+	.container-fluid{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 	.alert-box {
 		color: #fff;
 		background: #FF7451;
@@ -108,6 +113,9 @@
 		margin-top: -1px;
 	}
 }
+.header-1 {
+	
+}
 .header-2{
 	#hor-menu .nav{
 		text-align: center;
@@ -198,7 +206,7 @@
 		font-weight: 800;
 		position: relative;
 		letter-spacing: 0.7px;
-		@include underline(-5, $active, 2)
+		@include underline(-5, $active, 2);
 		&:hover::before{
 			width: 100%;
 		}
@@ -404,6 +412,10 @@
 	position: static;
 	.nav > li.item-fullwidth{
 		position: static;
+		.mega-col-nav{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 	.dropdown-menu.fullwidth{
 		width: 100%;
@@ -413,12 +425,45 @@
 		    padding: 0;
 		}
 	}
-	.nav > .menu-item .mega-nav li.group > a {
-	    font-size: 18px;
-	    display: block;
-	    padding-bottom: 11px;
-	    padding-top: 8px;
-	    font-weight: 800;
+	.nav > .menu-item .mega-nav li{
+		&.has-label{
+			&.sale > a span::after{
+				background-color: #E12C43;
+				content: "Sale";
+			}
+			&.new > a span::after{
+				background-color: #42A5F6;
+				content: "New";
+			}
+			&.featured > a span::after{
+				background-color: #ffba0a;
+				content: "Featured";
+			}
+			&.out-of-stock > a span::after{
+				background-color: #333;
+				content: "Out Of Stock";
+			}
+			> a span{
+				&::after{
+					color: #ffffff;
+				    display: inline-block;
+				    font-size: 12px;
+				    line-height: 15px;
+				    padding: 0 4px;
+				    font-weight: 400;
+				    margin-left: 4px;
+				    position: relative;
+				    top: -2px;
+				}
+			}
+		}
+		&.group > a {
+		    font-size: 18px;
+		    display: block;
+		    padding-bottom: 11px;
+		    padding-top: 8px;
+		    font-weight: 800;
+		}
 	}
 	.nav > .menu-item.item-fullwidth .mega-nav li > a{
 		padding-left: 0;
@@ -500,7 +545,118 @@
 			}
 		}
 	}
+	.sub-women{
+		.row + .row{
+			margin-top: 28px;
+		}
+		.sub-product-carousel{
+			margin-top: 5px;
+			margin-bottom: 28px;
+			.owl-nav{
+				position: absolute;
+			    top: -46px;
+			    right: 4px;
+			    button{
+			    	position: static;
+			    	transform: none;
+			    	&:hover{
+			    		background-color: transparent;
+			    		&::before{
+			    			color: #333;
+			    		}
+			    	}
+			    }
+			}
+		}
+		.product-miniature{
+			.product-miniature .product-info {
+			    margin-top: 6px;
+			}
+			.content_price{
+				font-size: 18px;
+				margin-left: 0;
+			}
+		}
+		.pb-banner{
+			position: relative;
+			overflow: hidden;
+			&:hover{
+				img{
+					transform: scale3d(1.1, 1.1, 1);
+				}
+				.banner-content .text-1::before{
+					width: 100%;
+				}
+			}
+			img{
+				transition: transform 1s, -webkit-transform 1s;
+			}
+			&.right{
+				.banner-content{
+					.text-1, .text-2{
+						color: #fff;
+						&::before{
+							background-color: #fff;
+						}
+					}
+				}
+			}
+			.banner-content{
+				top: 18px;
+			    left: 25px;
+			    position: absolute;
+			    text-align: left;
+			    margin-top: 0;
+			    .text-1{
+			    	font-size: 24px;
+				    font-weight: 800;
+				    position: relative;
+				    display: inline-block;
+				    color: #333;
+				    margin-bottom: 6px;
+				     @include underline(1, #333, 2)
+			    }
+			    .text-2{
+			    	font-size: 16px;
+				    max-width: 275px;
+				    color: #333;
+				    line-height: 1.2;
+			    }
+			}
+		}
+	}
+	.banner-men{
+		text-align: center;
+		margin-top: 11px;
+		&:hover a .text-1::before{
+			width: 100%;
+		}
+		a{
+			text-align: center;
+			img{
+				margin-bottom: 16px;
+			}
+			.text-1{
+				font-size: 24px;
+				font-weight: 800;
+				position: relative;
+				display: inline-block;
+				color: #333;
+				margin-bottom: 8px;
+				line-height: 28px;
+				@include underline(1, #333, 2)
+
+			}
+			.text-2{
+				font-size: 16px;
+				display: block;
+				color: #333;
+				line-height: 19px;
+			}
+		}
+	}
 }
+
 
 //ajax search
 .search-result-area{
@@ -811,13 +967,7 @@
 	}
 }
 
-#header{
-	background: #fff;
-	.container-fluid{
-		padding-left: 50px;
-		padding-right: 50px;
-	}
-}
+
 .header-collapse{
 	position: absolute;
 	min-width: 194px;

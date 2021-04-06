@@ -22,26 +22,22 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="header-top">
-    <div class="container">
-        <div class="row no-margin">
-            <div class="header-left">
-                {$gdzSetting.topbar_content nofilter}
-            </div>
-            <div class="header-right">
-                <button type="button" class="btn btn-link" data-toggle="dropdown">Links</button>
-                <div id="link" class="dropdown-menu">
-                    {widget_block name="ps_currencyselector"}
-                        {include 'module:ps_currencyselector/ps_currencyselector-dropdown.tpl'}
-                    {/widget_block}
-                    {widget_block name="ps_languageselector"}
-                        {include 'module:ps_languageselector/ps_languageselector-dropdown.tpl'}
-                    {/widget_block}
-                    {widget_block name="ps_customersignin"}
-                        {include 'module:ps_customersignin/ps_customersignin.tpl'}
-                    {/widget_block}
+{if ($gdzSetting.header_topbar == 1)}
+    <div class="alert-box">
+        <div class="container">
+            <div class="row">
+                <div class="layout-column col-12">
+                    {$gdzSetting.topbar_content nofilter}
                 </div>
             </div>
+        </div>
+    </div>
+{/if}
+
+<div id="header-top" class="{if $gdzSetting.topbar_class} {$gdzSetting.topbar_class}{/if} header-top top-panel">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            {$gdzSetting.header_html nofilter}
         </div>
     </div>
 </div>
@@ -57,8 +53,20 @@
             </div>
             <div class="layout-column col-auto header-right">
                 <div class="row">
-                    {if ($gdzSetting.wishlist == 1)}
-                        {include file='_partials/headers/wishlist.tpl'}
+                    {if $gdzSetting.search == 1}
+                        {if $gdzSetting.search_box_type == 'dropdown'}
+                            {widget_block name="gdz_ajaxsearch"}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                            {/widget_block}
+                        {elseif $gdzSetting.search_box_type == 'fullwidth'}
+                            {widget_block name="gdz_ajaxsearch"}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullwidth.tpl'}
+                            {/widget_block}
+                        {else}
+                            {widget_block name="gdz_ajaxsearch"}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
+                            {/widget_block}
+                        {/if}
                     {/if}
                     {if ($gdzSetting.cart == 1)}
                         {widget_block name="ps_shoppingcart"}
@@ -70,8 +78,4 @@
         </div>
     </div>
 </div>
-{if $gdzSetting.search && $gdzSetting.search_box_type != 'dropdown'}
-    {widget_block name="gdz_ajaxsearch"}
-        {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
-    {/widget_block}
-{/if}
+

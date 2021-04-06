@@ -10,6 +10,40 @@ jQuery(function ($) {
         $('.panel-default .collapse').not(e.target).collapse('hide');
     });
 
+    if($(".sub-product-carousel").length) {
+		var subProductCarousel = $(".sub-product-carousel");
+        var rtl = false;
+        subProductCarousel.addClass("owl-carousel");
+		if ($("body").hasClass("rtl")) rtl = true;
+		subProductCarousel.owlCarousel({
+			responsiveClass:true,
+			responsive:{
+				1199:{
+					items:3
+				},
+				991:{
+					items:3
+				},
+				768:{
+					items:2
+				},
+				481:{
+					items:2
+				},
+				0:{
+					items:2
+				}
+			},
+			rtl: rtl,
+			margin: 30,
+			nav: true,
+			dots: false,
+			autoplay: false,
+			slideSpeed: 200,
+			loop: false
+		});
+	}
+
 
     //owl carousel featured product
     var lazyload_fp = false;

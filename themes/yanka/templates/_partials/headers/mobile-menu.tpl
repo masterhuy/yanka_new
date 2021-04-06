@@ -23,11 +23,19 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <a id="mobile-menu-toggle" class="open-button hidden-lg">
-	<i class="icon-bars"></i>
+	<svg width="24" height="24" viewBox="0 0 24 24">
+        <use xlink:href="#icon-mobile-menu-toggle">
+            <symbol id="icon-mobile-menu-toggle" fill="none" viewBox="0 0 24 24">
+                <path d="M0 6h24M0 12h16M0 18h24" stroke="currentColor" stroke-widht="1.6"></path>
+            </symbol>
+        </use>
+    </svg>
 </a>
 <div class="mobile-menu-wrap hidden-lg">
     <button id="mobile-menu-close" class="close-button">
-        <i class="icon-close"></i>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve">
+            <polygon fill="currentColor" points="15.6,1.6 14.4,0.4 8,6.9 1.6,0.4 0.4,1.6 6.9,8 0.4,14.4 1.6,15.6 8,9.1 14.4,15.6 15.6,14.4 9.1,8 "></polygon>
+        </svg>
     </button>
     {hook h='displayTopColumn'}
     <h3 class="text-menu">{l s='Menu' d='Shop.Theme.Global'}</h3>

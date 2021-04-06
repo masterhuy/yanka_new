@@ -398,6 +398,9 @@
     width: 24px;
     height: 24px; }
 
+.category-post .category-info {
+  margin-top: 10px; }
+
 @media (min-width: 992px) {
   #module-gdz_blog-category #left-column {
     -webkit-box-flex: 0;

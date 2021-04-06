@@ -86,9 +86,6 @@
 .gdz-megamenu .mega-col-nav {
     padding: 0;
 }
-.gdz-megamenu .mega-col-nav ~ .mega-col-nav li{
-    padding-left: 10px !important;
-}
 .gdz-megamenu .mega-nav > .mega > .dropdown-menu {
     left: 100%;
     margin: 0;
@@ -146,9 +143,6 @@
 .gdz-megamenu .nav > .menu-item .mega-nav li {
     position: relative;
     padding: 0;
-}
-.gdz-megamenu .nav > .menu-item .mega-nav li.group{
-    margin-top: 18px;
 }
 .gdz-megamenu .nav > .menu-item .mega-nav li.group ~ .group{
     margin-top: 12px;
