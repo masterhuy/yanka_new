@@ -1,73 +1,96 @@
+@charset "UTF-8";
 /* Sliders */
+.fraction-slider .slide {
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+}
+.fraction-slider .btn {
+  height: 44px !important;
+}
 .fraction-slider .prev {
-  background-color: #fff; }
-  .fraction-slider .prev:hover {
-    background-color: #333; }
-  .fraction-slider .prev::before {
-    content: "\e904";
-    font-family: 'yanka';
-    font-size: 23px;
-    line-height: 1;
-    z-index: 2;
-    top: 8px;
-    left: 8px;
-    color: #D0D0D0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 25px;
-    height: 25px; }
-
+  background-color: #fff;
+}
+.fraction-slider .prev:hover {
+  background-color: #333;
+}
+.fraction-slider .prev::before {
+  content: "";
+  font-family: "yanka";
+  font-size: 23px;
+  line-height: 1;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  color: #D0D0D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
+}
 .fraction-slider .next {
-  background-color: #fff; }
-  .fraction-slider .next:hover {
-    background-color: #333; }
-  .fraction-slider .next::before {
-    content: "\e905";
-    font-family: 'yanka';
-    font-size: 23px;
-    line-height: 1;
-    z-index: 2;
-    top: 8px;
-    left: 8px;
-    color: #D0D0D0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 25px;
-    height: 25px; }
-
+  background-color: #fff;
+}
+.fraction-slider .next:hover {
+  background-color: #333;
+}
+.fraction-slider .next::before {
+  content: "";
+  font-family: "yanka";
+  font-size: 23px;
+  line-height: 1;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  color: #D0D0D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
+}
 .fraction-slider .fs-pager-wrapper {
-  bottom: 32px; }
-  .fraction-slider .fs-pager-wrapper a {
-    width: 10px;
-    height: 4px;
-    border: none;
-    margin: 0 8px;
-    background-color: #fff;
-    border-radius: 0;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s; }
-    .fraction-slider .fs-pager-wrapper a:hover {
-      background-color: #333; }
-    .fraction-slider .fs-pager-wrapper a.active {
-      width: 30px;
-      background-color: #333; }
+  bottom: 32px;
+  display: none;
+}
+.fraction-slider .fs-pager-wrapper a {
+  width: 10px;
+  height: 4px;
+  border: none;
+  margin: 0 8px;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.fraction-slider .fs-pager-wrapper a:hover {
+  background-color: #333;
+}
+.fraction-slider .fs-pager-wrapper a.active {
+  width: 30px;
+  background-color: #333;
+}
 
 .gdz-slide-content.text-center {
-  width: 100% !important; }
+  width: 100% !important;
+}
 
+@media (min-width: 576px) {
+  .fraction-slider .fs-pager-wrapper {
+    display: block;
+  }
+}
 /*# sourceMappingURL=sliders.css.map */

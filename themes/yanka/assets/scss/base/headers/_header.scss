@@ -5,8 +5,8 @@
 #header{
 	background: #fff;
 	.container-fluid{
-		padding-left: 50px;
-		padding-right: 50px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.alert-box {
 		color: #fff;
@@ -322,7 +322,6 @@
 	font-size: 26px;
 	font-weight: 800;
 	display: block;
-	padding-bottom: 10px;
 	letter-spacing: 0.3px;
 }
 
@@ -335,6 +334,7 @@
 		margin-bottom: 0;
 	}
 	.call-us {
+		text-align: center;
 		strong {
 			color: #333;
 		}
@@ -1090,3 +1090,41 @@
 		}
 	}
 }
+
+.open-button{
+	color: #333;
+	&:hover{
+		color: $active;
+	}
+	> svg{
+		width: 24px;
+		height: 24px;
+	}
+}
+
+#mobile-header{
+	.right-module-header{
+		.row > .btn-group{
+			+ .btn-group{
+				margin-left: 25px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1200px){
+	.top-panel{
+		.call-us{
+			text-align: left;
+		}
+	}
+	.site-logo-text {
+	    padding-bottom: 10px;
+	}
+	#header .container-fluid {
+	    padding-left: 50px;
+	    padding-right: 50px;
+	}
+}
+

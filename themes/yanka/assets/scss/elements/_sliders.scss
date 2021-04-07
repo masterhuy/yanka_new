@@ -1,5 +1,12 @@
 /* Sliders */
 .fraction-slider{
+	.slide{
+		background-position: 50% 50% !important;
+    	background-size: cover !important;
+	}
+	.btn{
+		height: 44px !important;
+	}
 	.prev{
 		background-color: #fff;
 		&:hover{
@@ -44,6 +51,7 @@
 	}
 	.fs-pager-wrapper{
 		bottom: 32px;
+		display: none;
 		a{
 			width: 10px;
 			height: 4px;
@@ -64,4 +72,11 @@
 }
 .gdz-slide-content.text-center{
 	width: 100% !important;
+}
+
+
+@media (min-width: 576px){
+	.fraction-slider .fs-pager-wrapper{
+		display: block;
+	}
 }

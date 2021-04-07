@@ -198,7 +198,7 @@ select, textarea {
     margin-top: 2px;
     position: relative;
     line-height: normal;
-    @include underline(0, #333, 2)
+    @include underline(0, #333, 2);
     &:hover{
         color: #333;
         text-decoration: none;
@@ -313,45 +313,7 @@ select, textarea {
         }
     }
 }
-.hotdeal-products{
-    .countdown-box{
-        position: absolute;
-        bottom: 10px;
-        width: calc(100% - 20px);
-        background: rgba(255,255,255,0.9);
-        left: 10px;
-        text-align: center;
-        padding: 10px;
-        .title-countdown {
-            display: inline-block;
-            font-size: 14px;
-            line-height: 17px;
-            color: #333;
-            padding-bottom: 5px;
-            text-transform: capitalize;
-        }
-    }
-    .countdown-section {
-        display: inline-flex;
-        flex-direction: column;
-        color: #333;
-        padding: 0 12px;
-        min-width: 50px;
-    }
-    .countdown-amount{
-        font-size: 22px;
-        line-height: 15px;
-        display: block;
-        font-weight: 700;
-    }
-    .countdown-period{
-        display: block;
-        padding-top: 4px;
-        font-size: 12px;
-        line-height: 18px;
-        text-transform: uppercase;
-    }
-}
+
 .owl_carousel{
     position: relative;
     button.owl-dot{
@@ -587,12 +549,8 @@ body{
 
 /*back to top*/
 .back-to-top {
-    bottom: -60px;
+    height: 73px;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    right: 0;
     background: #333;
     color: #fff;
     transition: all 200ms;
@@ -600,13 +558,13 @@ body{
     &:hover{
         background: #48CAB2;
     }
-    &.show{
-        bottom: 50px;
-    }
     span{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-transform: uppercase;
+        font-size: 12px;
     }
     i{
         height: 100%;
@@ -642,13 +600,13 @@ body{
             display: inline-block;
             position: relative;
             margin-bottom: 0;
-            @include underline(2, #333, 2)
+            @include underline(2, #333, 2);
         }
     }
 }
 #woorebought-popup p a span{
     position: relative;
-    @include underline(1, #333, 1)
+    @include underline(1, #333, 1);
     &:hover::before{
         width: 100%;
     }
@@ -667,6 +625,19 @@ body{
 @media (min-width: 768px){
     .hidden-md-up{
         display: none;
+    }
+    .back-to-top{
+        position: fixed;
+        right: 0;
+        bottom: -60px;
+        width: 60px;
+        height: 60px;
+        &.show{
+            bottom: 50px;
+        }
+        .text{
+            display: none;
+        }
     }
 }
 @media (min-width: 1200px){

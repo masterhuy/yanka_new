@@ -159,7 +159,7 @@ jQuery(function ($) {
             margin:0,
             nav:false,
             dots:false,
-            autoplay:false,
+            autoplay:true,
             lazyLoad:lazyload_hcr,
             responsive:{
                 0:{
@@ -488,6 +488,15 @@ jQuery(window).resize(function () {
     stickyRightColumn2();
     footerCollapse();
     calcOwnControlProductModal();
+
+    calcOwlnavButton();
+    calcOwlBlogCarousel();
+    calcOwlControlCarousel('producttab-products');
+    calcOwlControlCarousel('customs-carousel-product');
+    calcOwlControlCarousel('filter-products');
+    calcOwlControlCarousel('hotdeal-products');
+    calcOwlControlCarousel('catproduct-carousel');
+    calcOwlControlCarousel('categorytab-products');
 });
 
 

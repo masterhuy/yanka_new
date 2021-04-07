@@ -264,6 +264,18 @@
 		}
 	}
 }
+#footer-main .block{
+	&.collapsed{
+		.block-title i{
+			transform: none;
+		}
+	}
+	.block-title i{
+		transition: .4s all;
+    	color: #d0d0d0;
+		transform: rotate(45deg);
+	}
+}
 .img-center{
 	display: block;
 	margin: 0 auto;

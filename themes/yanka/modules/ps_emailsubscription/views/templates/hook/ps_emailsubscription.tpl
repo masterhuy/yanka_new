@@ -22,9 +22,9 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<div class="email_subscription block block_newsletter">
+<div class="email_subscription block_newsletter">
 	<div class="newsletter-desc">{l s='Be the first to learn about our latest trends and get exclusive offers.' d='Modules.Emailsubscription.Shop'}</div>
-	<div class="block-content">
+	<div class="block-contentt">
 	  	{if $msg}
 	    	<div class="alert {if $nw_error}alert-error{else}alert-success{/if}">{$msg}</div>
 	  	{/if}

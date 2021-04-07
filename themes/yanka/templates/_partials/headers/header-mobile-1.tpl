@@ -44,15 +44,15 @@
 
 <div id="header-mobile-top" class="header-mobile-top mobile-menu-light{if $gdzSetting.header_mobile_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_mobile_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
     <div class="container">
-        <div class="row align-items-center no-margin">
-            <div class="layout-column col-auto header-left">
+        <div class="row align-items-center">
+            <div class="layout-column col-4 header-left">
                 {include file='_partials/headers/mobile-menu.tpl'}
             </div>
-            <div class="layout-column text-center">
+            <div class="layout-column col-4 text-center">
                 {include file='_partials/headers/logo.tpl'}
             </div>
-            <div class="layout-column col-auto header-right">
-                <div class="row">
+            <div class="layout-column col-4 right-module-header header-right">
+                <div class="row align-items-center justify-content-end no-margin">
                     {if $gdzSetting.search == 1}
                         {if $gdzSetting.search_box_type == 'dropdown'}
                             {widget_block name="gdz_ajaxsearch"}

@@ -24,16 +24,10 @@
 		}
 	}
 	.btn-group{
-		display: block;
-		opacity: 0;
-		visibility: hidden;
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		width: auto;
-		transition: opacity 0.2s;
-		a:not(:last-child){
-		  	margin-bottom: 15px;
+		display: flex;
+		margin-top: 15px;
+		a{
+			margin-right: 15px;
 		}
 		svg{
 			width: 24px;
@@ -56,6 +50,11 @@
 		line-height: 1;
 		padding-bottom: 9px;
 		margin-top: -1px;
+		+ .content_price{
+			margin-left: 0;
+			margin-bottom: 10px;
+			margin-top: -7px;
+		}
 	}
 	.product-link{
 		display: block;
@@ -163,6 +162,8 @@
 		}
 	}
 	button.cart-button {
+		font-size: 0;
+		width: 100%;
 	   	background-color: #48CAB2;
 	  	border: none;
 	  	color: #ffffff;
@@ -194,6 +195,9 @@
 				line-height: normal;
 				margin-left: 11px;
 			}
+	  	}
+	  	.text-addcart, .text-outofstock, .text-added{
+	  		font-size: 0;
 	  	}
 	  	transition: background-color 0.2s linear, padding 0.2s ease-out;
 	  	&:focus{
@@ -262,16 +266,7 @@
 .product-preview button.cart-button:hover .icon-cart{
   display: none;
 }
-.text-addcart, .text-outofstock, .text-added {
-  width: 0;
-  line-height: 0;
-  font-size: 0;
-  -webkit-transition: margin .2s;
-  -moz-transition: margin .2s;
-  -ms-transition: margin .2s;
-  -o-transition: margin .2s;
-  transition: margin .2s;
-}
+
 .product-btn .fa-spin, .product-btn .fa-check{
   font-size: 20px;
   display: none; }
@@ -299,3 +294,68 @@
   cursor: not-allowed;
   display: flex !important;
   justify-content: center; }
+.hotdeal-products{
+    .countdown-box{
+    	display: none;
+        position: absolute;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        background: rgba(255,255,255,0.9);
+        left: 10px;
+        text-align: center;
+        padding: 10px;
+        .title-countdown {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 17px;
+            color: #333;
+            padding-bottom: 5px;
+            text-transform: capitalize;
+        }
+    }
+    .countdown-section {
+        display: inline-flex;
+        flex-direction: column;
+        color: #333;
+        padding: 0 12px;
+        min-width: 50px;
+    }
+    .countdown-amount{
+        font-size: 22px;
+        line-height: 15px;
+        display: block;
+        font-weight: 700;
+    }
+    .countdown-period{
+        display: block;
+        padding-top: 4px;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 768px){
+	.product-miniature button.cart-button{
+		font-size: 13px;
+	}
+	.hotdeal-products .countdown-box{
+		display: block;
+	}
+}
+@media (min-width:1200px){
+	.btn-group{
+		margin-top: 0;
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: auto;
+		transition: opacity 0.2s;
+		a:not(:last-child){
+		  	margin-bottom: 15px;
+		}
+	}
+}
