@@ -24,7 +24,7 @@
 				a{
 					color: #777;
 					position: relative;
-					@include underline(0, #777, 1)
+					@include underline(0, #777, 1);
 					&:hover::before{
 						width: 100%;
 					}
@@ -41,7 +41,7 @@
 			display: inline-block;
 			margin-top: -10px;
 			position: relative;
-			@include underline(5, $active, 2)
+			@include underline(5, $active, 2);
 			&:hover::before{
 				width: 100%;
 			}
@@ -103,8 +103,11 @@
 		}
 	}
 	.content_price{
-		display: flex;
+		display: flex !important;
 		margin-left: 0;
+		&.d-xl-none{
+			display: none !important;
+		}
 		span + span{
 			margin-left: 10px;
 		}
@@ -116,5 +119,13 @@
 	.cart-button,
 	.btn-group{
 		display: none !important;
+	}
+}
+
+@media (max-width: 991px){
+	.h11-list-category, .h11-banner-text-center{
+		.layout-column{
+			margin-bottom: 10px;
+		}
 	}
 }

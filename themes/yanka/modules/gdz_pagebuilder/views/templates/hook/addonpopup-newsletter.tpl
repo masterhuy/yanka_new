@@ -32,7 +32,7 @@
 				</svg>
 			</a>
 			<div class="row d-flex w-100">
-				<div class="gdz-popup-content col-lg-6 col-md-6 col-sm-6 col-xs-12 ml-auto">
+				<div class="gdz-popup-content col-lg-6 col-md-6 col-12 ml-auto">
 					{if $popup_title}
 						<h3>
 							{$popup_title|escape:'htmlall':'UTF-8'}
@@ -51,8 +51,6 @@
 				</div>
 			</div>
 		</div>
-
-		
 	</div>
 </div>
 

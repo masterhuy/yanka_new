@@ -29,7 +29,7 @@
                 <h3 class="h3 block-title">
                    {l s='Subscribe to Our Newsletter!' d='Shop.jmstheme'}
                 </h3>
-                <div class="block-content">
+                <div class="block-contents">
                     {block name='footer-newsletter'}
                         <div class="block block-footer block-newsletter">
                             {widget name="ps_emailsubscription" hook='displayFooter'}

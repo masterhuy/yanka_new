@@ -25,7 +25,7 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 col-lg-8 block">
+            <div class="col-12 col-lg-8 block">
                 <div class="newsletter">
                     <h3 class="h3 block-title">
                         {l s='Subscribe to Our Newsletter!' d='Shop.jmstheme'}
@@ -37,7 +37,7 @@
                     {/block}
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3 ml-auto block">
+            <div class="col-12 col-lg-3 ml-auto block">
                 <div class="block-socials">
                     {include file='_partials/socials.tpl'}
                 </div>

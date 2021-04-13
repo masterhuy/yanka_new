@@ -65,3 +65,23 @@
 		}
 	}
 }
+
+@media (max-width: 991px){
+	.h5-banner-type-1, .h5-banner-type-2{
+		.layout-column{
+			margin-bottom: 10px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.h5-banner-type-2{
+		.pb-banner-text{
+			min-width: 90%;
+		    padding: 10px;
+		    bottom: auto !important;
+		}
+		.pb-banner-desc{
+			display: none;
+		}
+	}
+}

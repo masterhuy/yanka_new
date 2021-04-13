@@ -17,3 +17,12 @@
 	}
 }
 
+@media (max-width: 991px){
+	.h2-banner{
+		.layout-column{
+			+ .layout-column{
+				margin-top: 40px;
+			}
+		}
+	}
+}

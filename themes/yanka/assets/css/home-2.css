@@ -1,21 +1,29 @@
 /* Demo 2 Homepage 2 */
 .h2-banner .pb-image {
-  overflow: hidden; }
-  .h2-banner .pb-image a img {
-    width: 100%;
-    transition: transform 1s, -webkit-transform 1s; }
-  .h2-banner .pb-image:hover a img {
-    -webkit-transform: scale3d(1.1, 1.1, 1);
-    transform: scale3d(1.1, 1.1, 1); }
-
+  overflow: hidden;
+}
+.h2-banner .pb-image a img {
+  width: 100%;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.h2-banner .pb-image:hover a img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+          transform: scale3d(1.1, 1.1, 1);
+}
 .h2-banner .pb-heading {
   margin-top: 12px;
-  margin-bottom: -1px; }
-
+  margin-bottom: -1px;
+}
 .h2-banner .pb-text-content p {
-  margin-bottom: 13px; }
-
+  margin-bottom: 13px;
+}
 .h2-banner .pb-button {
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
+@media (max-width: 991px) {
+  .h2-banner .layout-column + .layout-column {
+    margin-top: 40px;
+  }
+}
 /*# sourceMappingURL=home-2.css.map */

@@ -1,85 +1,109 @@
 @charset "UTF-8";
 /* Testimonials */
 .pb-testimonial .pb-testimonial-box:hover {
-  cursor: pointer; }
-  .pb-testimonial .pb-testimonial-box:hover .pb-testimonial-comment h5::before {
-    width: 100%; }
-
+  cursor: pointer;
+}
+.pb-testimonial .pb-testimonial-box:hover .pb-testimonial-comment h5::before {
+  width: 100%;
+}
 .pb-testimonial .pb-testimonial-box .pb-testimonial-img {
   width: 80px;
   margin-right: 16px;
-  border-radius: 50%; }
-  .pb-testimonial .pb-testimonial-box .pb-testimonial-img img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; }
-
+  border-radius: 50%;
+}
+.pb-testimonial .pb-testimonial-box .pb-testimonial-img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
 .pb-testimonial .pb-testimonial-box .pb-testimonial-comment {
   padding: 48px 40px 22px 53px;
   background: #f8f8f8;
-  position: relative; }
-  .pb-testimonial .pb-testimonial-box .pb-testimonial-comment h5 {
-    display: inline-block;
-    padding-bottom: 11px;
-    margin-bottom: 0;
-    position: relative; }
-    .pb-testimonial .pb-testimonial-box .pb-testimonial-comment h5::before {
-      position: absolute;
-      bottom: 12px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 0%;
-      content: '';
-      color: transparent;
-      background-color: #333;
-      height: 2px;
-      -webkit-transition: width 0.25s linear;
-      -o-transition: width 0.25s linear;
-      transition: width 0.25s linear; }
-  .pb-testimonial .pb-testimonial-box .pb-testimonial-comment::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 76px;
-    bottom: -17px;
-    width: 0;
-    height: 0;
-    border-top: 17px solid #f8f8f8;
-    border-right: 34px solid transparent; }
-
+  position: relative;
+}
+.pb-testimonial .pb-testimonial-box .pb-testimonial-comment h5 {
+  display: inline-block;
+  padding-bottom: 11px;
+  margin-bottom: 0;
+  position: relative;
+}
+.pb-testimonial .pb-testimonial-box .pb-testimonial-comment h5::before {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: "";
+  color: transparent;
+  background-color: #333;
+  height: 2px;
+  -webkit-transition: width 0.25s linear;
+  -o-transition: width 0.25s linear;
+  transition: width 0.25s linear;
+}
+.pb-testimonial .pb-testimonial-box .pb-testimonial-comment::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 76px;
+  bottom: -17px;
+  width: 0;
+  height: 0;
+  border-top: 17px solid #f8f8f8;
+  border-right: 34px solid transparent;
+}
 .pb-testimonial .pb-testimonial-box .pb-rating {
   position: absolute;
   right: 40px;
-  top: 42px; }
-  .pb-testimonial .pb-testimonial-box .pb-rating i {
-    color: #EBEBEB; }
-    .pb-testimonial .pb-testimonial-box .pb-rating i + i {
-      margin-left: 1px; }
-
+  top: 42px;
+}
+.pb-testimonial .pb-testimonial-box .pb-rating i {
+  color: #EBEBEB;
+}
+.pb-testimonial .pb-testimonial-box .pb-rating i + i {
+  margin-left: 1px;
+}
 .pb-testimonial .pb-testimonial-box .pb-reviewsbox-author {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 13px;
-  margin-top: 24px; }
-
+  margin-top: 24px;
+}
 .pb-testimonial .pb-testimonial-box .pb-testimonial-author {
   font-size: 13px;
   font-weight: 800;
   color: #333;
   margin-right: 4px;
-  margin-bottom: 0; }
-
+  margin-bottom: 0;
+}
 .pb-testimonial .pb-testimonial-box .pb-testimonial-position {
-  position: relative; }
-  .pb-testimonial .pb-testimonial-box .pb-testimonial-position::before {
-    content: "—"; }
-
+  position: relative;
+}
+.pb-testimonial .pb-testimonial-box .pb-testimonial-position::before {
+  content: "—";
+}
 .pb-testimonial .owl-dots {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
+@media (max-width: 767px) {
+  .pb-testimonial .pb-testimonial-box .pb-testimonial-comment {
+    padding: 15px 20px;
+  }
+  .pb-testimonial .pb-testimonial-box .pb-rating {
+    position: static;
+  }
+  .pb-testimonial .pb-testimonial-box .pb-testimonial-img {
+    width: 60px;
+  }
+  .pb-testimonial .pb-testimonial-box .pb-testimonial-img img {
+    width: 60px;
+    height: 60px;
+  }
+}
 /*# sourceMappingURL=testimonials.css.map */

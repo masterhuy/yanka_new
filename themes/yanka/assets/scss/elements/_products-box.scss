@@ -334,17 +334,22 @@
         text-transform: uppercase;
     }
 }
-
-@media (min-width: 768px){
+@media (min-width: 575px){
 	.product-miniature button.cart-button{
-		font-size: 13px;
+		width: auto;
+		 .text-addcart{
+		 	font-size: 13px;
+		 	margin-left: 10px;
+		 }
 	}
+}
+@media (min-width: 768px){
 	.hotdeal-products .countdown-box{
 		display: block;
 	}
 }
 @media (min-width:1200px){
-	.btn-group{
+	.product-miniature .btn-group{
 		margin-top: 0;
 		display: block;
 		opacity: 0;
@@ -357,5 +362,15 @@
 		a:not(:last-child){
 		  	margin-bottom: 15px;
 		}
+	}
+	.product-miniature button.cart-button .text-addcart, 
+	.product-miniature button.cart-button .text-outofstock, 
+	.product-miniature button.cart-button .text-added{
+		display: none;
+	}
+	.product-miniature button.cart-button:hover .text-addcart, 
+	.product-miniature button.cart-button:hover .text-outofstock, 
+	.product-miniature button.cart-button:hover .text-added{
+		display: block;
 	}
 }

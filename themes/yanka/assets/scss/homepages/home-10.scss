@@ -112,3 +112,50 @@
 		}
 	}
 }
+
+@media (max-width: 991px){
+	.pt-parallax-list img {
+	    -webkit-transition: inherit !important;
+	    transition: inherit !important;
+	    -webkit-transform: inherit !important;
+	    transform: inherit !important;
+	}
+	.pt-parallax-01{
+		.pt-img-main{
+			width: 90%;
+		}
+		.pt-img-sub{
+			bottom: -30px;
+	    	right: 0px;
+	    	max-width: 75%;
+		}
+	}
+}
+
+@media (max-width: 767px){
+	.pt-parallax-01{
+		flex-direction: column;
+		+ .pt-parallax-01{
+			.pt-description{
+				margin-top: 0;
+				margin-bottom: 40px;
+			}
+		}
+		.pt-img {
+		    width: 100%;
+		}
+		.pt-description {
+		    width: 100%;
+		    margin-top: 40px;
+		    padding-left: 0;
+		}
+	}
+	.pt-parallax-02{
+		flex-direction: column;
+		.pt-description{
+			position: static;
+		    transform: none;
+		    margin-top: 20px;
+		}
+	}
+}

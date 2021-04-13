@@ -5,7 +5,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  * @Website: http://www.joommasters.com
 *}
-<div class="btn-group gdz_ajax_search{if $gdzSetting.search_box_type} {$gdzSetting.search_box_type}{/if}" id="gdz_ajax_search">
+<div class="gdz_ajax_search{if $gdzSetting.search_box_type} {$gdzSetting.search_box_type}{/if}" id="gdz_ajax_search">
 	<a href="#" class="btn-search hover-tooltip" data-toggle="dropdown" data-display="static">
 		<i class="d-flex">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">

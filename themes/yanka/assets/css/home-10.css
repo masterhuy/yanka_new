@@ -1,103 +1,177 @@
 /* Demo 10*/
 #header .header-6 .top-panel {
-  display: none; }
-
+  display: none;
+}
 #header .header-6 .container-fluid {
   max-width: 1200px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+}
 
 .pt-parallax-01 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .pt-parallax-01:nth-child(2) {
-    margin-top: 100px; }
-    .pt-parallax-01:nth-child(2) .pt-description {
-      padding-left: 0;
-      padding-right: 28px; }
-  .pt-parallax-01 .pt-img {
-    position: relative;
-    width: 58.33333%; }
-  .pt-parallax-01 .pt-description {
-    width: 41.66667%;
-    padding-left: 44px; }
-    .pt-parallax-01 .pt-description .pt-title-01 {
-      font-size: 18px;
-      line-height: 26px;
-      color: #333333;
-      font-weight: 800; }
-    .pt-parallax-01 .pt-description .pt-title-02 {
-      font-size: 36px;
-      line-height: 43px;
-      color: #333333;
-      font-weight: 800;
-      margin-top: 8px; }
-    .pt-parallax-01 .pt-description p {
-      margin-top: 21px; }
-    .pt-parallax-01 .pt-description .btn-default {
-      margin-top: 24px; }
-  .pt-parallax-01 .pt-img-sub {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pt-parallax-01:nth-child(2) {
+  margin-top: 100px;
+}
+.pt-parallax-01:nth-child(2) .pt-description {
+  padding-left: 0;
+  padding-right: 28px;
+}
+.pt-parallax-01 .pt-img {
+  position: relative;
+  width: 58.33333%;
+}
+.pt-parallax-01 .pt-description {
+  width: 41.66667%;
+  padding-left: 44px;
+}
+.pt-parallax-01 .pt-description .pt-title-01 {
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  font-weight: 800;
+}
+.pt-parallax-01 .pt-description .pt-title-02 {
+  font-size: 36px;
+  line-height: 43px;
+  color: #333333;
+  font-weight: 800;
+  margin-top: 8px;
+}
+.pt-parallax-01 .pt-description p {
+  margin-top: 21px;
+}
+.pt-parallax-01 .pt-description .btn-default {
+  margin-top: 24px;
+}
+.pt-parallax-01 .pt-img-sub {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 
 .pt-parallax-02 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative; }
-  .pt-parallax-02 .pt-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    width: 100%; }
-    .pt-parallax-02 .pt-img .pt-item {
-      width: 50%; }
-      .pt-parallax-02 .pt-img .pt-item img {
-        width: 100%;
-        height: auto;
-        position: relative;
-        z-index: 1; }
-      .pt-parallax-02 .pt-img .pt-item:first-child {
-        padding-right: 15px; }
-      .pt-parallax-02 .pt-img .pt-item:last-child {
-        padding-left: 15px; }
-  .pt-parallax-02 .pt-description {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2; }
-    .pt-parallax-02 .pt-description .pt-title-01 {
-      color: #333;
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 800; }
-    .pt-parallax-02 .pt-description .pt-title-02 {
-      color: #333;
-      font-size: 36px;
-      line-height: 43px;
-      font-weight: 800; }
-    .pt-parallax-02 .pt-description .btn-default {
-      margin-top: 25px; }
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.pt-parallax-02 .pt-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.pt-parallax-02 .pt-img .pt-item {
+  width: 50%;
+}
+.pt-parallax-02 .pt-img .pt-item img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+.pt-parallax-02 .pt-img .pt-item:first-child {
+  padding-right: 15px;
+}
+.pt-parallax-02 .pt-img .pt-item:last-child {
+  padding-left: 15px;
+}
+.pt-parallax-02 .pt-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+.pt-parallax-02 .pt-description .pt-title-01 {
+  color: #333;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 800;
+}
+.pt-parallax-02 .pt-description .pt-title-02 {
+  color: #333;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 800;
+}
+.pt-parallax-02 .pt-description .btn-default {
+  margin-top: 25px;
+}
 
+@media (max-width: 991px) {
+  .pt-parallax-list img {
+    -webkit-transition: inherit !important;
+    -o-transition: inherit !important;
+    transition: inherit !important;
+    -webkit-transform: inherit !important;
+    -ms-transform: inherit !important;
+        transform: inherit !important;
+  }
+
+  .pt-parallax-01 .pt-img-main {
+    width: 90%;
+  }
+  .pt-parallax-01 .pt-img-sub {
+    bottom: -30px;
+    right: 0px;
+    max-width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  .pt-parallax-01 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pt-parallax-01 + .pt-parallax-01 .pt-description {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .pt-parallax-01 .pt-img {
+    width: 100%;
+  }
+  .pt-parallax-01 .pt-description {
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 0;
+  }
+
+  .pt-parallax-02 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pt-parallax-02 .pt-description {
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin-top: 20px;
+  }
+}
 /*# sourceMappingURL=home-10.css.map */

@@ -44,3 +44,11 @@
     	margin-bottom: 11px;
 	}
 }
+
+@media (max-width: 767px){
+	.h13-banner{
+		.layout-column{
+			margin-bottom: 30px;
+		}
+	}
+}

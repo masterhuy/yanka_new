@@ -35,6 +35,7 @@
 		display: block;
 		line-height: 28px;
 		margin-top: 10px;
+		margin-bottom: 30px;
 	}
 	.block-content{
 		margin-top: 32px;
@@ -95,3 +96,19 @@
 	}
 }
 //
+
+@media (max-width: 767px){
+	.gdz-popup{
+		height: auto !important;
+		.content{
+			background: #fff;
+		}
+		h3{
+			font-size: 28px;
+			line-height: 39px;
+		}
+		.gdz-popup-content{
+			padding: 20px;
+		}
+	}
+}

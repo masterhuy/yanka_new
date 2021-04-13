@@ -62,7 +62,7 @@
 			span{
 				display: inline-block;
 				position: relative;
-				@include underline(3, #333, 2)
+				@include underline(3, #333, 2);
 			}
 		}
 	}
@@ -99,12 +99,19 @@
 	a{
 		position: relative;
 		color: $active;
-		@include underline(4, #48CAB2, 2)
+		@include underline(4, #48CAB2, 2);
 		&::before{
 			width: 100%;
 		}
 		&:hover::before{
 			width: 0;
 		}
+	}
+}
+
+
+@media (max-width: 767px){
+	.h14-pt-box-layout .text .addon-box {
+	    padding-left: 0;
 	}
 }

@@ -51,6 +51,12 @@
 }
 
 @media (min-width: 768px) {
+	@for $i from 0 through 100 {
+	    .lh-md-#{$i} {
+	        line-height: #{$i}px !important;
+	    }
+	}
+
 	@for $i from 0 through 15 {
 	    .mt-md-#{$i} {
 	        margin-top: #{$i}rem !important;
@@ -103,6 +109,11 @@
 }
 
 @media (min-width: 1200px) {
+	@for $i from 0 through 100 {
+	    .lh-xl-#{$i} {
+	        line-height: #{$i}px !important;
+	    }
+	}
 	@for $i from 0 through 15 {
 	    .mt-xl-#{$i} {
 	        margin-top: #{$i}rem !important;

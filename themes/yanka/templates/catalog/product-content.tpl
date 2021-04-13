@@ -59,24 +59,7 @@
                         <span class="editable">{$product.reference}</span>
                     </li>
                 {/if}
-                <li>
-                    {block name='product_availability'}
-                        {if $product.show_availability && $product.availability_message}
-                            <li>
-                                <label>{l s='Availability:' d='Shop.Theme.Catalog'}</label>
-                                <span class="editable">
-                                    {if $product.availability == 'available'}
-                                        {$product.availability_message}
-                                    {elseif $product.availability == 'last_remaining_items'}
-                                        <i class="material-icons product-last-items">&#xE002;</i>
-                                    {else}
-                                        {$product.availability_message}
-                                    {/if}
-                                </span>
-                            </li>
-                        {/if}
-                    {/block}
-                </li>
+                
                 {if $product.id_manufacturer}
                     <li id="product_vendor">
                         <label>{l s='Vendor:' d='Shop.Theme.Catalog'}</label>

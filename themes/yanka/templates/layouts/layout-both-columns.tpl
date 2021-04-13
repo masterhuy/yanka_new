@@ -125,6 +125,7 @@
                     <span class="text d-block d-md-none">{l s='Back to top' d='Shop.Theme.Actions'}</span>
                 </span>
             </div>
+            <div class="bg-overlay"></div>
         </div>
 
         {block name='javascript_bottom'}

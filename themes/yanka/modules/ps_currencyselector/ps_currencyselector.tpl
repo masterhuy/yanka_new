@@ -23,11 +23,12 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <div class="btn-group compact-hidden currency-info">
+	<label>{l s='Currency' d='Shop.Theme.Global'}</label>
 	<ul>
-      {foreach from=$currencies item=currency}
-	    <li {if $currency.current}class="current"{/if}>
-	      	<a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="dropdown-item">{$currency.iso_code} {$currency.sign}</a>
-	    </li>
-      {/foreach}
+		{foreach from=$currencies item=currency}
+			<li {if $currency.current}class="current"{/if}>
+				<a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="dropdown-item">{$currency.sign} {$currency.iso_code}</a>
+			</li>
+		{/foreach}
 	</ul>
 </div>

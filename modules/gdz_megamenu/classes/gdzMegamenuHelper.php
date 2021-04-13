@@ -542,7 +542,7 @@ class gdzMegamenuHelper
             $extra_style = ' style="width:'.$setting->width.'px"';
             $extra_data .= ' data-width="'.$setting->width.'"';
         }
-        $this->menu .= '<div class="nav-child dropdown-menu mega-dropdown-menu'.$extra_class.'"'.$extra_data.$extra_style.'><div class="mega-dropdown-inner">';
+        $this->menu .= '<div data-display="static" class="nav-child dropdown-menu mega-dropdown-menu'.$extra_class.'"'.$extra_data.$extra_style.'><div class="mega-dropdown-inner">';
     }
     public function endDropdown()
     {

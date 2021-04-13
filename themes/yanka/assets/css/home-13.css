@@ -1,44 +1,56 @@
 /* Demo 13 Homepage 13 */
 #header .header-7 .top-panel {
-  display: none; }
-
+  display: none;
+}
 #header .header-7 .container-fluid {
   max-width: 1200px;
   padding-left: 15px;
-  padding-right: 15px; }
-
+  padding-right: 15px;
+}
 #header .header-7 .sticky-wrapper {
-  background-color: transparent; }
-  #header .header-7 .sticky-wrapper.sticky {
-    background-color: #333; }
-  #header .header-7 .sticky-wrapper .container-fluid {
-    background-color: #333;
-    max-width: 1170px; }
-
+  background-color: transparent;
+}
+#header .header-7 .sticky-wrapper.sticky {
+  background-color: #333;
+}
+#header .header-7 .sticky-wrapper .container-fluid {
+  background-color: #333;
+  max-width: 1170px;
+}
 #header .header-7 #hor-menu .gdz-megamenu .nav > li:first-child > a {
-  padding-left: 12px; }
-
+  padding-left: 12px;
+}
 #header .header-7 #hor-menu .gdz-megamenu .nav > li.open > a, #header .header-7 #hor-menu .gdz-megamenu .nav > li:hover > a, #header .header-7 #hor-menu .gdz-megamenu .nav > li.sub-home > a {
   color: #fff;
-  background-color: #48CAB2; }
-  #header .header-7 #hor-menu .gdz-megamenu .nav > li.open > a span::before, #header .header-7 #hor-menu .gdz-megamenu .nav > li:hover > a span::before, #header .header-7 #hor-menu .gdz-megamenu .nav > li.sub-home > a span::before {
-    display: none; }
+  background-color: #48CAB2;
+}
+#header .header-7 #hor-menu .gdz-megamenu .nav > li.open > a span::before, #header .header-7 #hor-menu .gdz-megamenu .nav > li:hover > a span::before, #header .header-7 #hor-menu .gdz-megamenu .nav > li.sub-home > a span::before {
+  display: none;
+}
 
 .h13-banner .pb-image {
-  overflow: hidden; }
-  .h13-banner .pb-image a img {
-    width: 100%;
-    transition: transform 1s, -webkit-transform 1s; }
-  .h13-banner .pb-image:hover a img {
-    -webkit-transform: scale3d(1.1, 1.1, 1);
-    transform: scale3d(1.1, 1.1, 1); }
-
+  overflow: hidden;
+}
+.h13-banner .pb-image a img {
+  width: 100%;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.h13-banner .pb-image:hover a img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+          transform: scale3d(1.1, 1.1, 1);
+}
 .h13-banner .layout-column:hover .btn.btn-border::before {
-  border-width: 2px; }
-
+  border-width: 2px;
+}
 .h13-banner .pb-heading {
   margin-top: 12px;
   line-height: 35px;
-  margin-bottom: 11px; }
+  margin-bottom: 11px;
+}
 
+@media (max-width: 767px) {
+  .h13-banner .layout-column {
+    margin-bottom: 30px;
+  }
+}
 /*# sourceMappingURL=home-13.css.map */

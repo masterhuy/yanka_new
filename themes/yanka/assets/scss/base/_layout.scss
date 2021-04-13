@@ -12,7 +12,6 @@
 }
 
 .container {
-	max-width: 100%;
 	position: relative;
 }
 
@@ -27,6 +26,7 @@
 
 @media (min-width: 1200px){
 	.container{
+		max-width: 100%;
 		max-width: 1200px;
 	}
 	.col-xl5{

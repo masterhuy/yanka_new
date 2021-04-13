@@ -77,3 +77,21 @@
         margin-top: 20px;
     }
 }
+
+@media (max-width: 767px){
+	.pb-testimonial .pb-testimonial-box{
+		.pb-testimonial-comment{
+			padding: 15px 20px;
+		}
+		.pb-rating {
+		    position: static;
+		}
+		.pb-testimonial-img{
+			width: 60px;
+			img{
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+}

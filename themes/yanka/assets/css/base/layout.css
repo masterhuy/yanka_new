@@ -1,30 +1,37 @@
 /* Layout */
 .no-gutters {
   margin-left: 0;
-  margin-right: 0; }
-  .no-gutters > .col,
-  .no-gutters > [class*=col-] {
-    padding-left: 0;
-    padding-right: 0; }
+  margin-right: 0;
+}
+.no-gutters > .col,
+.no-gutters > [class*=col-] {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .container {
-  max-width: 100%;
-  position: relative; }
+  position: relative;
+}
 
 .container-fluid {
   width: 100%;
   padding-right: 0;
   padding-left: 0;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+}
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px; }
+    max-width: 100%;
+    max-width: 1200px;
+  }
+
   .col-xl5 {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%; } }
-
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
 /*# sourceMappingURL=layout.css.map */

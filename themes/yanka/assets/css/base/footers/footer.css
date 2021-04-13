@@ -288,4 +288,16 @@
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 991px) {
+  #footer.footer-5 #footer-main .newsletter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

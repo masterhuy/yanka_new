@@ -280,3 +280,11 @@
 	display: block;
 	margin: 0 auto;
 }
+
+
+@media (max-width: 991px){
+	#footer.footer-5 #footer-main .newsletter{
+		flex-direction: column;
+    	align-items: baseline;
+	}
+}

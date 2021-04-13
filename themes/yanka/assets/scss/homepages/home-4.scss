@@ -16,3 +16,38 @@
 		padding: 0 5px;
 	}
 }
+
+
+@media (max-width: 991px){
+	.h4-banner{
+		.grid{
+			margin-top: 10px;
+		}
+		.grid_column{
+			+ .grid_column{
+				margin-top: 10px;
+			}
+		}
+		.layout-column{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 767px){
+	.pb-testimonial .pb-testimonial-box{
+		.pb-rating{
+			position: static;
+		}
+		.pb-testimonial-comment{
+			padding: 15px 20px;
+		}
+		.pb-testimonial-img{
+			width: 60px;
+			img{
+				width: 60px;
+    			height: 60px;
+			}
+		}
+	}
+}
