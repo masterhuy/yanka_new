@@ -37,4 +37,9 @@
         <meta itemprop="reviewCount" content="{$nb_comments}" />
         <meta itemprop="ratingValue" content="{$average_grade}" />
     </div>
+{else}
+    <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+        <meta itemprop="reviewCount" content="0" />
+        <meta itemprop="ratingValue" content="5" />
+    </div>
 {/if}

@@ -3,4 +3,7 @@
 
 .h15-lookbook{
 	@include hoverImageEffect();
+	.layout-column{
+		margin-bottom: 36px;
+	}
 }

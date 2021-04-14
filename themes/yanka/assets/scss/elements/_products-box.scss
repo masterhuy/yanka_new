@@ -359,8 +359,11 @@
 		right: 20px;
 		width: auto;
 		transition: opacity 0.2s;
-		a:not(:last-child){
-		  	margin-bottom: 15px;
+		a{
+			margin-right: 0;
+			&:not(:last-child){
+			  	margin-bottom: 15px;
+			}
 		}
 	}
 	.product-miniature button.cart-button .text-addcart, 

@@ -1,4 +1,0 @@
-*ERROR* 	v1.7.6.5	2020/06/09 - 15:09:37: Unknown column &#039;menu_id&#039; in &#039;order clause&#039;&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;SELECT *
-                FROM ps_gdz_megamenu AS m WHERE `id_shop` = 1 ORDER BY menu_id DESC LIMIT 1&lt;/pre&gt; at line 769 in file classes/db/Db.php
-*ERROR* 	v1.7.6.5	2020/06/09 - 15:12:47: Unknown column &#039;menu_id&#039; in &#039;order clause&#039;&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;SELECT *
-                FROM ps_gdz_megamenu AS m WHERE `id_shop` = 1 ORDER BY menu_id DESC LIMIT 1&lt;/pre&gt; at line 769 in file classes/db/Db.php

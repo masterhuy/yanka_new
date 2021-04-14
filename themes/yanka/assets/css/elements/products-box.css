@@ -401,6 +401,9 @@
     -o-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
+  .product-miniature .btn-group a {
+    margin-right: 0;
+  }
   .product-miniature .btn-group a:not(:last-child) {
     margin-bottom: 15px;
   }

@@ -1,5 +1,0 @@
-*ERROR* 	v1.7.6.5	2020/06/24 - 14:02:45: Table &#039;godzilla_test.ps_wishlist&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
-				SELECT c.`id_customer`, c.`firstname`, c.`lastname`
-				  FROM `ps_wishlist` w
-				INNER JOIN `ps_customer` c ON c.`id_customer` = w.`id_customer`
-				ORDER BY c.`firstname` ASC&lt;/pre&gt; at line 769 in file classes/db/Db.php

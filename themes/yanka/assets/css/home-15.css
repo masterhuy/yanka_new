@@ -1,11 +1,16 @@
 /* Demo 15 Homepage 15 */
 .h15-lookbook .pb-image {
-  overflow: hidden; }
-  .h15-lookbook .pb-image a img {
-    width: 100%;
-    transition: transform 1s, -webkit-transform 1s; }
-  .h15-lookbook .pb-image:hover a img {
-    -webkit-transform: scale3d(1.1, 1.1, 1);
-    transform: scale3d(1.1, 1.1, 1); }
-
+  overflow: hidden;
+}
+.h15-lookbook .pb-image a img {
+  width: 100%;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.h15-lookbook .pb-image:hover a img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+          transform: scale3d(1.1, 1.1, 1);
+}
+.h15-lookbook .layout-column {
+  margin-bottom: 36px;
+}
 /*# sourceMappingURL=home-15.css.map */

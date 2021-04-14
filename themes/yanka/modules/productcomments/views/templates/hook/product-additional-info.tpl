@@ -28,9 +28,9 @@
         {include file='module:productcomments/views/templates/hook/average-grade-stars.tpl' grade=$average_grade}
 
         {* Rich snippet rating*}
-        <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
-            <meta itemprop="reviewCount" content="{$nb_comments}" />
-            <meta itemprop="ratingValue" content="{$average_grade}" />
-        </div>
     </div>
 {/if}
+<div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+    <meta itemprop="reviewCount" content="{if $nb_comments != 0 || $post_allowed}{$nb_comments}{else}1{/if}" />
+    <meta itemprop="ratingValue" content="{if $nb_comments != 0 || $post_allowed}{$average_grade}{else}5{/if}" />
+</div>
