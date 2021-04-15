@@ -22,22 +22,44 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+{if ($gdzSetting.header_topbar == 1)}
+    <div class="alert-box">
+        <div class="container">
+            <div class="row">
+                <div class="layout-column col-12">
+                    {$gdzSetting.topbar_content nofilter}
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
+<div id="header-top" class="{if $gdzSetting.topbar_class} {$gdzSetting.topbar_class}{/if} header-top top-panel">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            {$gdzSetting.header_html nofilter}
+        </div>
+    </div>
+</div>
 <div id="header-mobile-top" class="header-mobile-top mobile-menu-light {if $gdzSetting.header_mobile_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_mobile_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
     <div class="container">
         <div class="row align-items-center no-margin">
             <div class="layout-column header-left">
                 {include file='_partials/headers/logo.tpl'}
             </div>
-            <div class="layout-column col-auto header-right">
+            <div class="layout-column col-auto header-right right-module-header">
                 <div class="row align-items-center">
-                    {if $gdzSetting.search}
-                        {if $gdzSetting.search_box_type != 'dropdown'}
+                    {if $gdzSetting.search == 1}
+                        {if $gdzSetting.search_box_type == 'dropdown'}
                             {widget_block name="gdz_ajaxsearch"}
-                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-button.tpl'}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                            {/widget_block}
+                        {elseif $gdzSetting.search_box_type == 'fullwidth'}
+                            {widget_block name="gdz_ajaxsearch"}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullwidth.tpl'}
                             {/widget_block}
                         {else}
                             {widget_block name="gdz_ajaxsearch"}
-                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
                             {/widget_block}
                         {/if}
                     {/if}
@@ -57,8 +79,3 @@
         </div>
     </div>
 </div>
-{if $gdzSetting.search && $gdzSetting.search_box_type != 'dropdown'}
-    {widget_block name="gdz_ajaxsearch"}
-        {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
-    {/widget_block}
-{/if}

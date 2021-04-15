@@ -48,7 +48,7 @@
         {/block}
         {block name='product_cover'}
             <div class="col-10">
-                {include file='catalog/_partials/product-cover.tpl'}
+                {include file='catalog/_partials/product-cover-quickview.tpl'}
             </div>
         {/block}
     </div>

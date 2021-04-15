@@ -27,15 +27,17 @@
         <div class="modal-content">
             <div class="modal-body" id="main">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="mfp-close"></i>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve">
+                        <polygon fill="currentColor" points="15.6,1.6 14.4,0.4 8,6.9 1.6,0.4 0.4,1.6 6.9,8 0.4,14.4 1.6,15.6 8,9.1 14.4,15.6 15.6,14.4 9.1,8 "></polygon>
+                    </svg>
                 </button>
                 <div class="row">
-                    <div class="col-lg-7 col-md-6 col-sm-12 left">
+                    <div class="col-lg-6 col-md-6 col-12 left">
                         {block name='product_cover_thumbnails'}
                             {include file='catalog/_partials/product-cover-thumbnails-quickview.tpl'}
                         {/block}
                     </div>
-                    <div class="col-lg-5 col-md-6 col-sm-12 right">
+                    <div class="col-lg-6 col-md-6 col-12 right">
                         {block name='page_header_container'}
                             {block name='page_header'}
                                 <h2 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h2>
@@ -79,6 +81,9 @@
                         {if $gdzSetting.quickview_sharing}
                             {hook h='displayProductButtons' product=$product}
                         {/if}
+                        <a href="{$product.link|escape:'html'}" class="btn-link">
+                            {l s='View full info' d='Shop.Theme.Catalog'}
+                        </a>
                     </div>
                 </div>
             </div>

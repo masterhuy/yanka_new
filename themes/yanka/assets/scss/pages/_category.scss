@@ -42,7 +42,7 @@
     text-transform: capitalize;
     position: relative;
     letter-spacing: 0;
-    @include underline(6, #333, 2)
+    @include underline(6, #333, 2);
 	&:hover::before{
 		width: 100%;
 	}
@@ -381,7 +381,7 @@
 			padding-bottom: 3px;
 			position: relative;
 			display: inline-block;
-			@include underline(4, #333, 2)
+			@include underline(4, #333, 2);
 		}
 		.bottom-text {
 			font-size: 16px;
@@ -442,6 +442,20 @@
 		}
 	}
 	#products-top{
+		#search_filter_toggler{
+			border: 0;
+		    background-color: transparent;
+		    color: #333;
+		    font-size: 14px;
+		    font-weight: 800;
+		    display: flex;
+		    align-items: center;
+		    svg{
+		    	width: 23px;
+		    	height: 23px;
+		    	margin-right: 10px;
+		    }
+		}
 		.view-mode{
 			display: block;
 		}
@@ -464,6 +478,33 @@
 			.block-custom-html, .block-bestseller{
 				display: block;
 			}
+		}
+	}
+}
+
+
+@media (max-width: 991px){
+	#category div#left-column, 
+	#category div#right-column {
+	    position: fixed;
+	    width: 315px;
+	    max-width: 315px;
+	    height: 100%;
+	    background: #fff;
+	    top: 0;
+	    left: -315px;
+	    transition: left .3s;
+	    padding: 77px 30px 50px;
+	    overflow-y: auto;
+	    z-index: 999;
+	}
+	.open-filter{
+		.bg-overlay{
+			opacity: 1;
+			visibility: visible;
+		}
+		&#category div#left-column, &#category div#right-column{
+			left: 0;
 		}
 	}
 }

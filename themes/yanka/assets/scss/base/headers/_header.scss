@@ -1116,6 +1116,20 @@
 			}
 		}
 	}
+	.collapse, .collapsing{
+		text-align: left;
+	}
+	.btn-group{
+		svg{
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+.header-mobile-4 {
+	#mobile-menu-toggle{
+		margin-left: 25px;
+	}
 }
 .mobile-menu-wrap{
 	padding: 20px 20px;

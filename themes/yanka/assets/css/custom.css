@@ -24,6 +24,8 @@
 @import 'elements/popup-newsletter.css';
 /*--------------------- Modal addtocart -------------------- */
 @import 'elements/blockcart-modal.css';
+/*--------------------- Modal quickview -------------------- */
+@import 'elements/quickview-modal.css';
 /*--------------------- 5.Pages -------------------- */
 /*--------------------- Category -------------------- */
 @import 'pages/category.css';

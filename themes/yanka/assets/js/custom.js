@@ -663,13 +663,31 @@ jQuery(document).ready(function(){
         slidesToShow: 5,
         dots: true,
     });
-    
+
+    openFilterSidebar();
+    closeFilterSidebar();
 });
 
 
 $(window).load(function() {
     $('.carousel').carousel('pause'); 
 });
+
+
+function openFilterSidebar(){
+	$('body').on('click', '#search_filter_toggler', function () {
+		$("body").addClass("open-filter");
+	});
+}
+
+function closeFilterSidebar(){
+	$('body').on('click', '#search_filters_wrapper .btn-close', function () {
+		$("body").removeClass("open-filter");
+	});
+	$(".main-site > .bg-overlay").click(function(){
+		$("body").removeClass("open-filter");
+	});
+}
 
 
 

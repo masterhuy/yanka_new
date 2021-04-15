@@ -1167,6 +1167,17 @@
 #mobile-header .right-module-header .row > .btn-group + .btn-group {
   margin-left: 25px;
 }
+#mobile-header .collapse, #mobile-header .collapsing {
+  text-align: left;
+}
+#mobile-header .btn-group svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header-mobile-4 #mobile-menu-toggle {
+  margin-left: 25px;
+}
 
 .mobile-menu-wrap {
   padding: 20px 20px;

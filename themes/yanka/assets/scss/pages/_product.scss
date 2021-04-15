@@ -421,7 +421,7 @@
     .block-title{
     	margin-bottom: 0;
     	position: relative;
-    	@include underline(3, #333, 2)
+    	@include underline(3, #333, 2);
     }
     .item-product{
     	width: 25px;
@@ -735,7 +735,7 @@
 			display: inline-block;
 			position: relative;
 			margin-top: 3px;
-			@include underline(6, #333, 1)
+			@include underline(6, #333, 1);
 			&::before{
 				width: 100%;
 			}
@@ -791,7 +791,7 @@
 /* Sticky bar */
 #sticky-bar {
 	position: fixed;
-    z-index: 10000;
+    z-index: 1000;
     bottom: 0;
     left: 0;
     right: 0;

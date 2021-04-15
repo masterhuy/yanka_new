@@ -42,7 +42,7 @@
 
 					<div class="dontshow">
 						<input type="checkbox" name="dontshowagain" value="1" id="dontshowagain"/>
-						<label>{l s="I accept teh" d='Shop.Theme.Actions'} <a href="index.php?id_cms=14&controller=cms">{l s="Privacy policy." d='Shop.Theme.Actions'}</a></label>
+						<label>{l s="Dont show this popup again" d='Shop.Theme.Actions'}</label>
 						<span class="checkmark"></span>
 					</div>
 					<input type="hidden" name="width_default" id="width-default" value="{$popup_width|escape:'htmlall':'UTF-8'}" />

@@ -1,0 +1,78 @@
+@import '../config/variables.scss';
+
+.quickview-modal{
+	.modal-dialog{
+		max-width: 950px;
+		background-color: transparent;
+	}
+	.modal-content{
+		border: none;
+		border-radius: 0;
+	}
+	.modal-body{
+		padding: 40px;
+		background-color: #fff;
+	}
+	.close{
+		width: 24px;
+	    height: 24px;
+	    top: 15px;
+	    right: 15px;
+	    &:hover{
+	    	opacity: 1 !important;
+	    }
+		svg{
+			color: #d0d0d0;
+			transition: .2s all;
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+	.slick-list{
+		overflow: hidden;
+	}
+	.thumb-container{
+		margin-bottom: 10px;
+	}
+	.product-images{
+		position: relative;
+		button::before{
+			font-size: 14px;
+		}
+	}
+	.images-container{
+		.slick-arrow{
+			&.slick-prev{
+				top: calc(100% + 0px);
+				right: 0;
+			}
+		}
+	}
+	.product-cover .zoom-icon{
+		display: none;
+	}
+	.product-name{
+		font-size: 24px;
+	}
+	.product-prices.content_price{
+		.price.new{
+			font-size: 24px;
+		}
+		.old.price{
+			font-size: 18px;
+		}
+	}
+	.product-desc{
+		font-size: 16px;
+	}
+	.btn-link{
+		margin-top: 25px;
+		color: $active;
+		font-size: 13px;
+    	text-transform: initial;
+		&::before{
+			background-color: $active;
+		}
+	}
+}

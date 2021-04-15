@@ -1,0 +1,71 @@
+.quickview-modal .modal-dialog {
+  max-width: 950px;
+  background-color: transparent;
+}
+.quickview-modal .modal-content {
+  border: none;
+  border-radius: 0;
+}
+.quickview-modal .modal-body {
+  padding: 40px;
+  background-color: #fff;
+}
+.quickview-modal .close {
+  width: 24px;
+  height: 24px;
+  top: 15px;
+  right: 15px;
+}
+.quickview-modal .close:hover {
+  opacity: 1 !important;
+}
+.quickview-modal .close svg {
+  color: #d0d0d0;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.quickview-modal .close svg:hover {
+  color: #333;
+}
+.quickview-modal .slick-list {
+  overflow: hidden;
+}
+.quickview-modal .thumb-container {
+  margin-bottom: 10px;
+}
+.quickview-modal .product-images {
+  position: relative;
+}
+.quickview-modal .product-images button::before {
+  font-size: 14px;
+}
+.quickview-modal .images-container .slick-arrow.slick-prev {
+  top: calc(100% + 0px);
+  right: 0;
+}
+.quickview-modal .product-cover .zoom-icon {
+  display: none;
+}
+.quickview-modal .product-name {
+  font-size: 24px;
+}
+.quickview-modal .product-prices.content_price .price.new {
+  font-size: 24px;
+}
+.quickview-modal .product-prices.content_price .old.price {
+  font-size: 18px;
+}
+.quickview-modal .product-desc {
+  font-size: 16px;
+}
+.quickview-modal .btn-link {
+  margin-top: 25px;
+  color: #48CAB2;
+  font-size: 13px;
+  text-transform: initial;
+}
+.quickview-modal .btn-link::before {
+  background-color: #48CAB2;
+}
+/*# sourceMappingURL=quickview-modal.css.map */
