@@ -1,17 +1,42 @@
 /* Breadcrumb */
 .breadcrumb {
   font-size: 12px;
-  color: #777; }
+  color: #777;
+}
+
+.breadcrumb-nav {
+  width: 100%;
+}
 
 .breadcrumb-item + .breadcrumb-item {
-  padding-left: 0; }
-  .breadcrumb-item + .breadcrumb-item::before {
-    display: none; }
+  padding-left: 0;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  display: none;
+}
 
 .breadcrumb-wrapper {
-  padding: 0; }
-  .breadcrumb-wrapper .container-fluid {
-    max-width: 100%;
-    padding: 0 50px; }
+  padding: 0;
+}
+.breadcrumb-wrapper .container-fluid {
+  max-width: 100%;
+  padding: 0 50px;
+}
 
+@media (max-width: 1199px) {
+  .breadcrumb-wrapper .container-fluid {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 991px) {
+  .breadcrumb-wrapper .container-fluid {
+    max-width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  .breadcrumb-wrapper .container-fluid {
+    max-width: 540px;
+  }
+}
 /*# sourceMappingURL=breadcrumb.css.map */

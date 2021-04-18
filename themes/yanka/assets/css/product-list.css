@@ -610,10 +610,6 @@
 	#content-wrapper.col-lg-12 .label-sort-by{
 		display: none;
 	}
-	#products-top .col-sort{
-		display: flex;
-		justify-content: space-between;
-	}
 }
 
 @media (min-width: 768px){

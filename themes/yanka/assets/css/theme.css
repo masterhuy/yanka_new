@@ -787,7 +787,7 @@ header .row .col-auto {
     transition: all 0.4s;
     z-index: 999999;
 }
-.bg-overlay{
+.bg-overlay, .mobile-menu-overlay{
   opacity: 0;
   visibility: hidden;
   cursor: pointer;

@@ -3,6 +3,9 @@
 	font-size: 12px;
 	color: #777;
 }
+.breadcrumb-nav{
+	width: 100%;
+}
 .breadcrumb-item + .breadcrumb-item{
 	padding-left: 0;
 	&::before{
@@ -17,5 +20,21 @@
 	}
 }
 
+@media (max-width: 1199px){
+	.breadcrumb-wrapper .container-fluid{
+		max-width: 960px;
+    	padding: 0 15px;
+	}
+}
 
+@media (max-width: 991px){
+	.breadcrumb-wrapper .container-fluid{
+		max-width: 720px;
+	}
+}
 
+@media (max-width: 767px){
+	.breadcrumb-wrapper .container-fluid{
+		max-width: 540px;
+	}
+}

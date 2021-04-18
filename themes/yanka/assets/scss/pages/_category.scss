@@ -334,8 +334,11 @@
 	}
 	.sort-by {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
+		.inlude_sort_by{
+			margin-right: 15px;
+		}
 		.label-sort-by{
 			font-weight: 400;
 			color: #333;
@@ -387,6 +390,11 @@
 			font-size: 16px;
 			color: #333;
 		}
+	}
+}
+.products-list{
+	.product-miniature .btn-group{
+		display: none;
 	}
 }
 
@@ -441,35 +449,21 @@
 			}
 		}
 	}
-	#products-top{
-		#search_filter_toggler{
-			border: 0;
-		    background-color: transparent;
-		    color: #333;
-		    font-size: 14px;
-		    font-weight: 800;
-		    display: flex;
-		    align-items: center;
-		    svg{
-		    	width: 23px;
-		    	height: 23px;
-		    	margin-right: 10px;
-		    }
-		}
-		.view-mode{
-			display: block;
-		}
-		.inlude_sort_by {
-			margin-right: 15px;
-		}
-		.sort-by{
-			justify-content: flex-end;
-		}
-		.pagination{
-			justify-content: flex-start;
-			margin-bottom: 0;
-		}
-	}
+}
+.sidebar-column .btn-close {
+    position: absolute;
+    top: 30px;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #777;
+    display: flex;
+    align-items: center;
+    svg{
+    	color: #d0d0d0;
+    	margin-right: 8px;
+    }
 }
 
 @media (min-width: 992px){
@@ -496,7 +490,40 @@
 	    transition: left .3s;
 	    padding: 77px 30px 50px;
 	    overflow-y: auto;
-	    z-index: 999;
+	    z-index: 10000;
+	    .special-block{
+	    	display: none;
+	    }
+	}
+	#products-top{
+		#search_filter_toggler{
+			border: 0;
+		    background-color: transparent;
+		    color: #333;
+		    font-size: 14px;
+		    font-weight: 800;
+		    display: flex;
+		    align-items: center;
+		    padding: 0;
+		    svg{
+		    	width: 23px;
+		    	height: 23px;
+		    	margin-right: 10px;
+		    }
+		}
+		.view-mode{
+			display: block;
+		}
+		.inlude_sort_by {
+			margin-right: 15px;
+		}
+		.sort-by{
+			justify-content: flex-end;
+		}
+		.pagination{
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
 	}
 	.open-filter{
 		.bg-overlay{
@@ -505,6 +532,21 @@
 		}
 		&#category div#left-column, &#category div#right-column{
 			left: 0;
+		}
+	}
+	.show-menu{
+		.mobile-menu-overlay{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+@media (max-width: 767px){
+	#products-top .sort-by{
+		justify-content: flex-end;
+		.view-mode{
+			display: none;
 		}
 	}
 }

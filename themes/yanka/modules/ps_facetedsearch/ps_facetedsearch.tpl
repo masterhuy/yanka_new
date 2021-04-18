@@ -24,12 +24,13 @@
  *}
 {if isset($listing.rendered_facets)}
     <div id="search_filters_wrapper" class="hidden-sm-down">
-        <div id="search_filter_controls" class="d-flex justify-content-center hidden-md-up">
-            <button class="btn btn-secondary ok">
-                {l s='OK' d='Shop.Theme.Actions'}
-            </button>
-        </div>
         {$listing.rendered_facets nofilter}
     </div>
 {/if}
+<button class="d-flex d-lg-none btn-close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve">
+        <polygon fill="currentColor" points="15.6,1.6 14.4,0.4 8,6.9 1.6,0.4 0.4,1.6 6.9,8 0.4,14.4 1.6,15.6 8,9.1 14.4,15.6 15.6,14.4 9.1,8 "></polygon>
+    </svg>
+    <span>{l s='Close' d='Shop.Theme.Actions'}</span>
+</button>
 

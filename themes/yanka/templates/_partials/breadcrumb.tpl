@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="breadcrumb-wrapper">
-    <div class="breadcrumb page-header text-center">
+    <div class="breadcrumb page-header">
         <div class="breadcrumb-nav">
             <div class="container-fluid">
                 <div data-depth="{$breadcrumb.count}" class="row align-items-center{if $gdzSetting.breadcrumb_seperator} seperator-{$gdzSetting.breadcrumb_seperator}{/if}">

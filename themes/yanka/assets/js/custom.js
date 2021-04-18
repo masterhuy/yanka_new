@@ -676,16 +676,16 @@ $(window).load(function() {
 
 function openFilterSidebar(){
 	$('body').on('click', '#search_filter_toggler', function () {
-		$("body").addClass("open-filter");
+		$("body").addClass("open-filter overflow-hidden");
 	});
 }
 
 function closeFilterSidebar(){
-	$('body').on('click', '#search_filters_wrapper .btn-close', function () {
-		$("body").removeClass("open-filter");
+	$('body').on('click', '.sidebar-column .btn-close', function () {
+		$("body").removeClass("open-filter overflow-hidden");
 	});
 	$(".main-site > .bg-overlay").click(function(){
-		$("body").removeClass("open-filter");
+		$("body").removeClass("open-filter overflow-hidden");
 	});
 }
 

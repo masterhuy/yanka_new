@@ -3352,7 +3352,7 @@
             })
         };
         (0, r.default)("body").on("click", "#search_filter_toggler", function() {
-            (0, r.default)("#search_filters_wrapper").removeClass("hidden-sm-down"), (0, r.default)("#content-wrapper").addClass("hidden-sm-down"), (0, r.default)("#footer").addClass("hidden-sm-down")
+            (0, r.default)("#search_filters_wrapper").removeClass("hidden-sm-down"), (0, r.default)("#footer").addClass("hidden-sm-down")
         }), (0, r.default)("#search_filter_controls .clear").on("click", function() {
             (0, r.default)("#search_filters_wrapper").addClass("hidden-sm-down"), (0, r.default)("#content-wrapper").removeClass("hidden-sm-down"), (0, r.default)("#footer").removeClass("hidden-sm-down")
         }), (0, r.default)("#search_filter_controls .ok").on("click", function() {
